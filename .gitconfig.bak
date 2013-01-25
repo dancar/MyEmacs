@@ -1,0 +1,27 @@
+[user]
+	name = Dan Carmon
+	email = dan.carmon@trusteer.com
+[core]
+	excludesfile = /Users/dan/.gitignore
+	editor = /Applications/Emacs.app/Contents/MacOS/bin/emacsclient
+
+[alias]
+svn-diff = !git-svn-diff
+st=status
+ci=commit
+br=branch
+co=checkout
+df=diff
+lg="log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset' --abbrev-commit --date=relative"
+lga="log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset' --abbrev-commit --date=relative --all"
+
+[difftool "ediff"]
+cmd = emacs --eval \"(ediff-files \\\"$LOCAL\\\" \\\"$REMOTE\\\")\"
+[color]
+	diff = always
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path =
+[mergetool "sourcetree"]
+	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
