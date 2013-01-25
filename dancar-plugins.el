@@ -63,6 +63,11 @@
 ;; Configurations:
 ;; ================
 
+;; ruby-mode special files:
+(add-to-list 'auto-mode-alist '("^Gemfile$" . ruby-mode))
+(add-to-list 'auto-mode-alist '("^Vagrantfile$" . ruby-mode))
+(add-to-list 'auto-mode-alist '("\\.rake$" . ruby-mode))
+
 ;; lua-mode
 (autoload 'lua-mode "lua-mode" "Lua editing mode." t)
 (add-to-list 'auto-mode-alist '("\\.lua$" . lua-mode))
