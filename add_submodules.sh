@@ -1,0 +1,16 @@
+git submodule add https://github.com/magnars/expand-region.el.git plugins/expand-region
+git submodule add https://github.com/tsgates/git-emacs.git plugins/git-emacs
+git submodule add https://github.com/magnars/js2-refactor.el.git plugins/js2-refactor
+git submodule add https://github.com/magit/magit.git plugins/magit
+git submodule add https://github.com/magnars/mark-multiple.el.git plugins/mark-multiple
+git submodule add https://github.com/magnars/multiple-cursors.el.git plugins/multiple-cursors
+git submodule add https://github.com/yoshiki/yaml-mode.git plugins/yaml-mode
+git submodule add https://github.com/rmm5t/maxframe.el.git plugins/maxframe
+git submodule add https://github.com/joshwnj/json-mode.git plugins/json-mode
+git submodule add https://github.com/mooz/js2-mode.git plugins/js2-mode
+git submodule add https://github.com/emacs-helm/helm.git plugins/helm
+git submodule add https://github.com/nex3/sass-mode.git plugins/sass-mode
+git submodule add https://github.com/auto-complete/auto-complete.git plugins/auto-complete
+git submodule add https://github.com/antonj/scss-mode.git plugins/scss-mode
+git submodule add https://github.com/purcell/exec-path-from-shell.git plugins/exec-path-from-shell
+git submodule add https://github.com/immerrr/lua-mode.git plugins/lua-mode
