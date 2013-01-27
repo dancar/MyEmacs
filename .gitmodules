@@ -53,3 +53,6 @@
 [submodule "plugins/yasnippet"]
 	path = plugins/yasnippet
 	url = https://github.com/capitaomorte/yasnippet.git
+[submodule "plugins/ido-f3"]
+	path = plugins/ido-f3
+	url = git@github.com:dancar/ido-f3
