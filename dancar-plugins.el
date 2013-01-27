@@ -51,7 +51,6 @@
 (load-plugin 'move-lines)
 (load-plugin 'exec-path-from-shell)
 (load-plugin 'auto-complete)
-(load-plugin 'ruby-mode)
 
 
 ;; enhanced-ruby-mode
