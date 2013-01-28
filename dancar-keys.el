@@ -1,5 +1,5 @@
 ;; (l) dancar
-(global-set-key (kbd "C-c k") 'kill-buffer-and-window)
+(global-set-key (kbd "C-c C-k") 'kill-buffer-and-window)
 (global-set-key (kbd "C-c C-p") 'f3)
 (global-set-key (kbd "<f8>") 'f3-switch-project)
 (global-set-key (kbd "M-<f8>") 'f3-load-project)
