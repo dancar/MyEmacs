@@ -52,6 +52,7 @@
 (load-plugin 'exec-path-from-shell)
 (load-plugin 'auto-complete)
 (load-plugin `ido-f3)
+(load-plugin `php-mode)
 
 
 ;; enhanced-ruby-mode

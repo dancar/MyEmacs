@@ -56,3 +56,6 @@
 [submodule "plugins/ido-f3"]
 	path = plugins/ido-f3
 	url = git@github.com:dancar/ido-f3
+[submodule "plugins/php-mode"]
+	path = plugins/php-mode
+	url = https://github.com/ejmr/php-mode.git
