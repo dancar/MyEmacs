@@ -79,7 +79,7 @@
 
 (define-key my-org-mode-keys-minor-mode-map (kbd "C-<tab>") `other-window)
 (define-key my-org-mode-keys-minor-mode-map (kbd "C-c C-p") 'f3)
-
+(define-key my-org-mode-keys-minor-mode-map (kbd "C-c C-k") 'kill-buffer-and-window)
 (define-minor-mode my-org-mode-keys-minor-mode
   "A minor mode so fix org-mode keys"
   nil " my-org-mode-keys" 'my-org-mode-keys-minor-mode-map)
