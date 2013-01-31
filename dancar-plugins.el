@@ -55,9 +55,6 @@
 (load-plugin `php-mode)
 
 
-;; enhanced-ruby-mode
-(setq enh-ruby-program "~/.rvm/rubies/ruby-1.9.3-p0/bin/ruby") ; so that still works if ruby points to ruby1.8
-
 ;; Disabled:
 ;; ================
 ;; (require 'gpicker)

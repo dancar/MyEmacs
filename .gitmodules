@@ -47,9 +47,6 @@
 [submodule "plugins/lua-mode"]
 	path = plugins/lua-mode
 	url = http://github.com/immerrr/lua-mode.git
-[submodule "plugins/ruby-mode"]
-	path = plugins/ruby-mode
-	url = https://github.com/jacott/Enhanced-Ruby-Mode.git
 [submodule "plugins/yasnippet"]
 	path = plugins/yasnippet
 	url = https://github.com/capitaomorte/yasnippet.git
