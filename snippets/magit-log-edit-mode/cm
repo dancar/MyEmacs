@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: cm
+# key: cm
+# --
+$0 (issue #$1)
