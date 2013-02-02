@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: logi
+# key: logi
+# --
+logi("`(file-name-nondirectory (buffer-file-name))`\\\\ `(line-number-at-pos)`: $1 =", $1)
