@@ -1,4 +1,6 @@
 ;; (l) dancar
+(global-set-key (kbd "M-P") `delete-indentation)
+(global-set-key (kbd "M-N") (lambda() (interactive (delete-indentation 1))))
 (global-set-key (kbd "C-c C-k") (lambda () (interactive) (kill-buffer (current-buffer))))
 (global-set-key (kbd "C-c C-p") 'f3)
 (global-set-key (kbd "<f8>") 'f3-switch-project)
