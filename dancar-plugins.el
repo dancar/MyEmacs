@@ -61,10 +61,17 @@
 ;; (require 'sr-speedbar)
 ;; (require 'helm-config)
 ;; (require 'tail)
-;; (require 'auto-complete)
 
 ;; Configurations:
 ;; ================
+
+
+;; auto-complete-mode
+;; http://stackoverflow.com/questions/8095715/emacs-auto-complete-mode-at-startup
+(defun auto-complete-mode-maybe ()
+  "No maybe for you. Only AC!"
+  (unless (minibufferp (current-buffer))
+    (auto-complete-mode 1)))
 
 ;; ruby-mode special files:
 (add-to-list 'auto-mode-alist '("^Gemfile$" . ruby-mode))
