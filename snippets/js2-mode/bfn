@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: bfn
+# key: bfn
+# --
+Ext.bind(function ($1) {
+  $0
+}, this)${2: }
