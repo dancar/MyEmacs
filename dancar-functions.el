@@ -87,4 +87,12 @@
   (insert (concat "tail -f " file))
   (comint-send-input))
 
+(defun bookmark-here-set ()
+  (interactive)
+  (bookmark-set "_hereBookmark"))
+
+(defun bookmark-here-jump ()
+  (interactive)
+  (bookmark-jump "_hereBookmark"))
+
 (provide 'dancar-functions)

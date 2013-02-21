@@ -1,4 +1,8 @@
 ;; (l) dancar
+
+(global-set-key (kbd "C-c C-b") `bookmark-here-set)
+(global-set-key (kbd "C-c C-j") `bookmark-here-jump)
+
 (global-set-key (kbd "M-P") `delete-indentation)
 (global-set-key (kbd "M-N") (lambda() (interactive (delete-indentation 1))))
 (global-set-key (kbd "C-c C-k") (lambda () (interactive) (kill-buffer (current-buffer))))
