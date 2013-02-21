@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: here
+# key: here
+# --
+puts('`(file-name-nondirectory (buffer-file-name))`\\\\ `(line-number-at-pos)`: here')
