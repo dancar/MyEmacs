@@ -74,8 +74,8 @@
     (auto-complete-mode 1)))
 
 ;; ruby-mode special files:
-(add-to-list 'auto-mode-alist '("^Gemfile$" . ruby-mode))
-(add-to-list 'auto-mode-alist '("^Vagrantfile$" . ruby-mode))
+(add-to-list 'auto-mode-alist '("Gemfile$" . ruby-mode))
+(add-to-list 'auto-mode-alist '("Vagrantfile$" . ruby-mode))
 (add-to-list 'auto-mode-alist '("\\.rake$" . ruby-mode))
 
 ;; lua-mode

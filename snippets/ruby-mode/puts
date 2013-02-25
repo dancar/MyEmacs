@@ -2,4 +2,4 @@
 # name: puts
 # key: puts
 # --
-puts('`(file-name-nondirectory (buffer-file-name))`\\\\ `(line-number-at-pos)`: $1${2:: \\'' + ($1).to_s + '\\'}')
+puts('MYDEBUG `(file-name-nondirectory (buffer-file-name))`\\\\ `(line-number-at-pos)`: $1${2:: \\'' + ($1).to_s + '\\'}')
