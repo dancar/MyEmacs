@@ -12,10 +12,14 @@
 (defun go-line ()
   (interactive)
   (search-backward " ")
+  (delete-char 1)
   (newline-and-indent)
   (previous-line)
   (end-of-line)
-  (newline-and-indent))
+    (if (equal major-mode `coffee-mode)
+      (coffee-newline-and-indent)
+      (newline-and-indent)))
+
 
 (defun server-tail()
   (interactive)
