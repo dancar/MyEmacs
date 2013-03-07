@@ -72,6 +72,7 @@
   "No maybe for you. Only AC!"
   (unless (minibufferp (current-buffer))
     (auto-complete-mode 1)))
+(global-auto-complete-mode 1)
 
 ;; ruby-mode special files:
 (add-to-list 'auto-mode-alist '("Gemfile$" . ruby-mode))
