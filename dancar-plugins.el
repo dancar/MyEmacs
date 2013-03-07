@@ -53,7 +53,7 @@
 (load-plugin 'auto-complete)
 (load-plugin `ido-f3)
 (load-plugin `php-mode)
-
+(load-plugin `markdown-mode)
 
 ;; Disabled:
 ;; ================
@@ -65,6 +65,8 @@
 ;; Configurations:
 ;; ================
 
+;; markdown-mode
+(add-to-list 'auto-mode-alist '("\\.text\\'" . markdown-mode))
 
 ;; auto-complete-mode
 ;; http://stackoverflow.com/questions/8095715/emacs-auto-complete-mode-at-startup

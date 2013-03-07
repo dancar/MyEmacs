@@ -56,3 +56,6 @@
 [submodule "plugins/php-mode"]
 	path = plugins/php-mode
 	url = https://github.com/ejmr/php-mode.git
+[submodule "plugins/markdown-mode"]
+	path = plugins/markdown-mode
+	url = https://github.com/defunkt/markdown-mode.git
