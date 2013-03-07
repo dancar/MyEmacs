@@ -2,4 +2,4 @@
 # name: here
 # key: here
 # --
-console.log('`(file-name-nondirectory (buffer-file-name))`\\\\ `(line-number-at-pos)`: <here>);
+console.log('`(file-name-nondirectory (buffer-file-name))`\\\\ `(line-number-at-pos)`: <here>');
