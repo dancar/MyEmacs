@@ -93,7 +93,8 @@
 
 (defun bookmark-here-set ()
   (interactive)
-  (bookmark-set "_hereBookmark"))
+  (bookmark-set "_hereBookmark")
+  (message "Bookmark set"))
 
 (defun bookmark-here-jump ()
   (interactive)
