@@ -99,4 +99,15 @@
   (interactive)
   (bookmark-jump "_hereBookmark"))
 
+(defun goto-notes ()
+  (interactive)
+  (let ((notes-buffer (get-buffer "notes.txt")))
+    (if notes-buffer
+        (switch-to-buffer notes-buffer)
+      (bookmark-jump "notes"))))
+
+
+
+
+
 (provide 'dancar-functions)
