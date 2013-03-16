@@ -75,6 +75,11 @@
   (unless (minibufferp (current-buffer))
     (auto-complete-mode 1)))
 (global-auto-complete-mode 1)
+;; http://stackoverflow.com/questions/12660428/emacs-auto-complete-dont-trigger-on-ret-in-inline-suggestion
+(define-key ac-completing-map "\C-m" nil)
+(define-key ac-completing-map (kbd "<tab>") nil)
+(setq ac-use-menu-map t)
+(define-key ac-menu-map "\C-m" 'ac-complete)
 
 ;; ruby-mode special files:
 (add-to-list 'auto-mode-alist '("Gemfile$" . ruby-mode))

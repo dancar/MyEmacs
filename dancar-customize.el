@@ -4,7 +4,7 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(ac-auto-show-menu nil)
- '(ac-delay 0.0)
+ '(ac-delay 0.2)
  '(ac-trigger-key nil)
  '(ac-use-fuzzy t)
  '(auto-save-default nil)
