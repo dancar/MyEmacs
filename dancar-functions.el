@@ -101,7 +101,10 @@
   (bookmark-jump "_hereBookmark"))
 
 (defun goto-notes ()
+  "Open the \"notes\" bookmark"
   (interactive)
+  (bookmark-bmenu-list) ;; Mysterious bug causes the bookmark not to be found unless ths list is preloaded
+  (kill-buffer "*Bookmark List*")
   (let ((notes-buffer (get-buffer "notes.txt")))
     (if notes-buffer
         (switch-to-buffer notes-buffer)
