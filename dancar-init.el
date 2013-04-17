@@ -14,7 +14,7 @@
  ((equal system-type 'darwin)
   (set-face-attribute 'default nil :family "Monaco" :height 130 :weight 'normal))
  ((and nil (equal system-type 'gnu/linux))
-  (set-face-attribute 'default nil :family "Ubuntu Mono" :height 130 :weight 'normal)))
+  (set-face-attribute 'default nil :family "Ubuntu Mono" :height 180 :weight 'normal)))
 
 (add-hook 'ediff-prepare-buffer-hook (lambda () (toggle-truncate-lines 0)))
 (put 'erase-buffer 'disabled nil)

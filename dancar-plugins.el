@@ -67,6 +67,7 @@
 
 ;; markdown-mode
 (add-to-list 'auto-mode-alist '("\\.text\\'" . markdown-mode))
+(add-to-list 'auto-mode-alist '("\\.md//'" . markdown-mode))
 
 ;; auto-complete-mode
 ;; http://stackoverflow.com/questions/8095715/emacs-auto-complete-mode-at-startup
