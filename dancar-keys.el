@@ -56,8 +56,8 @@
 
 (global-set-key  (kbd "C-M-p") (lambda () (interactive) (previous-line 4)))
 (global-set-key  (kbd "C-M-n") (lambda () (interactive) (next-line 4)))
-(global-set-key  (kbd "C-M-S-p") (lambda () (interactive) (previous-line 10)))
-(global-set-key  (kbd "C-M-S-n") (lambda () (interactive) (next-line 10)))
+(global-set-key  (kbd "C-M-S-p") (lambda () (interactive) (previous-line 12)))
+(global-set-key  (kbd "C-M-S-n") (lambda () (interactive) (next-line 12)))
 
 
 ;; ruby-mode keys override:
@@ -106,7 +106,7 @@
 
 (define-minor-mode my-super-mode-keys-minor-mode
   "A minor mode so fix super-mode keys"
-  nil " Dan(-:" 'my-super-mode-keys-minor-mode-map)
+  nil " DanSuperKeys" 'my-super-mode-keys-minor-mode-map)
 (my-super-mode-keys-minor-mode 1)
 (defadvice load (after give-my-super-mode-keybindings-priority)
   "Try to ensure that my keybindings always have priority."

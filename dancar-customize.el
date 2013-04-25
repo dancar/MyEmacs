@@ -4,8 +4,8 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(ac-auto-show-menu nil)
+ '(ac-auto-start 10)
  '(ac-delay 0.2)
- '(ac-trigger-key nil)
  '(ac-use-fuzzy t)
  '(auto-save-default nil)
  '(auto-save-file-name-transforms (quote ((".*" "~/.emacs.d/autosaves/\\1" t))))
