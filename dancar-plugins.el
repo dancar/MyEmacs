@@ -218,7 +218,7 @@ vi style of % jumping to matching brace."
 ;;; full path in title
 (setq frame-title-format
       (list
-       (format "%s %%S: %%j " (system-name))
+       "Emacs24 - "
        '(buffer-file-name "%f" (dired-directory dired-directory "%b"))))
 
 ;;exec-path
