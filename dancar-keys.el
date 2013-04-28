@@ -1,6 +1,6 @@
 ;; (l) dancar
 
-(global-set-key (kbd "C-M-|") 'goto-notes)
+(global-set-key (kbd "C-M-|") 'deft)
 
 (global-set-key (kbd "C-c C-b") `bookmark-here-set)
 (global-set-key (kbd "C-c C-j") `bookmark-here-jump)
