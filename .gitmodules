@@ -65,3 +65,6 @@
 [submodule "plugins/coffee-mode"]
 	path = plugins/coffee-mode
 	url = https://github.com/defunkt/coffee-mode.git
+[submodule "plugins/deft"]
+	path = plugins/deft
+	url = git://jblevins.org/git/deft.git

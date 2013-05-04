@@ -56,6 +56,7 @@
 (load-plugin `markdown-mode)
 (load-plugin `autopair)
 (load-plugin 'coffee-mode)
+(load-plugin `deft)
 
 ;; Disabled:
 ;; ================
@@ -74,6 +75,15 @@
 
 ;;auto-pair
 (autopair-global-mode) ;; enable autopair in all buffers
+
+;; deft
+;; configuration based on http://emacs-fu.blogspot.co.il/2011/09/quick-note-taking-with-deft-and-org.html
+(when (require 'deft nil 'noerror)
+   (setq
+      deft-extension "org"
+      deft-directory "~/Dropbox/deft/"
+      deft-text-mode 'org-mode)
+   (global-set-key (kbd "<f9>") 'deft))
 
 ;; markdown-mode
 (add-to-list 'auto-mode-alist '("\\.text\\'" . markdown-mode))
