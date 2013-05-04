@@ -62,3 +62,6 @@
 [submodule "plugins/autopair"]
 	path = plugins/autopair
 	url = https://github.com/capitaomorte/autopair.git
+[submodule "plugins/coffee-mode"]
+	path = plugins/coffee-mode
+	url = https://github.com/defunkt/coffee-mode.git

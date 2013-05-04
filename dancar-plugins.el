@@ -55,6 +55,7 @@
 (load-plugin `php-mode)
 (load-plugin `markdown-mode)
 (load-plugin `autopair)
+(load-plugin 'coffee-mode)
 
 ;; Disabled:
 ;; ================
@@ -65,6 +66,11 @@
 
 ;; Configurations:
 ;; ================
+
+;;coffee-mode
+(add-hook 'coffee-mode-hook
+          (lambda() (coffee-cos-mode t)))
+
 
 ;;auto-pair
 (autopair-global-mode) ;; enable autopair in all buffers
