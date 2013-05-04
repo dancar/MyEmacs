@@ -54,6 +54,7 @@
 (load-plugin `ido-f3)
 (load-plugin `php-mode)
 (load-plugin `markdown-mode)
+(load-plugin `autopair)
 
 ;; Disabled:
 ;; ================
@@ -64,6 +65,9 @@
 
 ;; Configurations:
 ;; ================
+
+;;auto-pair
+(autopair-global-mode) ;; enable autopair in all buffers
 
 ;; markdown-mode
 (add-to-list 'auto-mode-alist '("\\.text\\'" . markdown-mode))

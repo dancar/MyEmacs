@@ -59,3 +59,6 @@
 [submodule "plugins/markdown-mode"]
 	path = plugins/markdown-mode
 	url = https://github.com/defunkt/markdown-mode.git
+[submodule "plugins/autopair"]
+	path = plugins/autopair
+	url = https://github.com/capitaomorte/autopair.git
