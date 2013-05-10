@@ -68,6 +68,10 @@
 ;; Configurations:
 ;; ================
 
+;; highlight-symbol
+(add-hook 'after-change-major-mode-hook 'highlight-symbol-mode)
+
+
 ;;coffee-mode
 (add-hook 'coffee-mode-hook
           (lambda() (coffee-cos-mode t)))
@@ -244,6 +248,7 @@ vi style of % jumping to matching brace."
 ;;exec-path
 (exec-path-from-shell-initialize)
 (mapcar 'exec-path-from-shell-copy-env '())
+
 ;; yasnippet
 (yas-global-mode 1)
 
