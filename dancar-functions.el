@@ -8,7 +8,6 @@
     (comment-or-uncomment-region (line-beginning-position) (line-end-position))))
 (global-set-key (kbd "M-;") 'comment-line-toggle)
 
-
 (defun go-line ()
   (interactive)
   (search-backward " ")
@@ -19,31 +18,6 @@
     (if (equal major-mode `coffee-mode)
       (coffee-newline-and-indent)
       (newline-and-indent)))
-
-
-(defun server-tail()
-  (interactive)
-  (shell "server")
-  (insert "tail -f ~/dev/tma/log/development.log")
-  (comint-send-input))
-
-(defun console()
-  (interactive)
-  (shell "console")
-  (insert "rails c")
-  (comint-send-input)
-  (other-buffer))
-
-(defun seed()
-  (interactive)
-  (shell-action "rake db:seed"))
-
-(defun compass()
-  (interactive)
-  (shell-action "tma_compass"))
-
-(global-set-key (kbd "<f10>") 'seed)
-(global-set-key (kbd "<f11>") `compass)
 
 (defun same-issue ()
   "Copies issue number to commit message (c) dancar"
@@ -56,34 +30,7 @@
   (magit-log-edit)
   (insert " ")
   (insert-register `x)
-  (beginning-of-buffer)
-  )
-
-;; shell-action-init:
-;; ((lambda ()
-;;   (setq shell-actions-buffer "shell-actions")
-;;   (shell shell-actions-buffer)
-;;   (switch-to-buffer nil)
-;;   ))
-
-
-(defun shell-action (action)
-  (shell-action-base action 1))
-
-(defun shell-action-base (action wait)
-  (interactive)
-  (split-window-below)
-  (other-window 1)
-  (switch-to-buffer shell-actions-buffer)
-  (insert action)
-  (comint-send-input)
-  (if wait
-      (let ((cursor-in-echo-area 1))
-        (read-event "Press any key to continue")))
-  (delete-window))
-
-(defun shell-action-bg (action)
-  (shell-action-base action nil))
+  (beginning-of-buffer))
 
 (defun tail (file)
   (interactive "fFile name:")
@@ -103,7 +50,7 @@
 (defun goto-notes ()
   "Open the \"notes\" bookmark"
   (interactive)
-  (bookmark-bmenu-list) ;; Mysterious bug causes the bookmark not to be found unless ths list is preloaded
+  (bookmark-bmenu-list) ;; Mysterious bug causes the bookmark not to be found unless the list is preloaded
   (kill-buffer "*Bookmark List*")
   (let ((notes-buffer (get-buffer "notes.txt")))
     (if notes-buffer
