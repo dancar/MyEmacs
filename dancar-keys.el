@@ -13,7 +13,6 @@
 (global-set-key (kbd "<f8>") 'f3-switch-project)
 (global-set-key (kbd "M-S-<f8>") 'f3-load-project)
 (global-set-key (kbd "M-<f8>") 'f3-reload-project)
-;; (global-set-key (kbd "M-<SPC>") `speedbar-get-focus)
 (global-set-key (kbd "C-x C-r") `ido-recentf-open)
 (global-set-key (kbd "M-n") `move-text-down)
 (global-set-key (kbd "M-p") `move-text-up)
