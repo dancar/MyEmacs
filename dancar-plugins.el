@@ -78,7 +78,7 @@
 
 
 ;;auto-pair
-(autopair-global-mode) ;; enable autopair in all buffers
+;; (autopair-global-mode) ;; enable autopair in all buffers
 
 ;; deft
 ;; configuration based on http://emacs-fu.blogspot.co.il/2011/09/quick-note-taking-with-deft-and-org.html
