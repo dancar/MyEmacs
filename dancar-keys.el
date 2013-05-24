@@ -1,5 +1,7 @@
 ;; (l) dancar
 
+(global-set-key (kbd "C-w") 'dancar-kill)
+
 (global-set-key (kbd "C-M-|") 'deft)
 
 (global-set-key (kbd "C-c C-b") `bookmark-here-set)

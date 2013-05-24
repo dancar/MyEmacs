@@ -60,4 +60,13 @@
 (fset 'little-coffee-window
    (lambda (&optional arg) "Keyboard macro." (interactive "p") (kmacro-exec-ring-item (quote ([24 49 24 50 C-tab 21 21 134217848 115 104 114 105 tab return C-tab] 0 "%d")) arg)))
 
+
+(defun dancar-kill ()
+  "Kill the region if active, else backward-kill subword"
+  (interactive)
+  (if
+      (region-active-p)
+      (kill-region (region-beginning) (region-end))
+    (subword-backward-kill 1)))
+
 (provide 'dancar-functions)
