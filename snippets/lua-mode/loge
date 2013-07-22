@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: loge
+# key: loge
+# --
+loge('`(file-name-nondirectory (buffer-file-name))`\\\\ `(line-number-at-pos)`: $1:' ..  tostring($1))
