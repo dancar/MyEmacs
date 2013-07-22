@@ -63,6 +63,7 @@
  '(scss-compile-at-save nil)
  '(scss-sass-command "compass compile")
  '(set-mark-command-repeat-pop t)
+ '(sh-indentation 2)
  '(shift-select-mode nil)
  '(speedbar-show-unknown-files t)
  '(sr-speedbar-delete-windows t)
