@@ -1,3 +1,7 @@
+
+(color-theme-comidia) ;; <- Nice! (dark, bluwish)
+(color-theme-dark-laptop)
+
 (color-theme-aalto-dark)
 (color-theme-aalto-light)
 (color-theme-aliceblue)
@@ -17,9 +21,6 @@
 (color-theme-charcoal-black)
 (color-theme-clarity)
 (color-theme-classic)
-
-(color-theme-comidia) ;; <- Nice! (dark, bluwish)
-
 (color-theme-compare)
 (color-theme-dark-blue)
 (color-theme-dark-blue2)
@@ -28,7 +29,6 @@
 (color-theme-dark-gnus)
 (color-theme-dark-green)
 (color-theme-dark-info)
-(color-theme-dark-laptop)
 (color-theme-deep-blue)
 (color-theme-describe)
 (color-theme-digital-ofs1)

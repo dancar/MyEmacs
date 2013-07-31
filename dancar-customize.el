@@ -52,6 +52,8 @@
  '(magit-process-popup-time 0)
  '(make-backup-files nil)
  '(menu-bar-mode nil)
+ '(nyan-mode t)
+ '(nyan-wavy-trail nil)
  '(recentf-auto-cleanup (quote never))
  '(recentf-max-saved-items 1000)
  '(scroll-conservatively 100)
