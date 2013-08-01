@@ -1,4 +1,6 @@
 ;; (l) dancar
+(global-set-key (kbd "C-;") `previous-buffer)
+(global-set-key (kbd "C-:") `next-buffer)
 
 (global-set-key (kbd "C-w") 'dancar-kill)
 

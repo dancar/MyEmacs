@@ -25,7 +25,7 @@
          (add-to-list 'plugin-error-list plugin))
          (message (format "Error loading plugin \"%s\"." plugin-name))
       ))))
-
+(load-plugin 'nyan-mode)
 (load-plugin 'scss-mode)
 (load-plugin 'json-mode)
 (load-plugin 'git-emacs)
@@ -57,6 +57,7 @@
 (load-plugin `autopair)
 (load-plugin 'coffee-mode)
 (load-plugin `deft)
+(load-plugin 'web-mode)
 
 ;; Disabled:
 ;; ================
@@ -67,6 +68,18 @@
 
 ;; Configurations:
 ;; ================
+
+
+;; web-mode
+
+(add-to-list 'auto-mode-alist '("\\.phtml\\'" . web-mode))
+(add-to-list 'auto-mode-alist '("\\.tpl\\.php\\'" . web-mode))
+(add-to-list 'auto-mode-alist '("\\.jsp\\'" . web-mode))
+(add-to-list 'auto-mode-alist '("\\.as[cp]x\\'" . web-mode))
+(add-to-list 'auto-mode-alist '("\\.erb\\'" . web-mode))
+(add-to-list 'auto-mode-alist '("\\.mustache\\'" . web-mode))
+(add-to-list 'auto-mode-alist '("\\.djhtml\\'" . web-mode))
+
 
 ;; highlight-symbol
 (add-hook 'after-change-major-mode-hook 'highlight-symbol-mode)
@@ -134,6 +147,7 @@
 ;; lua-mode
 (autoload 'lua-mode "lua-mode" "Lua editing mode." t)
 (add-to-list 'auto-mode-alist '("\\.lua$" . lua-mode))
+(add-to-list 'auto-mode-alist '("\\.ws$" . lua-mode))
 (add-to-list 'interpreter-mode-alist '("lua" . lua-mode))
 
 ;; Display ido results vertically, rather than horizontally
@@ -173,7 +187,10 @@
 (eval-after-load "color-theme"
   '(progn
      (color-theme-initialize)
-     (color-theme-hober)))
+     ;; (color-theme-hober)
+     ;; (color-theme-comidia)
+     (color-theme-dark-laptop)
+     ))
 
 ;;Expand-region
 (global-set-key (kbd "C-=") 'er/expand-region)
