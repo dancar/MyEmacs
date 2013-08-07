@@ -25,14 +25,13 @@
          (add-to-list 'plugin-error-list plugin))
          (message (format "Error loading plugin \"%s\"." plugin-name))
       ))))
+
+;; Minor modes / helpers:
 (load-plugin 'nyan-mode)
-(load-plugin 'scss-mode)
-(load-plugin 'json-mode)
 (load-plugin 'git-emacs)
 (load-plugin 'magit)
 (load-plugin 'newcomment)
-;; (load-plugin 'highlight-symbol)
-(load-plugin 'lua-mode)
+(load-plugin 'highlight-symbol)
 (load-plugin 'maxframe)
 (load-plugin 'ido)
 (load-plugin 'recentf)
@@ -42,33 +41,39 @@
 (load-plugin 'dired-details-plus)
 (load-plugin 'inline-string-rectangle)
 (load-plugin 'mark-more-like-this)
-(load-plugin 'js2-mode)
 (load-plugin 'js2-refactor)
-(load-plugin 'mic-paren)
 (load-plugin 'multiple-cursors)
-(load-plugin 'yaml-mode)
 (load-plugin 'yasnippet)
 (load-plugin 'move-lines)
 (load-plugin 'exec-path-from-shell)
 (load-plugin 'auto-complete)
 (load-plugin `ido-f3)
-(load-plugin `php-mode)
-(load-plugin `markdown-mode)
 (load-plugin `autopair)
-(load-plugin 'coffee-mode)
 (load-plugin `deft)
+(load-plugin 'mic-paren)
+(require 'helm-config)
+;; Major modes:
+(load-plugin 'scss-mode)
+(load-plugin 'json-mode)
+(load-plugin 'lua-mode)
+(load-plugin 'js2-mode)
+(load-plugin 'yaml-mode)
+;; (load-plugin `php-mode)
+;; (load-plugin `markdown-mode)
+;; (load-plugin 'coffee-mode)
 (load-plugin 'web-mode)
 
 ;; Disabled:
 ;; ================
 ;; (require 'gpicker)
 ;; (require 'sr-speedbar)
-;; (require 'helm-config)
 ;; (require 'tail)
 
 ;; Configurations:
 ;; ================
 
+;; helm-mode
+(helm-mode 1)
 
 ;; nyan-mode
 (nyan-mode)
@@ -91,6 +96,7 @@
 ;;coffee-mode
 (add-hook 'coffee-mode-hook
           (lambda() (coffee-cos-mode t)))
+
 
 
 ;;auto-pair
@@ -169,8 +175,8 @@
 ;; (setq mf-max-width 1600)  ;; Pixel width of main monitor
 
 ;;; ido-mode
-(setq ido-everywhere 1)
-(ido-mode 1)
+;; (setq ido-everywhere 1)
+;; (ido-mode 1)
 
 ;;; display tooltips in the echo:
 (tooltip-mode -1)
