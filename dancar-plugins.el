@@ -31,7 +31,7 @@
 (load-plugin 'git-emacs)
 (load-plugin 'magit)
 (load-plugin 'newcomment)
-(load-plugin 'highlight-symbol)
+;; (load-plugin 'highlight-symbol)
 (load-plugin 'lua-mode)
 (load-plugin 'maxframe)
 (load-plugin 'ido)
@@ -70,6 +70,9 @@
 ;; ================
 
 
+;; nyan-mode
+(nyan-mode)
+
 ;; web-mode
 
 (add-to-list 'auto-mode-alist '("\\.phtml\\'" . web-mode))
@@ -82,7 +85,7 @@
 
 
 ;; highlight-symbol
-(add-hook 'after-change-major-mode-hook 'highlight-symbol-mode)
+;; (add-hook 'after-change-major-mode-hook 'highlight-symbol-mode)
 
 
 ;;coffee-mode
