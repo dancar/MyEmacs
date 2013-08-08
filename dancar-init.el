@@ -1,4 +1,7 @@
 (package-initialize)
+(add-to-list 'package-archives
+             '("melpa" . "http://melpa.milkbox.net/packages/") t)
+
 (add-to-list 'load-path "~/.emacs.d")
 (require 'dancar-customize)
 (require 'dancar-functions)

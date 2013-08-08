@@ -69,4 +69,11 @@
       (kill-region (region-beginning) (region-end))
     (subword-backward-kill 1)))
 
+
+;; Stolen from http://irreal.org/blog/?p=354
+(defun json-format ()
+  (interactive)
+  (save-excursion
+    (shell-command-on-region (mark) (point) "python -m json.tool" (buffer-name) t)))
+
 (provide 'dancar-functions)

@@ -26,6 +26,8 @@
  '(ediff-merge-split-window-function (quote split-window-horizontally))
  '(ediff-split-window-function (quote split-window-horizontally))
  '(ediff-window-setup-function (quote ediff-setup-windows-plain))
+ '(elscreen-display-tab nil)
+ '(elscreen-prefix-key "")
  '(git-state-modeline-decoration (quote git-state-decoration-large-dot))
  '(global-auto-complete-mode t)
  '(global-auto-revert-mode t)
