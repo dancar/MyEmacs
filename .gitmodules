@@ -62,6 +62,3 @@
 [submodule "plugins/deft"]
 	path = plugins/deft
 	url = git://jblevins.org/git/deft.git
-[submodule "plugins/nyan-mode"]
-	path = plugins/nyan-mode
-	url = https://github.com/TeMPOraL/nyan-mode.git
