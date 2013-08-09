@@ -27,38 +27,22 @@
       ))))
 
 ;; Minor modes / helpers:
-(load-plugin 'nyan-mode)
 (load-plugin 'git-emacs)
-(load-plugin 'magit)
 (load-plugin 'newcomment)
 (load-plugin 'highlight-symbol)
 (load-plugin 'maxframe)
 (load-plugin 'ido)
 (load-plugin 'recentf)
-(load-plugin 'color-theme)
-(load-plugin 'expand-region)
 (load-plugin 'dired-details)
 (load-plugin 'dired-details-plus)
 (load-plugin 'inline-string-rectangle)
 (load-plugin 'mark-more-like-this)
-(load-plugin 'multiple-cursors)
-(load-plugin 'yasnippet)
 (load-plugin 'move-lines)
-(load-plugin 'exec-path-from-shell)
-(load-plugin 'auto-complete)
 (load-plugin `ido-f3)
-(load-plugin `autopair)
-(load-plugin `deft)
 (load-plugin 'mic-paren)
-(require 'helm-config)
 ;; Major modes:
 (load-plugin 'scss-mode)
 (load-plugin 'json-mode)
-(load-plugin 'lua-mode)
-(load-plugin 'yaml-mode)
-;; (load-plugin `php-mode)
-;; (load-plugin `markdown-mode)
-;; (load-plugin 'coffee-mode)
 (load-plugin 'web-mode)
 
 ;; Disabled:
@@ -69,12 +53,6 @@
 
 ;; Configurations:
 ;; ================
-
-;; helm-mode
-(helm-mode 1)
-
-;; nyan-mode
-(nyan-mode)
 
 ;; web-mode
 
@@ -91,14 +69,6 @@
 ;; (add-hook 'after-change-major-mode-hook 'highlight-symbol-mode)
 
 
-;;coffee-mode
-(add-hook 'coffee-mode-hook
-          (lambda() (coffee-cos-mode t)))
-
-
-
-;;auto-pair
-;; (autopair-global-mode) ;; enable autopair in all buffers
 
 ;; deft
 ;; configuration based on http://emacs-fu.blogspot.co.il/2011/09/quick-note-taking-with-deft-and-org.html
@@ -109,22 +79,18 @@
       deft-text-mode 'org-mode)
    (global-set-key (kbd "<f9>") 'deft))
 
-;; markdown-mode
-(add-to-list 'auto-mode-alist '("\\.text\\'" . markdown-mode))
-(add-to-list 'auto-mode-alist '("\\.md//'" . markdown-mode))
-
 ;; auto-complete-mode
 ;; http://stackoverflow.com/questions/8095715/emacs-auto-complete-mode-at-startup
 (defun auto-complete-mode-maybe ()
   "No maybe for you. Only AC!"
   (unless (minibufferp (current-buffer))
     (auto-complete-mode 1)))
-(global-auto-complete-mode 1)
+
 ;; http://stackoverflow.com/questions/12660428/emacs-auto-complete-dont-trigger-on-ret-in-inline-suggestion
-(define-key ac-completing-map "\C-m" nil)
-(define-key ac-completing-map (kbd "<tab>") nil)
+;; (define-key ac-completing-map "\C-m" nil)
+;; (define-key ac-completing-map (kbd "<tab>") nil)
 (setq ac-use-menu-map t)
-(define-key ac-menu-map "\C-m" 'ac-complete)
+;; (define-key ac-menu-map "\C-m" 'ac-complete)
 
 ;; ruby-mode special files:
 (add-to-list 'auto-mode-alist '("Gemfile$" . ruby-mode))
@@ -162,12 +128,6 @@
 (defun ido-disable-line-truncation () (set (make-local-variable 'truncate-lines) nil))
 (add-hook 'ido-minibuffer-setup-hook 'ido-disable-line-truncation)
 
-;; sass-mode
-;; (add-to-list 'load-path "~/.emacs.d/plugins/sass-mode")
-;; (autoload 'sass-mode "js2-mode" nil t)
-;; (add-to-list 'auto-mode-alist '("\\.scss$" . sass-mode))
-;; (require 'sass-mode)
-
 ;;;max-frame
 (add-hook 'window-setup-hook 'maximize-frame t)
 ;; (setq mf-max-width 1600)  ;; Pixel width of main monitor
@@ -189,15 +149,6 @@
   (if (find-file (ido-completing-read "Find recent file: " recentf-list))
       (message "Opening file...")
     (message "Aborting")))
-
-;;;color theme:
-(eval-after-load "color-theme"
-  '(progn
-     (color-theme-initialize)
-     ;; (color-theme-hober)
-     ;; (color-theme-comidia)
-     (color-theme-dark-laptop)
-     ))
 
 ;;Expand-region
 (global-set-key (kbd "C-=") 'er/expand-region)
@@ -259,11 +210,7 @@ vi style of % jumping to matching brace."
 ;;mic-parent
 (paren-activate)
 
-;;; gpicker
-;(global-set-key (kbd "C-x f") `gpicker-find-file)
-
-;;; multiple cursors
-(global-set-key (kbd "C-S-c C-S-c") 'mc/edit-lines)
+;;; munltiple cursors
 
 ;;; full path in title
 (setq frame-title-format
@@ -274,13 +221,6 @@ vi style of % jumping to matching brace."
 ;;exec-path
 (exec-path-from-shell-initialize)
 (mapcar 'exec-path-from-shell-copy-env '())
-
-;; yasnippet
-(yas-global-mode 1)
-
-;; yaml-mode
-(add-to-list 'auto-mode-alist '("\\.yml$" . yaml-mode))
-
 
 ;;join-region
 (defun join-region (beg end)
@@ -303,7 +243,6 @@ user."
     (unless (file-writable-p file)
       (setq file (concat "/sudo:root@localhost:" file)))
     (find-file file)))
-;; or some other keybinding...
 (global-set-key (kbd "C-x F") 'djcb-find-file-as-root)
 
 (provide 'dancar-plugins)

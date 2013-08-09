@@ -1,14 +1,12 @@
 ;; (l) dancar
+
+(global-set-key (kbd "C-S-c C-S-c") 'mc/edit-lines)
 (global-set-key (kbd "C-;") `previous-buffer)
 (global-set-key (kbd "C-:") `next-buffer)
-
 (global-set-key (kbd "C-w") 'dancar-kill)
-
 (global-set-key (kbd "C-M-|") 'deft)
-
 (global-set-key (kbd "C-c C-b") `bookmark-here-set)
 (global-set-key (kbd "C-c C-j") `bookmark-here-jump)
-
 (global-set-key (kbd "M-P") `delete-indentation)
 (global-set-key (kbd "M-N") (lambda() (interactive (delete-indentation 1))))
 (global-set-key (kbd "C-c C-k") (lambda () (interactive) (kill-buffer (current-buffer))))

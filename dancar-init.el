@@ -5,8 +5,8 @@
 (add-to-list 'load-path "~/.emacs.d")
 (require 'dancar-customize)
 (require 'dancar-functions)
-(require 'dancar-keys)
 (require 'dancar-plugins)
+(require 'dancar-keys)
 
 ;; Start emacs server when in windows system:
 (when window-system (server-start))
@@ -41,3 +41,6 @@
 ;; Display pluging load errors:
 (if (> (list-length plugin-error-list) 0)
     (error "Plugin Errors %s" plugin-error-list))
+
+;; load color-theme:
+(load-theme 'manoj-dark)
