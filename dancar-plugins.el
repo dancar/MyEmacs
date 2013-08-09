@@ -5,7 +5,7 @@
 ;; add all subdirs of plugins to load path:
 (mapcar (lambda (dir) (add-to-list 'load-path dir)) (directory-files "~/.emacs.d/plugins/" 1 "^[-_a-zA-Z0-9]+$"))
 ;; dependencies:
-(add-to-list 'load-path "~/.emacs.d/plugins/js2-refactor/util/vendor")
+
 (add-to-list 'load-path "~/.emacs.d/plugins/auto-complete/lib/popup")
 
 ;; Plugins:
@@ -41,7 +41,6 @@
 (load-plugin 'dired-details-plus)
 (load-plugin 'inline-string-rectangle)
 (load-plugin 'mark-more-like-this)
-(load-plugin 'js2-refactor)
 (load-plugin 'multiple-cursors)
 (load-plugin 'yasnippet)
 (load-plugin 'move-lines)
@@ -56,7 +55,6 @@
 (load-plugin 'scss-mode)
 (load-plugin 'json-mode)
 (load-plugin 'lua-mode)
-(load-plugin 'js2-mode)
 (load-plugin 'yaml-mode)
 ;; (load-plugin `php-mode)
 ;; (load-plugin `markdown-mode)
@@ -226,6 +224,8 @@ vi style of % jumping to matching brace."
 ;;js2
 (autoload 'js2-mode "js2-mode" nil t)
 (add-to-list 'auto-mode-alist '("\\.js$" . js2-mode))
+(js2r-add-keybindings-with-prefix "C-c C-m")
+
 
 ;;js2-refactor
 ;; Usage

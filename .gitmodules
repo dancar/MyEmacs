@@ -4,9 +4,6 @@
 [submodule "plugins/git-emacs"]
 	path = plugins/git-emacs
 	url = https://github.com/tsgates/git-emacs.git
-[submodule "plugins/js2-refactor"]
-	path = plugins/js2-refactor
-	url = https://github.com/magnars/js2-refactor.el.git
 [submodule "plugins/magit"]
 	path = plugins/magit
 	url = https://github.com/magit/magit.git
@@ -25,9 +22,6 @@
 [submodule "plugins/json-mode"]
 	path = plugins/json-mode
 	url = https://github.com/joshwnj/json-mode.git
-[submodule "plugins/js2-mode"]
-	path = plugins/js2-mode
-	url = https://github.com/mooz/js2-mode.git
 [submodule "plugins/helm"]
 	path = plugins/helm
 	url = https://github.com/emacs-helm/helm.git
