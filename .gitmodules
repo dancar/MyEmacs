@@ -1,24 +1,6 @@
-[submodule "plugins/expand-region"]
-	path = plugins/expand-region
-	url = https://github.com/magnars/expand-region.el.git
 [submodule "plugins/git-emacs"]
 	path = plugins/git-emacs
 	url = https://github.com/tsgates/git-emacs.git
-[submodule "plugins/magit"]
-	path = plugins/magit
-	url = https://github.com/magit/magit.git
-[submodule "plugins/mark-multiple"]
-	path = plugins/mark-multiple
-	url = https://github.com/magnars/mark-multiple.el.git
-[submodule "plugins/multiple-cursors"]
-	path = plugins/multiple-cursors
-	url = https://github.com/magnars/multiple-cursors.el.git
-[submodule "plugins/yaml-mode"]
-	path = plugins/yaml-mode
-	url = https://github.com/yoshiki/yaml-mode.git
-[submodule "plugins/maxframe"]
-	path = plugins/maxframe
-	url = https://github.com/rmm5t/maxframe.el.git
 [submodule "plugins/json-mode"]
 	path = plugins/json-mode
 	url = https://github.com/joshwnj/json-mode.git
@@ -28,37 +10,7 @@
 [submodule "plugins/sass-mode"]
 	path = plugins/sass-mode
 	url = https://github.com/nex3/sass-mode.git
-[submodule "plugins/auto-complete"]
-        path = plugins/auto-complete
-        url = https://github.com/auto-complete/auto-complete.git
-[submodule "plugins/scss-mode"]
-	path = plugins/scss-mode
-	url = https://github.com/antonj/scss-mode.git
-[submodule "plugins/exec-path-from-shell"]
-	path = plugins/exec-path-from-shell
-	url = https://github.com/purcell/exec-path-from-shell.git
 
-[submodule "plugins/lua-mode"]
-	path = plugins/lua-mode
-	url = http://github.com/immerrr/lua-mode.git
-[submodule "plugins/yasnippet"]
-	path = plugins/yasnippet
-	url = https://github.com/capitaomorte/yasnippet.git
 [submodule "plugins/ido-f3"]
 	path = plugins/ido-f3
 	url = git@github.com:dancar/ido-f3
-[submodule "plugins/php-mode"]
-	path = plugins/php-mode
-	url = https://github.com/ejmr/php-mode.git
-[submodule "plugins/markdown-mode"]
-	path = plugins/markdown-mode
-	url = https://github.com/defunkt/markdown-mode.git
-[submodule "plugins/autopair"]
-	path = plugins/autopair
-	url = https://github.com/capitaomorte/autopair.git
-[submodule "plugins/coffee-mode"]
-	path = plugins/coffee-mode
-	url = https://github.com/defunkt/coffee-mode.git
-[submodule "plugins/deft"]
-	path = plugins/deft
-	url = git://jblevins.org/git/deft.git
