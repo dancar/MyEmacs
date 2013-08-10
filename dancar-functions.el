@@ -76,4 +76,26 @@
   (save-excursion
     (shell-command-on-region (mark) (point) "python -m json.tool" (buffer-name) t)))
 
+(defun new-buffer ()
+  "Creates new buffers with iterative names
+  (l) dancar"
+  (interactive)
+  (let*
+      ((i 0)
+       (name (buffer-name (current-buffer)))
+       )
+
+    (message name)
+    (message "here")
+    (while (get-buffer name)
+      (message "there")
+      (set `i (+ i 1))
+      (set `name
+           (concat "new-" (number-to-string i)))
+      (message name)
+      (message "ok"))
+    (switch-to-buffer name)
+    )
+  )
+
 (provide 'dancar-functions)
