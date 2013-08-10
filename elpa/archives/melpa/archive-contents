@@ -3146,7 +3146,7 @@
 	 (0 3)))
        "fuzzy matching with good sorting [github]" single])
  (floobits .
-	   [(20130808 1659)
+	   [(20130808 1718)
 	    ((json
 	      (1 2))
 	     (highlight
@@ -3349,7 +3349,7 @@
 	 [(20130701 1012)
 	  nil "Erlang major mode [github]" tar])
  (ergoemacs-mode .
-		 [(20130808 1523)
+		 [(20130808 2252)
 		  ((org-cua-dwim
 		    (0 5)))
 		  "Emacs mode based on common modern software interface and ergonomics. [github]" tar])
@@ -3882,10 +3882,10 @@
 	     [(20130619 1241)
 	      nil "Perl code editing commands for Emacs [github]" single])
  (confluence-edit .
-		  [(20130804 2241)
+		  [(20130808 2150)
 		   nil "Emacs mode for editing confluence content buffers [svn]" single])
  (confluence .
-	     [(20130804 2240)
+	     [(20130808 2150)
 	      ((xml-rpc
 		(1 6 4))
 	       (confluence-edit
