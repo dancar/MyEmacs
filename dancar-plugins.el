@@ -256,7 +256,6 @@ user."
 ;; helm-mode is activated in dancar-init, don't know why it didn't work from here...
 (require 'helm-ls-git)
 
-(setq helm-buffer-max-length nil)
 (defun helm-dan ()
   (interactive)
   (require 'helm-files)
