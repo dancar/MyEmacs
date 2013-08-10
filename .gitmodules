@@ -7,9 +7,6 @@
 [submodule "plugins/helm"]
 	path = plugins/helm
 	url = https://github.com/emacs-helm/helm.git
-[submodule "plugins/sass-mode"]
-	path = plugins/sass-mode
-	url = https://github.com/nex3/sass-mode.git
 
 [submodule "plugins/ido-f3"]
 	path = plugins/ido-f3

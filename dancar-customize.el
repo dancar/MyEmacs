@@ -37,10 +37,17 @@
  '(grep-find-command (quote ("find . -type f -exec grep -nH -e  {} ;" . 34)))
  '(grep-find-ignored-files (quote (".#*" "*.o" "*~" "*.bin" "*.lbin" "*.so" "*.a" "*.ln" "*.blg" "*.bbl" "*.elc" "*.lof" "*.glo" "*.idx" "*.lot" "*.fmt" "*.tfm" "*.class" "*.fas" "*.lib" "*.mem" "*.x86f" "*.sparcf" "*.dfsl" "*.pfsl" "*.d64fsl" "*.p64fsl" "*.lx64fsl" "*.lx32fsl" "*.dx64fsl" "*.dx32fsl" "*.fx64fsl" "*.fx32fsl" "*.sx64fsl" "*.sx32fsl" "*.wx64fsl" "*.wx32fsl" "*.fasl" "*.ufsl" "*.fsl" "*.dxl" "*.lo" "*.la" "*.gmo" "*.mo" "*.toc" "*.aux" "*.cp" "*.fn" "*.ky" "*.pg" "*.tp" "*.vr" "*.cps" "*.fns" "*.kys" "*.pgs" "*.tps" "*.vrs" "*.pyc" "*.pyo" "ext-*.js")))
  '(grep-find-template "find . <X> -type f <F> -exec grep <C> -nH -e <R> {} \\;")
+ '(helm-always-two-windows t)
  '(helm-idle-delay 0.01)
  '(helm-input-idle-delay 0.01)
+ '(helm-ls-git-show-abs-or-relative (quote relative))
+ '(helm-mode nil)
  '(highlight-symbol-idle-delay 0)
  '(highlight-symbol-on-navigation-p t)
+ '(icicle-Completions-max-columns nil)
+ '(icicle-Completions-window-max-height 70)
+ '(icicle-TAB/S-TAB-only-completes-flag nil)
+ '(icicle-show-Completions-initially-flag t)
  '(ido-enable-flex-matching nil)
  '(ido-max-work-file-list 100)
  '(indent-tabs-mode nil)
@@ -83,6 +90,7 @@
  '(tool-bar-mode nil)
  '(truncate-lines t)
  '(x-gtk-whole-detached-tool-bar nil)
+ '(yas-global-mode t nil (yasnippet))
  '(yas-good-grace nil)
  '(yas-use-menu (quote full)))
 (custom-set-faces
@@ -92,6 +100,6 @@
  ;; If there is more than one, they won't work right.
  '(highlight-symbol-face ((t (:underline "Blue"))))
  '(magit-item-highlight ((t (:background "gray8"))))
- '(paren-face-match ((t (:inverse-video t)))))
+ '(paren-face-match ((t (:inverse-video t))) t))
 
 (provide 'dancar-customize)

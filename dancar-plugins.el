@@ -38,21 +38,50 @@
 (load-plugin 'inline-string-rectangle)
 (load-plugin 'mark-more-like-this)
 (load-plugin 'move-lines)
-(load-plugin `ido-f3)
-(load-plugin 'mic-paren)
+;; (load-plugin `f3)
 ;; Major modes:
 (load-plugin 'scss-mode)
 (load-plugin 'json-mode)
-(load-plugin 'web-mode)
-
-;; Disabled:
-;; ================
-;; (require 'gpicker)
-;; (require 'sr-speedbar)
-;; (require 'tail)
 
 ;; Configurations:
 ;; ================
+
+;; helm
+(setq helm-buffer-max-length nil)
+(defun helm-dan ()
+  (interactive)
+  (require 'helm-files)
+  (helm-other-buffer '(helm-source-buffers-list
+                       helm-source-ls-git-status
+                       helm-source-recentf
+                       helm-source-ls-git
+                       helm-source-buffer-not-found)
+                     "*helm dan*"))
+;; line jump keys:
+(defun helm-big-jump-next-lines ()
+  (interactive)
+  (dotimes (_ 5)
+    (helm-next-line)))
+
+(defun helm-big-jump-previous-lines ()
+  (interactive)
+  (dotimes (_ 5)
+    (helm-previous-line)))
+
+(defun helm-jump-next-lines ()
+  (interactive)
+  (dotimes (_ 2)
+    (helm-next-line)))
+
+(defun helm-jump-previous-lines ()
+  (interactive)
+  (dotimes (_ 2)
+    (helm-previous-line)))
+
+(define-key helm-map (kbd "C-M-n") `helm-jump-next-lines)
+(define-key helm-map (kbd "C-M-p") `helm-jump-previous-lines)
+(define-key helm-map (kbd "C-M-S-n") `helm-big-jump-next-lines)
+(define-key helm-map (kbd "C-M-S-p") `helm-big-jump-previous-lines)
 
 ;; web-mode
 
@@ -206,9 +235,6 @@ vi style of % jumping to matching brace."
      (set-face-foreground 'magit-diff-del "red3")
      (when (not window-system)
        (set-face-background 'magit-item-highlight "black"))))
-
-;;mic-parent
-(paren-activate)
 
 ;;; munltiple cursors
 
