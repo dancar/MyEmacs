@@ -71,10 +71,24 @@
    (global-set-key (kbd "<f9>") 'deft))
 
 ;; auto-complete-mode
-;; BTW, for some reason, when using auto-complete with tag greater than 0.3, it makes the "(" key a prefix key.
+(require 'auto-complete)
+(global-auto-complete-mode 1)
 
-;; (require 'auto-complete)
-;; (global-auto-complete-mode 1)
+;; my shortcut keys:
+(defun ac-jump-next ()
+  (interactive)
+  (dotimes (_ 3)
+    (ac-next)))
+
+(defun ac-jump-previous ()
+  (interactive)
+  (dotimes (_ 3)
+    (ac-previous)))
+
+(define-key ac-completing-map (kbd "C-n") 'ac-next)
+(define-key ac-completing-map (kbd "C-p") 'ac-previous)
+(define-key ac-completing-map (kbd "C-M-n") 'ac-jump-next)
+(define-key ac-completing-map (kbd "C-M-p") 'ac-jump-previous)
 
 ;; http://stackoverflow.com/questions/8095715/emacs-auto-complete-mode-at-startup
 ;; (defun auto-complete-mode-maybe ()
