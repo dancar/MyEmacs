@@ -51,50 +51,6 @@
 ;;icicles
 ;; (icicle-mode)
 
-;; helm
-(helm-mode 1)
-(require 'helm-ls-git)
-
-
-(setq helm-buffer-max-length nil)
-(defun helm-dan ()
-  (interactive)
-  (require 'helm-files)
-  (helm-other-buffer '(
-                       helm-source-buffers-list
-                       helm-source-bookmarks
-                       helm-source-ls-git-status
-                       helm-source-recentf
-                       helm-source-ls-git
-                       helm-source-buffer-not-found
-                       )
-                     "*helm dan*"))
-;; line jump keys:
-(defun helm-big-jump-next-lines ()
-  (interactive)
-  (dotimes (_ 5)
-    (helm-next-line)))
-
-(defun helm-big-jump-previous-lines ()
-  (interactive)
-  (dotimes (_ 5)
-    (helm-previous-line)))
-
-(defun helm-jump-next-lines ()
-  (interactive)
-  (dotimes (_ 2)
-    (helm-next-line)))
-
-(defun helm-jump-previous-lines ()
-  (interactive)
-  (dotimes (_ 2)
-    (helm-previous-line)))
-
-(define-key helm-map (kbd "C-M-n") `helm-jump-next-lines)
-(define-key helm-map (kbd "C-M-p") `helm-jump-previous-lines)
-(define-key helm-map (kbd "C-M-S-n") `helm-big-jump-next-lines)
-(define-key helm-map (kbd "C-M-S-p") `helm-big-jump-previous-lines)
-
 ;; web-mode
 
 (add-to-list 'auto-mode-alist '("\\.phtml\\'" . web-mode))
@@ -115,6 +71,9 @@
    (global-set-key (kbd "<f9>") 'deft))
 
 ;; auto-complete-mode
+(require 'auto-complete)
+;; (global-auto-complete-mode 1)
+
 ;; http://stackoverflow.com/questions/8095715/emacs-auto-complete-mode-at-startup
 (defun auto-complete-mode-maybe ()
   "No maybe for you. Only AC!"
@@ -276,5 +235,48 @@ user."
       (setq file (concat "/sudo:root@localhost:" file)))
     (find-file file)))
 (global-set-key (kbd "C-x F") 'djcb-find-file-as-root)
+
+;; helm
+;; helm-mode is activated in dancar-init, don't know why it didn't work from here...
+(require 'helm-ls-git)
+
+(setq helm-buffer-max-length nil)
+(defun helm-dan ()
+  (interactive)
+  (require 'helm-files)
+  (helm-other-buffer '(
+                       helm-source-buffers-list
+                       helm-source-bookmarks
+                       helm-source-ls-git-status
+                       helm-source-recentf
+                       helm-source-ls-git
+                       helm-source-buffer-not-found
+                       )
+                     "*helm dan*"))
+;; line jump keys:
+(defun helm-big-jump-next-lines ()
+  (interactive)
+  (dotimes (_ 5)
+    (helm-next-line)))
+
+(defun helm-big-jump-previous-lines ()
+  (interactive)
+  (dotimes (_ 5)
+    (helm-previous-line)))
+
+(defun helm-jump-next-lines ()
+  (interactive)
+  (dotimes (_ 2)
+    (helm-next-line)))
+
+(defun helm-jump-previous-lines ()
+  (interactive)
+  (dotimes (_ 2)
+    (helm-previous-line)))
+
+(define-key helm-map (kbd "C-M-n") `helm-jump-next-lines)
+(define-key helm-map (kbd "C-M-p") `helm-jump-previous-lines)
+(define-key helm-map (kbd "C-M-S-n") `helm-big-jump-next-lines)
+(define-key helm-map (kbd "C-M-S-p") `helm-big-jump-previous-lines)
 
 (provide 'dancar-plugins)

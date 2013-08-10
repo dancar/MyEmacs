@@ -44,3 +44,4 @@
 
 ;; load color-theme:
 (load-theme 'manoj-dark)
+(helm-mode 1)
