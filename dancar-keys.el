@@ -1,7 +1,7 @@
 ;; (l) dancar
 
-(global-set-key (kbd "M-W") 'copy-to-register-1)
-(global-set-key (kbd "C-Y") 'paste-from-register-1)
+(global-set-key (kbd "C-c C-w") 'copy-to-register-1)
+(global-set-key (kbd "C-c C-y") 'paste-from-register-1)
 
 (global-set-key (kbd "C-S-c C-S-c") 'mc/edit-lines)
 (global-set-key (kbd "C-;") `previous-buffer)
