@@ -38,10 +38,12 @@
         "Prevent annoying \"Active processes exist\" query when you quit Emacs."
         (flet ((process-list ())) ad-do-it))
 
+;; load color-theme:
+(load-theme 'manoj-dark)
+
+;; things that didn't work when called from dancar-plugins.el:
+(helm-mode 1)
+
 ;; Display pluging load errors:
 (if (> (list-length plugin-error-list) 0)
     (error "Plugin Errors %s" plugin-error-list))
-
-;; load color-theme:
-(load-theme 'manoj-dark)
-(helm-mode 1)

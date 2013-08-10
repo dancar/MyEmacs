@@ -30,7 +30,6 @@
  '(elscreen-display-tab nil)
  '(elscreen-prefix-key "")
  '(git-state-modeline-decoration (quote git-state-decoration-large-dot))
- '(global-auto-complete-mode t)
  '(global-auto-revert-mode t)
  '(global-linum-mode t)
  '(global-subword-mode t)

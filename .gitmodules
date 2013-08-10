@@ -7,10 +7,6 @@
 [submodule "plugins/helm"]
 	path = plugins/helm
 	url = https://github.com/emacs-helm/helm.git
-
-[submodule "plugins/ido-f3"]
-	path = plugins/ido-f3
-	url = git@github.com:dancar/ido-f3
 [submodule "plugins/magit"]
 	path = plugins/magit
 	url = https://github.com/magit/magit.git

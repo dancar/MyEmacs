@@ -71,19 +71,21 @@
    (global-set-key (kbd "<f9>") 'deft))
 
 ;; auto-complete-mode
-(require 'auto-complete)
+;; BTW, for some reason, when using auto-complete with tag greater than 0.3, it makes the "(" key a prefix key.
+
+;; (require 'auto-complete)
 ;; (global-auto-complete-mode 1)
 
 ;; http://stackoverflow.com/questions/8095715/emacs-auto-complete-mode-at-startup
-(defun auto-complete-mode-maybe ()
-  "No maybe for you. Only AC!"
-  (unless (minibufferp (current-buffer))
-    (auto-complete-mode 1)))
+;; (defun auto-complete-mode-maybe ()
+;;   "No maybe for you. Only AC!"
+;;   (unless (minibufferp (current-buffer))
+;;     (auto-complete-mode 1)))
 
 ;; http://stackoverflow.com/questions/12660428/emacs-auto-complete-dont-trigger-on-ret-in-inline-suggestion
 ;; (define-key ac-completing-map "\C-m" nil)
 ;; (define-key ac-completing-map (kbd "<tab>") nil)
-(setq ac-use-menu-map t)
+;; (setq ac-use-menu-map t)
 ;; (define-key ac-menu-map "\C-m" 'ac-complete)
 
 ;; ruby-mode special files:
