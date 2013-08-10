@@ -47,7 +47,10 @@
  '(icicle-Completions-max-columns nil)
  '(icicle-Completions-window-max-height 70)
  '(icicle-TAB/S-TAB-only-completes-flag nil)
- '(icicle-show-Completions-initially-flag t)
+ '(icicle-modal-cycle-down-keys (quote ([down] [nil mouse-5] [mouse-5] "")))
+ '(icicle-modal-cycle-up-action-keys (quote ([C-up] [nil (control mouse-4)] [(control mouse-4)])))
+ '(icicle-modal-cycle-up-keys (quote ([up] [nil mouse-4] [mouse-4] "")))
+ '(icicle-show-Completions-initially-flag nil)
  '(ido-enable-flex-matching nil)
  '(ido-max-work-file-list 100)
  '(indent-tabs-mode nil)
@@ -99,7 +102,7 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(highlight-symbol-face ((t (:underline "Blue"))))
- '(magit-item-highlight ((t (:background "gray8"))))
+ '(magit-item-highlight ((t (:background "gray8"))) t)
  '(paren-face-match ((t (:inverse-video t))) t))
 
 (provide 'dancar-customize)
