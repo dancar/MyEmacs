@@ -40,6 +40,7 @@
 ;; Major modes:
 (load-plugin 'scss-mode)
 (load-plugin 'json-mode)
+(load-plugin 'copy-paste-from-register)
 
 ;; Configurations:
 ;; ================
