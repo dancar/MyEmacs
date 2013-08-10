@@ -1834,7 +1834,7 @@
 	    [(20120716 1647)
 	     nil "advanced highlighting of matching parentheses [wiki]" single])
  (mew .
-      [(20130809 2152)
+      [(20130810 1523)
        nil "Messaging in the Emacs World [github]" tar])
  (metaweblog .
 	     [(20130707 1701)
@@ -2484,7 +2484,7 @@
 	 [(20130723 2323)
 	  nil "Functions to manipulate colors, including RGB hex strings. [wiki]" single])
  (heroku-theme .
-	       [(20130809 2329)
+	       [(20130810 43)
 		nil "Heroku color theme [github]" single])
  (heroku .
 	 [(20120629 1113)
@@ -2634,7 +2634,7 @@
 	    (20120509)))
 	  "helm-sources and some utilities for GNU R. [github]" single])
  (helm .
-       [(20130809 1342)
+       [(20130810 752)
 	nil "Helm is an Emacs incremental and narrowing framework [github]" tar])
  (header2 .
 	  [(20130723 2321)

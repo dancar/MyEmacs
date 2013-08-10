@@ -4,9 +4,6 @@
 ;; ================
 ;; add all subdirs of plugins to load path:
 (mapcar (lambda (dir) (add-to-list 'load-path dir)) (directory-files "~/.emacs.d/plugins/" 1 "^[-_a-zA-Z0-9]+$"))
-;; dependencies:
-
-(add-to-list 'load-path "~/.emacs.d/plugins/auto-complete/lib/popup")
 
 ;; Plugins:
 ;; ================
@@ -47,19 +44,30 @@
 ;; Configurations:
 ;; ================
 
+;;highlight-symbol
+
+(highlight-symbol-mode 1)
+
 ;;icicles
-(icicle-mode)
+;; (icicle-mode)
 
 ;; helm
+(helm-mode 1)
+(require 'helm-ls-git)
+
+
 (setq helm-buffer-max-length nil)
 (defun helm-dan ()
   (interactive)
   (require 'helm-files)
-  (helm-other-buffer '(helm-source-buffers-list
+  (helm-other-buffer '(
+                       helm-source-buffers-list
+                       helm-source-bookmarks
                        helm-source-ls-git-status
                        helm-source-recentf
                        helm-source-ls-git
-                       helm-source-buffer-not-found)
+                       helm-source-buffer-not-found
+                       )
                      "*helm dan*"))
 ;; line jump keys:
 (defun helm-big-jump-next-lines ()
@@ -96,12 +104,6 @@
 (add-to-list 'auto-mode-alist '("\\.erb\\'" . web-mode))
 (add-to-list 'auto-mode-alist '("\\.mustache\\'" . web-mode))
 (add-to-list 'auto-mode-alist '("\\.djhtml\\'" . web-mode))
-
-
-;; highlight-symbol
-;; (add-hook 'after-change-major-mode-hook 'highlight-symbol-mode)
-
-
 
 ;; deft
 ;; configuration based on http://emacs-fu.blogspot.co.il/2011/09/quick-note-taking-with-deft-and-org.html
@@ -233,12 +235,12 @@ vi style of % jumping to matching brace."
 ;; C-S-down and C-S-up moves the current line up or down. If the line is an element in an object or array literal, it makes sure that the commas are still correctly placed.
 
 ;; change magit diff colors
-;; (eval-after-load 'magit
-;;   '(progn
-;;      (set-face-foreground 'magit-diff-add "green3")
-;;      (set-face-foreground 'magit-diff-del "red3")
-;;      (when (not window-system)
-;;        (set-face-background 'magit-item-highlight "black"))))
+(eval-after-load 'magit
+  '(progn
+     (set-face-foreground 'magit-diff-add "green3")
+     (set-face-foreground 'magit-diff-del "red3")
+     (when (not window-system)
+       (set-face-background 'magit-item-highlight "black"))))
 
 ;;; munltiple cursors
 

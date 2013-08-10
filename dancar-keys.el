@@ -34,7 +34,7 @@
 (global-set-key (kbd "S-s") `save-buffer)
 ;; (global-set-key (kbd "C-\\") `ido-switch-buffer)
 ;; (global-set-key (kbd "C-\\") `icicle-buffer)
-(global-set-key (kbd "C-\\") `helm-mini)
+(global-set-key (kbd "C-\\") `helm-dan)
 
 (global-set-key (kbd "C-<return>") `go-line)
 (global-set-key (kbd "M-k") (lambda () (interactive) (back-to-indentation) (kill-line)))
