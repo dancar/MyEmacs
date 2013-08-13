@@ -42,9 +42,14 @@
 (load-plugin 'scss-mode)
 (load-plugin 'json-mode)
 (load-plugin 'copy-paste-from-register)
+(load-plugin 'phi-search)
 
 ;; Configurations:
 ;; ================
+;; phi-search
+
+(global-set-key (kbd "C-s") 'phi-search)
+(global-set-key (kbd "C-r") 'phi-search-backward)
 
 ;;highlight-symbol
 

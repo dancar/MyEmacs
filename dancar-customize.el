@@ -90,6 +90,8 @@
  '(sr-speedbar-max-width 100)
  '(sr-speedbar-right-side nil)
  '(standard-indent 2)
+ '(tabbar-background-color nil)
+ '(tabbar-mode t nil (tabbar))
  '(tail-hide-delay 7)
  '(tail-max-size 7)
  '(tool-bar-mode nil)
