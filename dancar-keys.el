@@ -1,6 +1,10 @@
 ;; (l) dancar
 
-(global-set-key (kbd "C-M-w") 'copy-to-register-1)
+
+
+(global-set-key (kbd "C-x C-o") 'other-window)
+
+
 (global-set-key (kbd "C-M-y") 'paste-from-register-1)
 (global-set-key (kbd "C-M-S-Y") 'browse-kill-ring)
 

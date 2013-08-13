@@ -87,10 +87,10 @@
   (dotimes (_ 3)
     (ac-previous)))
 
-(define-key ac-completing-map (kbd "C-n") 'ac-next)
-(define-key ac-completing-map (kbd "C-p") 'ac-previous)
-(define-key ac-completing-map (kbd "C-M-n") 'ac-jump-next)
-(define-key ac-completing-map (kbd "C-M-p") 'ac-jump-previous)
+;; (define-key ac-completing-map (kbd "C-n") 'ac-next)
+;; (define-key ac-completing-map (kbd "C-p") 'ac-previous)
+;; (define-key ac-completing-map (kbd "C-M-n") 'ac-jump-next)
+;; (define-key ac-completing-map (kbd "C-M-p") 'ac-jump-previous)
 
 ;; http://stackoverflow.com/questions/8095715/emacs-auto-complete-mode-at-startup
 ;; (defun auto-complete-mode-maybe ()
