@@ -4,9 +4,6 @@
 [submodule "plugins/json-mode"]
 	path = plugins/json-mode
 	url = https://github.com/joshwnj/json-mode.git
-[submodule "plugins/helm"]
-	path = plugins/helm
-	url = https://github.com/emacs-helm/helm.git
 [submodule "plugins/magit"]
 	path = plugins/magit
 	url = https://github.com/magit/magit.git

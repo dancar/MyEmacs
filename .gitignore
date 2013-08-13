@@ -5,3 +5,4 @@ bookmarks
 .yas-compiled-snippets.el
 tramp
 session.*
+*.elc
