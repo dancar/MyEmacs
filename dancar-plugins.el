@@ -37,19 +37,19 @@
 (load-plugin 'mark-more-like-this)
 (load-plugin 'move-lines)
 (load-plugin 'browse-kill-ring)
+
 ;; (load-plugin `f3)
 ;; Major modes:
 (load-plugin 'scss-mode)
 (load-plugin 'json-mode)
 (load-plugin 'copy-paste-from-register)
-(load-plugin 'phi-search)
-
+;; (load-plugin 'phi-search)
+(load-plugin 'sr-speedbar)
 ;; Configurations:
 ;; ================
-;; phi-search
 
-(global-set-key (kbd "C-s") 'phi-search)
-(global-set-key (kbd "C-r") 'phi-search-backward)
+;; elscreen
+(elscreen-start)
 
 ;;highlight-symbol
 

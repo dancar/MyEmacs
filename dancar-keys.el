@@ -1,7 +1,7 @@
 ;; (l) dancar
 
 
-
+(global-set-key (kbd "C-c C-=") 'sr-speedbar-toggle)
 (global-set-key (kbd "C-x C-o") 'other-window)
 
 

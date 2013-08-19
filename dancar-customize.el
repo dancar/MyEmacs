@@ -3,7 +3,6 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(ac-auto-start 5)
  '(auto-save-default nil)
  '(auto-save-file-name-transforms (quote ((".*" "~/.emacs.d/autosaves/\\1" t))))
  '(backup-directory-alist (quote ((".*" . "~/.emacs.d/backups/"))))
@@ -25,7 +24,7 @@
  '(ediff-split-window-function (quote split-window-horizontally))
  '(ediff-window-setup-function (quote ediff-setup-windows-plain))
  '(elscreen-display-tab nil)
- '(elscreen-prefix-key "")
+ '(elscreen-tab-display-kill-screen nil)
  '(git-state-modeline-decoration (quote git-state-decoration-large-dot))
  '(global-auto-revert-mode t)
  '(global-linum-mode t)
@@ -86,12 +85,12 @@
  '(show-paren-mode t)
  '(show-paren-style (quote parenthesis))
  '(speedbar-show-unknown-files t)
+ '(sr-speedbar-auto-refresh nil)
  '(sr-speedbar-delete-windows t)
  '(sr-speedbar-max-width 100)
  '(sr-speedbar-right-side nil)
+ '(sr-speedbar-width-x 40)
  '(standard-indent 2)
- '(tabbar-background-color nil)
- '(tabbar-mode t nil (tabbar))
  '(tail-hide-delay 7)
  '(tail-max-size 7)
  '(tool-bar-mode nil)
