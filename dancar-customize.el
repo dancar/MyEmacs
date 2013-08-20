@@ -8,6 +8,7 @@
  '(backup-directory-alist (quote ((".*" . "~/.emacs.d/backups/"))))
  '(blink-cursor-mode t)
  '(blink-matching-delay 0.5)
+ '(bookmark-default-file "~/.emacs.d/.emacs.bmk")
  '(calendar-daylight-time-offset 120)
  '(calendar-daylight-time-zone-name "Israel")
  '(calendar-latitude 32.077272)
