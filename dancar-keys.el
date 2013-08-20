@@ -1,5 +1,16 @@
 ;; (l) dancar
 
+;; MBP adoption:
+(global-unset-key (kbd "s-k"))
+(global-unset-key (kbd "s-w"))
+(global-unset-key (kbd "s-p"))
+(global-unset-key (kbd "s-d"))
+(global-unset-key (kbd "s-f"))
+(global-unset-key (kbd "s-b"))
+(global-unset-key (kbd "s-x"))
+
+
+(global-set-key (kbd "C-z \"") 'helm-elscreen)
 
 (global-set-key (kbd "C-c C-=") 'sr-speedbar-toggle)
 (global-set-key (kbd "C-x C-o") 'other-window)
