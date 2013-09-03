@@ -175,6 +175,8 @@
 
 ;;; recent-f
 (recentf-mode t)
+(recentf-cleanup)
+
 ;; get rid of `find-file-read-only' and replace it with something more useful.
 (defun ido-recentf-open ()
   "Use `ido-completing-read' to \\[find-file] a recent file"

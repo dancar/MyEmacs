@@ -36,7 +36,7 @@
  '(grep-find-template "find . <X> -type f <F> -exec grep <C> -nH -e <R> {} \\;")
  '(helm-always-two-windows t)
  '(helm-boring-buffer-regexp-list (quote ("\\` " "\\*helm" "\\*helm-mode" "\\*Echo Area" "\\*Minibuf" "\\*magit-process*" "\\*magit-edit-log*")))
- '(helm-buffer-max-length nil)
+ '(helm-buffer-max-length 40)
  '(helm-ff-auto-update-initial-value nil)
  '(helm-idle-delay 0.01)
  '(helm-input-idle-delay 0.01)
@@ -81,6 +81,7 @@
  '(scss-compile-at-save nil)
  '(scss-sass-command "compass compile")
  '(set-mark-command-repeat-pop t)
+ '(sh-basic-offset 2)
  '(sh-indentation 2)
  '(shift-select-mode nil)
  '(show-paren-mode t)
@@ -106,6 +107,7 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(highlight-symbol-face ((t (:underline "Blue"))))
+ '(idle-highlight ((t (:inherit region :background "RoyalBlue4"))))
  '(magit-item-highlight ((t (:background "gray8"))))
  '(paren-face-match ((t (:inverse-video t))) t))
 

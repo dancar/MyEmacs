@@ -1,6 +1,8 @@
 ;; (l) dancar
 
 
+(global-set-key (kbd "C-c n") 'new-buffer)
+
 ;; MBP Adaptation:
 
 (fset 'init_kbd_fn
@@ -34,7 +36,7 @@
 (global-set-key (kbd "s-s") search-map)
 (global-set-key (kbd "s-;") 'comment-line-toggle)
 (global-set-key (kbd "s-:") 'eval-expression)
-
+(global-set-key (kbd "s-!") 'shell-command)
 ;; Digits:
 (global-set-key (kbd "s-0") 'digit-argument)
 (global-set-key (kbd "s-1") 'digit-argument)
@@ -52,7 +54,9 @@
 
 (global-set-key (kbd "s-g s-g") 'goto-line)
 (global-set-key (kbd "s-s r") 'rgrep)
-(global-set-key (kbd "s-<f3>") 'highlight-symbol-next)
+(global-set-key (kbd "s-q") 'highlight-symbol-next)
+(global-set-key (kbd "s-Q") 'highlight-symbol-prev)
+(global-set-key (kbd "C-c C-h") `highlight-symbol-at-point)
 (global-set-key (kbd "C-z \"") 'helm-elscreen)
 
 (global-set-key (kbd "C-c C-=") 'sr-speedbar-toggle)

@@ -8,6 +8,9 @@
 (require 'dancar-plugins)
 (require 'dancar-keys)
 
+;; Ding is annoying:
+(setq ring-bell-function (lambda() (message "Beep.")))
+
 ;; Start emacs server when in windows system:
 (when window-system (server-start))
 
