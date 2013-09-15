@@ -15,9 +15,9 @@
   (newline-and-indent)
   (previous-line)
   (end-of-line)
-    (if (equal major-mode `coffee-mode)
+  (if (equal major-mode `coffee-mode)
       (coffee-newline-and-indent)
-      (newline-and-indent)))
+    (newline-and-indent)))
 
 (defun same-issue ()
   "Copies issue number to commit message (c) dancar"
@@ -58,7 +58,7 @@
       (bookmark-jump "notes"))))
 
 (fset 'little-coffee-window
-   (lambda (&optional arg) "Keyboard macro." (interactive "p") (kmacro-exec-ring-item (quote ([24 49 24 50 C-tab 21 21 134217848 115 104 114 105 tab return C-tab] 0 "%d")) arg)))
+      (lambda (&optional arg) "Keyboard macro." (interactive "p") (kmacro-exec-ring-item (quote ([24 49 24 50 C-tab 21 21 134217848 115 104 114 105 tab return C-tab] 0 "%d")) arg)))
 
 
 (defun dancar-kill ()
@@ -98,4 +98,16 @@
     )
   )
 
+(defun indent-selection (count)
+  (interactive)
+  (let (
+        (deactivate-mark)
+        (start (if (use-region-p)
+                   (region-beginning)
+                 (line-beginning-position)))
+        (end (if (use-region-p)
+                 (region-end)
+               (line-end-position)))
+        )
+    (indent-rigidly start end count)))
 (provide 'dancar-functions)

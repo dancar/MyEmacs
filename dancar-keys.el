@@ -1,8 +1,9 @@
 ;; (l) dancar
-
-
+;;;
 (global-set-key (kbd "C-c n") 'new-buffer)
-
+(indent-rigidly (line-beginning-position) (line-end-position) 2)
+(global-set-key [C-s-268632076] (lambda () (interactive) (indent-selection 2)))
+(global-set-key [C-s-268632072] (lambda () (interactive) (indent-selection -2)))
 ;; MBP Adaptation:
 
 (fset 'init_kbd_fn
