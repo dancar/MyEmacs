@@ -69,8 +69,6 @@
 (global-set-key (kbd "C-s-W") 'copy-to-register-1)
 
 (global-set-key (kbd "C-S-c C-S-c") 'mc/edit-lines)
-(global-set-key (kbd "C-;") `previous-buffer)
-(global-set-key (kbd "C-:") `next-buffer)
 (global-set-key (kbd "C-w") 'dancar-kill)
 (global-set-key (kbd "C-s-|") 'deft)
 (global-set-key (kbd "C-c C-b") `bookmark-here-set)
@@ -88,7 +86,6 @@
 (global-set-key (kbd "C-S-s-<delete>") `erase-buffer)
 (global-set-key (kbd "C-S-s-<kp-delete>") `erase-buffer)
 (global-set-key (kbd "C-<kp-delete>") `delete-region)
-(global-set-key (kbd "C-|") `bookmark-jump)
 (global-set-key (kbd "C-c C-g") `magit-status)
 (global-set-key (kbd "C-#") `shell)
 (global-set-key (kbd "S-<f3>") `highlight-symbol-next)
@@ -97,6 +94,10 @@
 (global-set-key (kbd "<home>") `move-beginning-of-line)
 (global-set-key (kbd "<end>") `move-end-of-line)
 (global-set-key (kbd "C-\\") `helm-dan)
+(global-set-key (kbd "C-|") `bookmark-jump)
+(global-set-key (kbd "C-;") `toggle-buffer)
+(global-set-key (kbd "C-:") `switch-to-buffer)
+
 
 (global-set-key (kbd "C-<return>") `go-line)
 (global-set-key (kbd "s-k") (lambda () (interactive) (back-to-indentation) (kill-line)))

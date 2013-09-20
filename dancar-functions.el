@@ -1,3 +1,8 @@
+;; stolen: http://www.emacswiki.org/emacs/SwitchingBuffers#toc5
+(defun toggle-buffer ()
+      (interactive)
+      (switch-to-buffer (other-buffer (current-buffer) 1)))
+
 (defun comment-line-toggle ()
   "Toggle current line or region's commenting
   (c) dancar"
