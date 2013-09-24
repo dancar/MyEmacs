@@ -94,9 +94,8 @@
 (global-set-key (kbd "<home>") `move-beginning-of-line)
 (global-set-key (kbd "<end>") `move-end-of-line)
 (global-set-key (kbd "C-\\") `helm-dan)
-(global-set-key (kbd "C-|") `bookmark-jump)
+(global-set-key (kbd "C-|") `switch-to-buffer)
 (global-set-key (kbd "C-;") `toggle-buffer)
-(global-set-key (kbd "C-:") `switch-to-buffer)
 
 
 (global-set-key (kbd "C-<return>") `go-line)
