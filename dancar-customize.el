@@ -29,6 +29,7 @@
  '(git-state-modeline-decoration (quote git-state-decoration-large-dot))
  '(global-auto-revert-mode t)
  '(global-linum-mode t)
+ '(global-rainbow-delimiters-mode t)
  '(global-subword-mode t)
  '(global-undo-tree-mode t)
  '(grep-find-command (quote ("find . -type f -exec grep -nH -e  {} ;" . 34)))

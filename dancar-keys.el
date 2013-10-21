@@ -1,5 +1,9 @@
 ;; (l) dancar
 ;;;
+
+
+(global-set-key (kbd "C-<f7>") 'coffee-compile-region)
+
 (global-set-key (kbd "C-c n") 'new-buffer)
 (indent-rigidly (line-beginning-position) (line-end-position) 2)
 (global-set-key [C-s-268632076] (lambda () (interactive) (indent-selection 2)))
@@ -10,6 +14,9 @@
    (lambda (&optional arg) "Keyboard macro." (interactive "p") (kmacro-exec-ring-item (quote ([24 111 134217788 19 99 111 109 109 97 110 100 13 6 67108896 19 44 2 24 114 115 49 24 111 24 114 105 49 40 103 108 111 98 97 108 45 115 101 116 45 107 101 121 32 40 107 98 100 32 34 115 45 34 41 32 39 5 41 18 34 13] 0 "%d")) arg)))
 (global-set-key (kbd "<f10>") 'init_kbd_fn)
 
+
+
+(global-set-key (kbd "s-z") 'zap-to-char)
 (global-set-key (kbd "s-}") 'forward-paragraph)
 (global-set-key (kbd "s-{") 'backward-paragraph)
 (global-set-key (kbd "s-m") 'back-to-indentation)
@@ -35,6 +42,7 @@
 (global-set-key (kbd "s-g") goto-map)
 (global-set-key (kbd "s-z") 'zap-to-char)
 (global-set-key (kbd "s-s") search-map)
+(global-set-key (kbd "s-s a") 'ag-project-at-point)
 (global-set-key (kbd "s-;") 'comment-line-toggle)
 (global-set-key (kbd "s-:") 'eval-expression)
 (global-set-key (kbd "s-!") 'shell-command)
