@@ -130,6 +130,7 @@
 (add-to-list 'auto-mode-alist '("Vagrantfile$" . ruby-mode))
 (add-to-list 'auto-mode-alist '("\\.rake$" . ruby-mode))
 (add-to-list 'auto-mode-alist '("Rakefile$" . ruby-mode))
+(add-to-list 'auto-mode-alist '("\\.gemspec$" . ruby-mode))
 
 ;; fix Ruby indentation:
 ;; https://gist.github.com/fujin/5173680
@@ -293,6 +294,14 @@ user."
                        helm-source-buffer-not-found
                        )
                      "*helm dan*"))
+
+(defun helm-dan-buffers ()
+  (interactive)
+  (require 'helm-files)
+  (helm-other-buffer
+   '(helm-source-buffers-list)
+   "*helm dan buffers*"))
+
 ;; line jump keys:
 (defun helm-big-jump-next-lines ()
   (interactive)

@@ -76,11 +76,14 @@
 (global-set-key (kbd "C-s-y") 'paste-from-register-1)
 (global-set-key (kbd "C-s-W") 'copy-to-register-1)
 
-(global-set-key (kbd "C-S-c C-S-c") 'mc/edit-lines)
+(global-set-key [C-s-268632083] 'mc/edit-lines)
 (global-set-key (kbd "C-w") 'dancar-kill)
 (global-set-key (kbd "C-s-|") 'deft)
+
 (global-set-key (kbd "C-c C-b") `bookmark-here-set)
 (global-set-key (kbd "C-c C-j") `bookmark-here-jump)
+(global-set-key (kbd "C-c b") `bookmark-here-set)
+(global-set-key (kbd "C-c j") `bookmark-here-jump)
 
 (global-set-key (kbd "s-P") `delete-indentation)
 (global-set-key (kbd "s-N") (lambda() (interactive (delete-indentation 1))))
@@ -101,8 +104,8 @@
 (global-set-key (kbd "C-<f3>") `highlight-symbol-at-point)
 (global-set-key (kbd "<home>") `move-beginning-of-line)
 (global-set-key (kbd "<end>") `move-end-of-line)
-(global-set-key (kbd "C-\\") `helm-dan)
-(global-set-key (kbd "C-|") `switch-to-buffer)
+(global-set-key (kbd "C-\\") `helm-dan-buffers)
+(global-set-key (kbd "C-|") `helm-dan)
 (global-set-key (kbd "C-;") `toggle-buffer)
 
 

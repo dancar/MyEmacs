@@ -46,6 +46,10 @@
 
 ;; things that didn't work when called from dancar-plugins.el:
 (helm-mode 1)
+(setq elscreen-display-tab 15)
+(elscreen-notify-screen-modification 'force)
+(global-auto-complete-mode 1) ;; BETA
+
 
 ;; Display pluging load errors:
 (if (> (list-length plugin-error-list) 0)
