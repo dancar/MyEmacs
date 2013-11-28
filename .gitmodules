@@ -7,3 +7,6 @@
 [submodule "plugins/magit"]
 	path = plugins/magit
 	url = https://github.com/magit/magit.git
+[submodule "plugins/emacs-twiki-mode"]
+	path = plugins/emacs-twiki-mode
+	url = https://github.com/christopherjwhite/emacs-twiki-mode.git
