@@ -19,6 +19,7 @@
  '(css-indent-offset 2)
  '(custom-file "~/.emacs.d/dancar-customize.el")
  '(deft-auto-save-interval 0.0)
+ '(deft-use-filename-as-title t)
  '(dired-listing-switches "-lhpa")
  '(dired-use-ls-dired nil)
  '(ediff-merge-split-window-function (quote split-window-horizontally))

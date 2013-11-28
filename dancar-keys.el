@@ -78,7 +78,7 @@
 
 (global-set-key [C-s-268632083] 'mc/edit-lines)
 (global-set-key (kbd "C-w") 'dancar-kill)
-(global-set-key (kbd "C-s-|") 'deft)
+(global-set-key (kbd "C-s-|") (lambda () (interactive) (deft) (deft-filter-clear)))
 
 (global-set-key (kbd "C-c C-b") `bookmark-here-set)
 (global-set-key (kbd "C-c C-j") `bookmark-here-jump)

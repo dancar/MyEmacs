@@ -39,6 +39,7 @@
 (load-plugin 'browse-kill-ring)
 
 
+
 ;;;;;; stolen from idle-highlight-mode package info page:
 ;;; TODO: relocate?
 (defun my-coding-hook ()
