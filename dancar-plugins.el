@@ -28,40 +28,17 @@
 (load-plugin 'magit)
 (load-plugin 'newcomment)
 (load-plugin 'highlight-symbol)
-(load-plugin 'maxframe)
+;; (load-plugin 'maxframe)
 (load-plugin 'ido)
 (load-plugin 'recentf)
-(load-plugin 'dired-details)
-(load-plugin 'dired-details-plus)
-(load-plugin 'inline-string-rectangle)
+;; (load-plugin 'dired-details)
+;; (load-plugin 'dired-details-plus)
+;; (load-plugin 'inline-string-rectangle)
 (load-plugin 'mark-more-like-this)
 (load-plugin 'move-lines)
 (load-plugin 'browse-kill-ring)
 
-
-
-;;;;;; stolen from idle-highlight-mode package info page:
-;;; TODO: relocate?
-(defun my-coding-hook ()
-  (make-local-variable 'column-number-mode)
-  (column-number-mode t)
-  (if window-system (hl-line-mode t))
-  (idle-highlight-mode t)
-  )
-
-;;; TODO: add?
-(add-hook 'emacs-lisp-mode-hook 'my-coding-hook)
-(add-hook 'ruby-mode-hook 'my-coding-hook)
-(add-hook 'js2-mode-hook 'my-coding-hook)
-
-
-;; (load-plugin `f3)
-;; Major modes:
-(load-plugin 'scss-mode)
-(load-plugin 'json-mode)
-(load-plugin 'copy-paste-from-register)
-;; (load-plugin 'phi-search)
-(load-plugin 'sr-speedbar)
+;; (load-plugin 'sr-speedbar)
 ;; Configurations:
 ;; ================
 
@@ -132,6 +109,7 @@
 (add-to-list 'auto-mode-alist '("\\.rake$" . ruby-mode))
 (add-to-list 'auto-mode-alist '("Rakefile$" . ruby-mode))
 (add-to-list 'auto-mode-alist '("\\.gemspec$" . ruby-mode))
+(add-to-list 'auto-mode-alist '("capfile" . ruby-mode))
 
 ;; fix Ruby indentation:
 ;; https://gist.github.com/fujin/5173680
@@ -164,7 +142,7 @@
 (add-hook 'ido-minibuffer-setup-hook 'ido-disable-line-truncation)
 
 ;;;max-frame
-(add-hook 'window-setup-hook 'maximize-frame t)
+;; (add-hook 'window-setup-hook 'maximize-frame t)
 ;; (setq mf-max-width 1600)  ;; Pixel width of main monitor
 
 ;;; ido-mode
@@ -192,7 +170,7 @@
 (global-set-key (kbd "C-+") 'er/contract-region)
 
 ;; dired-details and plus
-(dired-details-install)
+;; (dired-details-install)
 
 ;;mark-multiple
 (global-set-key (kbd "C-x r t") 'inline-string-rectangle)

@@ -4,7 +4,7 @@
 
 ;; Author: Tomohiro Matsuyama <tomo@cx4a.org>
 ;; Keywords: lisp
-;; Version: 20130708.2245
+;; Version: 20130901.2255
 ;; X-Original-Version: 0.5.0
 
 ;; This program is free software; you can redistribute it and/or modify

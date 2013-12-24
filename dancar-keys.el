@@ -5,7 +5,7 @@
 (global-set-key (kbd "C-<f7>") 'coffee-compile-region)
 
 (global-set-key (kbd "C-c n") 'new-buffer)
-(indent-rigidly (line-beginning-position) (line-end-position) 2)
+  (indent-rigidly (line-beginning-position) (line-end-position) 2)
 (global-set-key [C-s-268632076] (lambda () (interactive) (indent-selection 2)))
 (global-set-key [C-s-268632072] (lambda () (interactive) (indent-selection -2)))
 ;; MBP Adaptation:
@@ -68,7 +68,7 @@
 (global-set-key (kbd "C-c C-h") `highlight-symbol-at-point)
 (global-set-key (kbd "C-z \"") 'helm-elscreen)
 
-(global-set-key (kbd "C-c C-=") 'sr-speedbar-toggle)
+;; (global-set-key (kbd "C-c C-=") 'sr-speedbar-toggle)
 (global-set-key (kbd "C-x C-o") 'other-window)
 
 (global-set-key (kbd "C-s-S-Y") 'browse-kill-ring)

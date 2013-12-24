@@ -1,3 +1,7 @@
+(defun date ()
+  (interactive)
+  (insert (shell-command-to-string "date")))
+
 ;; stolen: http://www.emacswiki.org/emacs/SwitchingBuffers#toc5
 (defun toggle-buffer ()
       (interactive)
