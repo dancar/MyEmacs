@@ -31,7 +31,7 @@
 ;; (load-plugin 'maxframe)
 (load-plugin 'ido)
 (load-plugin 'recentf)
-;; (load-plugin 'dired-details)
+(load-plugin 'dired-details)
 ;; (load-plugin 'dired-details-plus)
 ;; (load-plugin 'inline-string-rectangle)
 (load-plugin 'mark-more-like-this)
@@ -43,7 +43,7 @@
 ;; ================
 
 ;; elscreen
-(elscreen-start)
+;; (elscreen-start)
 
 ;;highlight-symbol
 
@@ -170,7 +170,7 @@
 (global-set-key (kbd "C-+") 'er/contract-region)
 
 ;; dired-details and plus
-;; (dired-details-install)
+(dired-details-install)
 
 ;;mark-multiple
 (global-set-key (kbd "C-x r t") 'inline-string-rectangle)

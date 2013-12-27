@@ -18,7 +18,7 @@
  (rear-context-string)
  (position . 1))
 ("init"
- (filename . "~/.emacs.d/dancar-init.el")
+ (filename . "~/.emacs.d/init.el")
  (front-context-string . "(package-initial")
  (rear-context-string)
  (position . 1))
