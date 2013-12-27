@@ -5,7 +5,7 @@
 (global-set-key (kbd "C-<f7>") 'coffee-compile-region)
 
 (global-set-key (kbd "C-c n") 'new-buffer)
-  (indent-rigidly (line-beginning-position) (line-end-position) 2)
+            (indent-rigidly (line-beginning-position) (line-end-position) 2)
 (global-set-key [C-s-268632076] (lambda () (interactive) (indent-selection 2)))
 (global-set-key [C-s-268632072] (lambda () (interactive) (indent-selection -2)))
 ;; MBP Adaptation:
@@ -66,7 +66,7 @@
 (global-set-key (kbd "s-q") 'highlight-symbol-next)
 (global-set-key (kbd "s-Q") 'highlight-symbol-prev)
 (global-set-key (kbd "C-c C-h") `highlight-symbol-at-point)
-(global-set-key (kbd "C-z \"") 'helm-elscreen)
+
 
 ;; (global-set-key (kbd "C-c C-=") 'sr-speedbar-toggle)
 (global-set-key (kbd "C-x C-o") 'other-window)
@@ -77,7 +77,7 @@
 (global-set-key (kbd "C-s-W") 'copy-to-register-1)
 
 (global-set-key [C-s-268632083] 'mc/edit-lines)
-(global-set-key (kbd "C-w") 'dancar-kill)
+; (global-set-key (kbd "C-w") 'dancar-kill)
 (global-set-key (kbd "C-s-|") (lambda () (interactive) (deft) (deft-filter-clear)))
 
 (global-set-key (kbd "C-c C-b") `bookmark-here-set)
@@ -104,7 +104,7 @@
 (global-set-key (kbd "C-<f3>") `highlight-symbol-at-point)
 (global-set-key (kbd "<home>") `move-beginning-of-line)
 (global-set-key (kbd "<end>") `move-end-of-line)
-(global-set-key (kbd "C-\\") `helm-dan-buffers)
+(global-set-key (kbd "C-\\") `switch-to-buffer)
 (global-set-key (kbd "C-|") `helm-dan)
 (global-set-key (kbd "C-;") `toggle-buffer)
 
