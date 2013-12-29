@@ -1,6 +1,8 @@
 ;; (l) dancar
 ;;;
 
+(global-set-key (kbd "C-x C-f") 'helm-find-files)
+(global-set-key (kbd "C-x C-d") (lambda () (interactive) (dired
 
 (global-set-key (kbd "C-<f7>") 'coffee-compile-region)
 
