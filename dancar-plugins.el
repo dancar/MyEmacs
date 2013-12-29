@@ -1,9 +1,8 @@
 (add-to-list 'load-path "~/.emacs.d/plugins/")
-
 ;; Preload:
 ;; ================
 ;; add all subdirs of plugins to load path:
-;(mapcar (lambda (dir) (add-to-list 'load-path dir)) (directory-files "~/.emacs.d/plugins/" 1 "^[-_a-zA-Z0-9]+$"))
+(mapcar (lambda (dir) (add-to-list 'load-path dir)) (directory-files "~/.emacs.d/plugins/" 1 "^[-_a-zA-Z0-9]+$"))
 
 ;; Plugins:
 ;; ================
@@ -36,6 +35,8 @@
 ;(load-plugin 'mark-more-like-this)
 ;(load-plugin 'move-lines)
 ;(load-plugin 'browse-kill-ring)
+(load-plugin 'magit)
+
 
 ;; (load-plugin 'sr-speedbar)
 ;; Configurations:

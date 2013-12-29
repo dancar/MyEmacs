@@ -4,7 +4,7 @@
 
 (add-to-list 'load-path "~/.emacs.d")
 (require 'dancar-customize)
-;;(require 'dancar-functions)
+(require 'dancar-functions)
 (require 'dancar-plugins)
 (require 'dancar-keys)
 
