@@ -259,27 +259,27 @@
 ;
 ;;; helm
 ;;; helm-mode is activated in dancar-init, don't know why it didn't work from here...
-;(require 'helm-ls-git)
+(require 'helm-ls-git)
 ;
-;(defun helm-dan ()
-;  (interactive)
-;  (require 'helm-files)
-;  (helm-other-buffer '(
-;                       helm-source-buffers-list
-;                       helm-source-bookmarks
-;                       helm-source-ls-git-status
-;                       helm-source-recentf
-;                       helm-source-ls-git
-;                       helm-source-buffer-not-found
-;                       )
-;                     "*helm dan*"))
+(defun helm-dan ()
+ (interactive)
+ (require 'helm-files)
+ (helm-other-buffer '(
+                      helm-source-buffers-list
+                      helm-source-bookmarks
+                      helm-source-ls-git-status
+                      helm-source-recentf
+                      helm-source-ls-git
+                      helm-source-buffer-not-found
+                      )
+                    "*helm dan*"))
 ;
-;(defun helm-dan-buffers ()
-;  (interactive)
-;  (require 'helm-files)
-;  (helm-other-buffer
-;   '(helm-source-buffers-list)
-;   "*helm dan buffers*"))
+(defun helm-dan-buffers ()
+ (interactive)
+ (require 'helm-files)
+ (helm-other-buffer
+  '(helm-source-buffers-list)
+  "*helm dan buffers*"))
 ;
 ;;; line jump keys:
 ;(defun helm-big-jump-next-lines ()

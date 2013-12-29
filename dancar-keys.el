@@ -104,7 +104,7 @@
 (global-set-key (kbd "C-<f3>") `highlight-symbol-at-point)
 (global-set-key (kbd "<home>") `move-beginning-of-line)
 (global-set-key (kbd "<end>") `move-end-of-line)
-(global-set-key (kbd "C-\\") `switch-to-buffer)
+(global-set-key (kbd "C-\\") `helm-dan-buffers)
 (global-set-key (kbd "C-|") `helm-dan)
 (global-set-key (kbd "C-;") `toggle-buffer)
 
