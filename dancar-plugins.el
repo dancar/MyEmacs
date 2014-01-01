@@ -131,11 +131,11 @@
 ;
 ;
 ;;; lua-mode
-;(autoload 'lua-mode "lua-mode" "Lua editing mode." t)
-;(add-to-list 'auto-mode-alist '("\\.lua$" . lua-mode))
-;(add-to-list 'auto-mode-alist '("\\.ws$" . lua-mode))
-;(add-to-list 'interpreter-mode-alist '("lua" . lua-mode))
-;
+(autoload 'lua-mode "lua-mode" "Lua editing mode." t)
+(add-to-list 'auto-mode-alist '("\\.lua$" . lua-mode))
+(add-to-list 'auto-mode-alist '("\\.ws$" . lua-mode))
+(add-to-list 'interpreter-mode-alist '("lua" . lua-mode))
+
 ;;; Display ido results vertically, rather than horizontally
 ;(setq ido-decorations (quote ("\n-> " "" "\n   " "\n   ..." "[" "]" " [No match]" " [Matched]" " [Not readable]" " [Too big]" " [Confirm]")))
 ;(defun ido-disable-line-truncation () (set (make-local-variable 'truncate-lines) nil))
