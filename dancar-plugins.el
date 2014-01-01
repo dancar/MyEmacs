@@ -23,7 +23,7 @@
       ))))
 
 ;; Minor modes / helpers:
-;(load-plugin 'git-emacs)
+(load-plugin 'git-emacs)
 ;(load-plugin 'newcomment)
 ;(load-plugin 'highlight-symbol)
 ;; (load-plugin 'maxframe)
