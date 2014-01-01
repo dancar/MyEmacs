@@ -2,12 +2,13 @@
 ;;;
 
 (global-set-key (kbd "C-x C-f") 'helm-find-files)
-(global-set-key (kbd "C-x C-d") (lambda () (interactive) (dired
+(global-set-key (kbd "C-x d") (lambda () (interactive) (dired (file-name-directory (buffer-file-name)))))
+(global-set-key (kbd "C-x D") `dired)
 
 (global-set-key (kbd "C-<f7>") 'coffee-compile-region)
 
 (global-set-key (kbd "C-c n") 'new-buffer)
-            (indent-rigidly (line-beginning-position) (line-end-position) 2)
+
 (global-set-key [C-s-268632076] (lambda () (interactive) (indent-selection 2)))
 (global-set-key [C-s-268632072] (lambda () (interactive) (indent-selection -2)))
 ;; MBP Adaptation:
