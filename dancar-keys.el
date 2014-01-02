@@ -2,7 +2,8 @@
 ;;;
 
 (global-set-key (kbd "C-x C-f") 'helm-find-files)
-(global-set-key (kbd "C-x d") (lambda () (interactive) (dired (file-name-directory (buffer-file-name)))))
+(global-set-key (kbd "C-x d") `dancar-dired)
+(global-set-key (kbd "C-x C-d") `dancar-dired)
 (global-set-key (kbd "C-x D") `dired)
 
 (global-set-key (kbd "C-<f7>") 'coffee-compile-region)

@@ -119,4 +119,11 @@
                (line-end-position)))
         )
     (indent-rigidly start end count)))
+
+(defun dancar-dired ()
+  (interactive)
+  (if (buffer-file-name)
+      (dired (file-name-directory (buffer-file-name)))
+    (execute-extended-command nil "dired")))
+
 (provide 'dancar-functions)
