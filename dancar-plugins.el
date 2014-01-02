@@ -231,8 +231,8 @@
 ;       '(buffer-file-name "%f" (dired-directory dired-directory "%b"))))
 ;
 ;;;exec-path
-;(exec-path-from-shell-initialize)
-;(mapcar 'exec-path-from-shell-copy-env '())
+(exec-path-from-shell-initialize)
+(mapcar 'exec-path-from-shell-copy-env '())
 ;
 ;;;join-region
 ;(defun join-region (beg end)
