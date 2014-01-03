@@ -19,6 +19,7 @@
 (global-set-key (kbd "<f10>") 'init_kbd_fn)
 
 
+(define-key helm-map (kbd "C-|") `dancar-helm-switch-to-full)
 
 (global-set-key (kbd "s-z") 'zap-to-char)
 (global-set-key (kbd "s-}") 'forward-paragraph)

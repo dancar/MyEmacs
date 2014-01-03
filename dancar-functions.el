@@ -1,3 +1,31 @@
+(defun dancar-helm-switch-to-full ()
+  (interactive)
+  (setq dan-temp-query (minibuffer-contents))
+  (helm-run-after-quit
+   (lambda()
+     (helm-dan `,dan-temp-query)))
+  (helm-keyboard-quit))
+
+(defun helm-dan (&optional input)
+  (interactive)
+  (helm :sources '(
+                   helm-source-buffers-list
+                   helm-source-bookmarks
+                   helm-source-ls-git-status
+                   helm-source-recentf
+                   helm-source-ls-git
+                   helm-source-buffer-not-found
+                   )
+        :buffer "*helm dan*"
+        :input input))
+
+(defun helm-dan-buffers ()
+ (interactive)
+ (require 'helm-files)
+ (helm-other-buffer
+  '(helm-source-buffers-list)
+  "*helm dan buffers*"))
+
 (defun date ()
   (interactive)
   (insert (shell-command-to-string "date")))
