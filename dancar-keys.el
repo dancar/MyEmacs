@@ -19,6 +19,8 @@
 (global-set-key (kbd "<f10>") 'init_kbd_fn)
 
 
+(global-set-key (kbd "C-c t") 'twittering-update-status-interactive)
+
 (define-key helm-map (kbd "C-|") `dancar-helm-switch-to-full)
 
 (global-set-key (kbd "s-z") 'zap-to-char)
