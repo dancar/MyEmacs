@@ -64,12 +64,10 @@
 
 ;; deft
 ;; configuration based on http://emacs-fu.blogspot.co.il/2011/09/quick-note-taking-with-deft-and-org.html
-;(when (require 'deft nil 'noerror)
-;   (setq
-;      deft-extension "org"
-;      deft-directory "~/Dropbox/deft/"
-;      deft-text-mode 'org-mode)
-;   (global-set-key (kbd "<f9>") 'deft))
+(setq
+ deft-extension "org"
+ deft-directory "~/Dropbox/deft/"
+ deft-text-mode 'org-mode)
 ;
 ;;; auto-complete-mode
 ;(require 'auto-complete)

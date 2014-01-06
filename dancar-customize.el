@@ -116,7 +116,7 @@
  ;; If there is more than one, they won't work right.
  '(highlight-symbol-face ((t (:underline "Blue"))))
  '(idle-highlight ((t (:inherit region :background "RoyalBlue4"))))
- '(magit-item-highlight ((t (:background "gray8"))))
+ '(magit-item-highlight ((t (:background "gray96"))))
  '(paren-face-match ((t (:inverse-video t))) t))
 
 (provide 'dancar-customize)

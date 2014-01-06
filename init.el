@@ -42,4 +42,4 @@
         (flet ((process-list ())) ad-do-it))
 
 ;; load color-theme:
-(load-theme 'manoj-dark)
+;; (load-theme 'manoj-dark)
