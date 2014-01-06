@@ -164,8 +164,8 @@
 ;    (message "Aborting")))
 ;
 ;;;Expand-region
-;(global-set-key (kbd "C-=") 'er/expand-region)
-;(global-set-key (kbd "C-+") 'er/contract-region)
+(global-set-key (kbd "C-=") 'er/expand-region)
+(global-set-key (kbd "C-+") 'er/contract-region)
 ;
 ;;; dired-details and plus
 ;(dired-details-install)
