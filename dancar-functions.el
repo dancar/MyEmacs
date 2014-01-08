@@ -122,18 +122,29 @@
        (name (buffer-name (current-buffer)))
        )
 
-    (message name)
-    (message "here")
     (while (get-buffer name)
-      (message "there")
       (set `i (+ i 1))
       (set `name
            (concat "new-" (number-to-string i)))
-      (message name)
-      (message "ok"))
     (switch-to-buffer name)
     )
   )
+
+(setq snippets-dir "~/Dropbox/snippets/")
+(defun new-snippet ()
+  (interactive)
+  (let* (
+         (filter-regexp "[0-9][0-9][0-9][0-9]")
+         (files (directory-files snippets-dir nil filter-regexp))
+         (get-number (lambda (filename)
+                       (string-to-number (substring filename 0 4))))
+         (numbers (mapcar get-number files))
+         (new-number (+ 1 (apply 'max (cons 0 numbers))))
+         (new-filename (format "%04d" new-number))
+         (new-full-filename (concat snippets-dir new-filename))
+         )
+    (find-file new-full-filename)))
+
 
 (defun indent-selection (count)
   (interactive)
