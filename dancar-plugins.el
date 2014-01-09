@@ -34,7 +34,7 @@
 ;; (load-plugin 'inline-string-rectangle)
 ;(load-plugin 'mark-more-like-this)
 (load-plugin 'move-lines)
-;(load-plugin 'browse-kill-ring)
+(load-plugin 'browse-kill-ring)
 (load-plugin 'magit)
 
 
