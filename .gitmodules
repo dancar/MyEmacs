@@ -10,3 +10,6 @@
 [submodule "plugins/emacs-twiki-mode"]
 	path = plugins/emacs-twiki-mode
 	url = https://github.com/christopherjwhite/emacs-twiki-mode.git
+[submodule "plugins/browse-kill-ring"]
+	path = plugins/browse-kill-ring
+	url = https://github.com/browse-kill-ring/browse-kill-ring.git

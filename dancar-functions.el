@@ -128,7 +128,7 @@
            (concat "new-" (number-to-string i)))
     (switch-to-buffer name)
     )
-  )
+  ))
 
 (setq snippets-dir "~/Dropbox/snippets/")
 (defun new-snippet ()
