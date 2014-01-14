@@ -223,10 +223,10 @@
 ;;;; munltiple cursors
 ;
 ;;;; full path in title
-;(setq frame-title-format
-;      (list
-;       "Emacs24 - "
-;       '(buffer-file-name "%f" (dired-directory dired-directory "%b"))))
+(setq frame-title-format
+     (list
+      "Emacs24 - "
+      '(buffer-file-name "%f" (dired-directory dired-directory "%b"))))
 ;
 ;;;exec-path
 (exec-path-from-shell-initialize)
