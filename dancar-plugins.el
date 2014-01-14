@@ -30,7 +30,7 @@
 ;(load-plugin 'ido)
 ;(load-plugin 'recentf)
 ;(load-plugin 'dired-details)
-;; (load-plugin 'dired-details-plus)
+(load-plugin 'dired-details-plus)
 ;; (load-plugin 'inline-string-rectangle)
 ;(load-plugin 'mark-more-like-this)
 (load-plugin 'move-lines)
