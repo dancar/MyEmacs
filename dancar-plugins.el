@@ -213,12 +213,11 @@
 ;;; C-S-down and C-S-up moves the current line up or down. If the line is an element in an object or array literal, it makes sure that the commas are still correctly placed.
 ;
 ;;; change magit diff colors
-;(eval-after-load 'magit
-;  '(progn
-;     (set-face-foreground 'magit-diff-add "green3")
-;     (set-face-foreground 'magit-diff-del "red3")
-;     (when (not window-system)
-;       (set-face-background 'magit-item-highlight "black"))))
+(eval-after-load 'magit
+ '(progn
+    (set-face-foreground 'magit-diff-add "green3")
+    (set-face-foreground 'magit-diff-del "red3")
+    ))
 ;
 ;;;; munltiple cursors
 ;
