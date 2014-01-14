@@ -70,8 +70,8 @@
  deft-text-mode 'org-mode)
 ;
 ;;; auto-complete-mode
-;(require 'auto-complete)
-;(global-auto-complete-mode 1)
+(require 'auto-complete)
+(global-auto-complete-mode 1)
 ;
 ;;; my shortcut keys:
 ;(defun ac-jump-next ()
