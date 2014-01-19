@@ -13,3 +13,6 @@
 [submodule "plugins/browse-kill-ring"]
 	path = plugins/browse-kill-ring
 	url = https://github.com/browse-kill-ring/browse-kill-ring.git
+[submodule "plugins/dokuwiki-mode"]
+	path = plugins/dokuwiki-mode
+	url = git@github.com:kbkbkbkb1/emacs-dokuwiki-mode.git
