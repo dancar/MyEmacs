@@ -2,7 +2,12 @@
 ;;; This format is meant to be slightly human-readable;
 ;;; nevertheless, you probably don't want to edit it.
 ;;; -*- End Of Bookmark File Format Version Stamp -*-
-(("ielts"
+(("ansible tasks"
+ (filename . "~/dev/devmachines/lib/data/ansible/tasks/")
+ (front-context-string . "redis_install.ym")
+ (rear-context-string . "6B Aug 18 18:29 ")
+ (position . 1451))
+("ielts"
  (filename . "~/Dropbox/IELTS/american_school_ielts.org")
  (front-context-string . "IELTS\n* Lesson 1")
  (rear-context-string)
