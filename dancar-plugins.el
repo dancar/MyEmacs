@@ -32,15 +32,21 @@
 ;(load-plugin 'dired-details)
 (load-plugin 'dired-details-plus)
 ;; (load-plugin 'inline-string-rectangle)
-;(load-plugin 'mark-more-like-this)
 (load-plugin 'move-lines)
 (load-plugin 'browse-kill-ring)
 (load-plugin 'magit)
 (load-plugin 'dokuwiki-mode)
-
+(load-plugin 'multiple-cursors)
 ;; (load-plugin 'sr-speedbar)
 ;; Configurations:
 ;; ================
+
+;; multiple-cursors
+(global-set-key (kbd "C-S-c C-S-c") 'mc/edit-lines)
+(global-set-key (kbd "C->") 'mc/mark-next-like-this)
+(global-set-key (kbd "C-<") 'mc/mark-previous-like-this)
+(global-set-key (kbd "C-c C-<") 'mc/mark-all-like-this)
+
 
 ;; elscreen
 ;; (elscreen-start)
@@ -170,6 +176,10 @@
 ;;; dired-details and plus
 ;(dired-details-install)
 ;
+
+
+
+
 ;;;mark-multiple
 ;(global-set-key (kbd "C-x r t") 'inline-string-rectangle)
 ;(global-set-key (kbd "C-<") 'mark-previous-like-this)
