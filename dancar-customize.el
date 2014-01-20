@@ -118,6 +118,7 @@
  '(highlight-symbol-face ((t (:underline "Blue"))))
  '(idle-highlight ((t (:inherit region :background "RoyalBlue4"))))
  '(magit-item-highlight ((t (:background "gray96"))))
- '(paren-face-match ((t (:inverse-video t))) t))
+ '(paren-face-match ((t (:inverse-video t))) t)
+ '(region ((t (:background "SlateGray2")))))
 
 (provide 'dancar-customize)

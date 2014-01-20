@@ -43,3 +43,4 @@
 
 ;; load color-theme:
 ;; (load-theme 'manoj-dark)
+(put 'narrow-to-region 'disabled nil)
