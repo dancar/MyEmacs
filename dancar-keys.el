@@ -1,18 +1,24 @@
 ;; (l) dancar
 ;;;
 
+;; Reminder: (global-set-key (kbd "C-S-c C-S-c") 'mc/edit-lines)
+
+(global-set-key (kbd "<f4>") (lambda () (interactive) (dired "~/dev")))
+(global-set-key (kbd "<f5>") (lambda () (interactive) (dired "~/dev/devmachines")))
+
 (global-set-key (kbd "C-x C-f") 'helm-find-files)
 (global-set-key (kbd "C-x d") `dancar-dired)
 (global-set-key (kbd "C-x C-d") `dancar-dired)
 (global-set-key (kbd "C-x D") `dired)
 
 (global-set-key (kbd "C-<f7>") 'coffee-compile-region)
-
 (global-set-key (kbd "C-c n") 'new-snippet)
+
+
+;; MBP Adaptation:
 
 (global-set-key [C-s-268632076] (lambda () (interactive) (indent-selection 2)))
 (global-set-key [C-s-268632072] (lambda () (interactive) (indent-selection -2)))
-;; MBP Adaptation:
 
 (fset 'init_kbd_fn
    (lambda (&optional arg) "Keyboard macro." (interactive "p") (kmacro-exec-ring-item (quote ([24 111 134217788 19 99 111 109 109 97 110 100 13 6 67108896 19 44 2 24 114 115 49 24 111 24 114 105 49 40 103 108 111 98 97 108 45 115 101 116 45 107 101 121 32 40 107 98 100 32 34 115 45 34 41 32 39 5 41 18 34 13] 0 "%d")) arg)))

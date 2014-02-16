@@ -53,10 +53,10 @@
  (rear-context-string)
  (position . 1))
 ("_hereBookmark"
- (filename . "~/Dropbox/Trusteer/async_service_doc.md")
- (front-context-string . ">\ngraph G {\n\n  E")
- (rear-context-string . "=\n\n<graphviz dot")
- (position . 8168))
+ (filename . "~/dev/devmachines/lib/lib/devmachines/capture_errors/subprocess.rb")
+ (front-context-string . "\n      # Suppres")
+ (rear-context-string . "ere EXCEPTION')\n")
+ (position . 4505))
 ("lastLoc"
  (filename . "~/dev/tma/public/tma/app/view/panes/EditUsers.js")
  (front-context-string . "\n      TMA.Msgs.")
