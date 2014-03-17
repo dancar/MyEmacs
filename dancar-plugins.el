@@ -42,6 +42,24 @@
 ;; ================
 
 
+;; tabbar-mode
+;; http://www.emacswiki.org/emacs/TabBarMode#toc4
+(defun my-tabbar-buffer-groups () ;; customize to show all normal files in one group
+  "Returns the name of the tab group names the current buffer belongs to.
+ There are two groups: Emacs buffers (those whose name starts with '*', plus
+ dired buffers), and the rest.  This works at least with Emacs v24.2 using
+ tabbar.el v1.7."
+  (list (cond ((string-equal "*" (substring (buffer-name) 0 1)) "Emacs")
+              ((eq major-mode 'dired-mode) "Dired")
+              ((eq major-mode 'markdown-mode) "Markdown")
+              ((eq major-mode 'org-mode) "org")
+              (t "User"))))
+(setq tabbar-buffer-groups-function 'my-tabbar-buffer-groups)
+(global-set-key (kbd "M-<right>") 'tabbar-forward-tab)
+(global-set-key (kbd "M-<up>") 'tabbar-forward-group)
+(global-set-key (kbd "M-<left>") 'tabbar-backward-tab)
+(global-set-key (kbd "M-<down>") 'tabbar-backward-group)
+
 (global-set-key (kbd "C-S-c C-S-c") 'mc/edit-lines)
 (global-set-key (kbd "C->") 'mc/mark-next-like-this)
 (global-set-key (kbd "C-<") 'mc/mark-previous-like-this)
@@ -108,12 +126,12 @@
 ;;; (define-key ac-menu-map "\C-m" 'ac-complete)
 ;
 ;;; ruby-mode special files:
-(add-to-list 'auto-mode-alist '("Gemfile$" . ruby-mode))
-(add-to-list 'auto-mode-alist '("Vagrantfile$" . ruby-mode))
-(add-to-list 'auto-mode-alist '("\\.rake$" . ruby-mode))
-(add-to-list 'auto-mode-alist '("Rakefile$" . ruby-mode))
-(add-to-list 'auto-mode-alist '("\\.gemspec$" . ruby-mode))
-(add-to-list 'auto-mode-alist '("capfile" . ruby-mode))
+(add-to-list 'auto-mode-alist '("Gemfile$" . enh-ruby-mode))
+(add-to-list 'auto-mode-alist '("Vagrantfile$" . enh-ruby-mode))
+(add-to-list 'auto-mode-alist '("\\.rake$" . enh-ruby-mode))
+(add-to-list 'auto-mode-alist '("Rakefile$" . enh-ruby-mode))
+(add-to-list 'auto-mode-alist '("\\.gemspec$" . enh-ruby-mode))
+(add-to-list 'auto-mode-alist '("capfile" . enh-ruby-mode))
 ;
 ;;; fix Ruby indentation:
 ;;; https://gist.github.com/fujin/5173680

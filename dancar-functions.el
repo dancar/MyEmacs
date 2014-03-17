@@ -165,4 +165,15 @@
       (dired (file-name-directory (buffer-file-name)))
     (execute-extended-command nil "dired")))
 
+(defun view-functions ()
+  (interactive)
+  (let ((rx
+        (case major-mode
+          (`js-mode "^  [a-zA-Z]+:")
+          (`coffee-mode "^  [a-zA-Z]+:")
+          (`yaml-mode "^  [a-zA-Z]+:")
+          ('enh-ruby-mode "^[ ]*def [a-zA-Z_]+"))))
+    (occur rx)))
+(global-set-key (kbd "C-c C-f") `view-functions)
+
 (provide 'dancar-functions)
