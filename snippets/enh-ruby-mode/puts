@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: puts
+# key: puts
+# --
+puts('MYDEBUG `(file-name-nondirectory (buffer-file-name))`\\\\ `(line-number-at-pos)`: $1: \\'' + ($1).to_s + '\\'')

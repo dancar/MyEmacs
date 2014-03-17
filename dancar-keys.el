@@ -1,8 +1,8 @@
 ;; (l) dancar
 ;;;
-
+(global-set-key [C-s-268632087] (lambda () (interactive (kill-buffer (current-buffer)))))
 ;; Reminder: (global-set-key (kbd "C-S-c C-S-c") 'mc/edit-lines)
-
+(global-set-key (kbd "C-z") 'zap-to-char)
 (global-set-key (kbd "<f4>") (lambda () (interactive) (dired "~/dev")))
 (global-set-key (kbd "<f5>") (lambda () (interactive) (dired "~/dev/devmachines")))
 
@@ -120,7 +120,6 @@
 (global-set-key (kbd "C-\\") `helm-dan-buffers)
 (global-set-key (kbd "C-|") `helm-dan)
 (global-set-key (kbd "C-;") `toggle-buffer)
-
 
 (global-set-key (kbd "C-<return>") `go-line)
 (global-set-key (kbd "s-k") (lambda () (interactive) (back-to-indentation) (kill-line)))

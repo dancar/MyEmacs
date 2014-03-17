@@ -53,10 +53,10 @@
  (rear-context-string)
  (position . 1))
 ("_hereBookmark"
- (filename . "~/dev/devmachines/lib/lib/devmachines/capture_errors/subprocess.rb")
- (front-context-string . "\n      # Suppres")
- (rear-context-string . "ere EXCEPTION')\n")
- (position . 4505))
+ (filename . "~/dev/mule/muleview/app/controller/ChartsController.coffee")
+ (front-context-string . "\n      \n        ")
+ (rear-context-string . "ord;\n        ans")
+ (position . 7093))
 ("lastLoc"
  (filename . "~/dev/tma/public/tma/app/view/panes/EditUsers.js")
  (front-context-string . "\n      TMA.Msgs.")
