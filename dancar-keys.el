@@ -79,6 +79,7 @@
 (global-set-key (kbd "s-q") 'highlight-symbol-next)
 (global-set-key (kbd "s-Q") 'highlight-symbol-prev)
 (global-set-key (kbd "C-c C-h") `highlight-symbol-at-point)
+(global-set-key (kbd "C-c H") `highlight-symbol-remove-all)
 
 
 ;; (global-set-key (kbd "C-c C-=") 'sr-speedbar-toggle)

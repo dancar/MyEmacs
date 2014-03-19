@@ -54,9 +54,9 @@
  (position . 1))
 ("_hereBookmark"
  (filename . "~/dev/mule/muleview/app/controller/ChartsController.coffee")
- (front-context-string . "\n      \n        ")
- (rear-context-string . "ord;\n        ans")
- (position . 7093))
+ (front-context-string . " ->\n\n    Mulevie")
+ (rear-context-string . "ion)\n\n  refresh:")
+ (position . 3908))
 ("lastLoc"
  (filename . "~/dev/tma/public/tma/app/view/panes/EditUsers.js")
  (front-context-string . "\n      TMA.Msgs.")

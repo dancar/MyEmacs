@@ -174,6 +174,6 @@
           (`yaml-mode "^  [a-zA-Z]+:")
           ('enh-ruby-mode "^[ ]*def [a-zA-Z_]+"))))
     (occur rx)))
-(global-set-key (kbd "C-c C-f") `view-functions)
+(global-set-key (kbd "C-c f") `view-functions)
 
 (provide 'dancar-functions)
