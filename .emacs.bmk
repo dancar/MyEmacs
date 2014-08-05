@@ -2,7 +2,12 @@
 ;;; This format is meant to be slightly human-readable;
 ;;; nevertheless, you probably don't want to edit it.
 ;;; -*- End Of Bookmark File Format Version Stamp -*-
-(("ansible tasks"
+(("2do"
+ (filename . "~/Dropbox/deft/2do_work.org")
+ (front-context-string . "2do_work\n=======")
+ (rear-context-string)
+ (position . 1))
+("ansible tasks"
  (filename . "~/dev/devmachines/lib/data/ansible/tasks/")
  (front-context-string . "redis_install.ym")
  (rear-context-string . "6B Aug 18 18:29 ")
@@ -53,10 +58,10 @@
  (rear-context-string)
  (position . 1))
 ("_hereBookmark"
- (filename . "~/dev/mule/muleview/app/controller/ChartsController.coffee")
- (front-context-string . " ->\n\n    Mulevie")
- (rear-context-string . "ion)\n\n  refresh:")
- (position . 3908))
+ (filename . "~/dev/mule/muleview/app/view/PieChart.coffee")
+ (front-context-string . "pKeyTotal\n      ")
+ (rear-context-string . "topKeyTotal = to")
+ (position . 746))
 ("lastLoc"
  (filename . "~/dev/tma/public/tma/app/view/panes/EditUsers.js")
  (front-context-string . "\n      TMA.Msgs.")

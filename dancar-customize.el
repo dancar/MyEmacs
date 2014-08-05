@@ -21,12 +21,15 @@
  '(deft-auto-save-interval 0.0)
  '(deft-use-filename-as-title t)
  '(dired-listing-switches "-lhpa")
+ '(dired-recursive-deletes (quote always))
  '(dired-use-ls-dired nil)
  '(ediff-merge-split-window-function (quote split-window-horizontally))
  '(ediff-split-window-function (quote split-window-horizontally))
  '(ediff-window-setup-function (quote ediff-setup-windows-plain))
  '(elscreen-display-tab nil)
  '(elscreen-tab-display-kill-screen nil)
+ '(epg-debug t)
+ '(fill-column 9999999999999)
  '(git-state-modeline-decoration (quote git-state-decoration-large-dot))
  '(global-auto-revert-mode t)
  '(global-diff-hl-mode t)
@@ -117,10 +120,9 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(default ((t (:inherit nil :stipple nil :background "azure2" :foreground "Black" :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 130 :width normal :foundry "apple" :family "Monaco"))))
  '(highlight-symbol-face ((t (:underline "Blue"))))
  '(idle-highlight ((t (:inherit region :background "RoyalBlue4" :foreground "white"))))
- '(magit-item-highlight ((t (:background "gray96"))))
+ ;; '(magit-item-highlight ((t (:background "gray96"))))
  '(paren-face-match ((t (:inverse-video t))) t)
  '(region ((t (:background "SlateGray2"))))
  '(tabbar-default ((t (:inherit variable-pitch :background "gray75" :foreground "gray50" :height 1.3))))

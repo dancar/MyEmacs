@@ -1,15 +1,17 @@
 ;; (l) dancar
 ;;;
+(global-set-key (kbd "C-c \"") (lambda () (interactive) (query-replace "\"" "'")))
 (global-set-key [C-s-268632087] (lambda () (interactive (kill-buffer (current-buffer)))))
 ;; Reminder: (global-set-key (kbd "C-S-c C-S-c") 'mc/edit-lines)
 (global-set-key (kbd "C-z") 'zap-to-char)
 (global-set-key (kbd "<f4>") (lambda () (interactive) (dired "~/dev")))
 (global-set-key (kbd "<f5>") (lambda () (interactive) (dired "~/dev/devmachines")))
 
-(global-set-key (kbd "C-x C-f") 'helm-find-files)
+;; (global-set-key (kbd "C-x C-f") 'ido-find-file)
+
 (global-set-key (kbd "C-x d") `dancar-dired)
 (global-set-key (kbd "C-x C-d") `dancar-dired)
-(global-set-key (kbd "C-x D") `dired)
+(global-set-key (kbd "C-x D") (lambda() (interactive) (dired "~/dev")))
 
 (global-set-key (kbd "C-<f7>") 'coffee-compile-region)
 (global-set-key (kbd "C-c n") 'new-snippet)
@@ -174,6 +176,13 @@
 (define-key my-org-mode-keys-minor-mode-map (kbd "C-<tab>") `other-window)
 (define-key my-org-mode-keys-minor-mode-map (kbd "C-c C-p") 'f3)
 (define-key my-org-mode-keys-minor-mode-map (kbd "C-c C-k") 'kill-buffer-and-window)
+
+(define-key my-org-mode-keys-minor-mode-map (kbd "M-<right>") 'tabbar-forward-tab)
+(define-key my-org-mode-keys-minor-mode-map (kbd "M-<left>") 'tabbar-backward-tab)
+(define-key my-org-mode-keys-minor-mode-map (kbd "M-<up>") 'tabbar-forward-group)
+(define-key my-org-mode-keys-minor-mode-map (kbd "M-j") 'org-metadown)
+(define-key my-org-mode-keys-minor-mode-map (kbd "M-k") 'org-metaup)
+
 (define-minor-mode my-org-mode-keys-minor-mode
   "A minor mode so fix org-mode keys"
   nil " my-org-mode-keys" 'my-org-mode-keys-minor-mode-map)

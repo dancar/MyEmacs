@@ -40,8 +40,8 @@
 (defadvice save-buffers-kill-emacs (around no-query-kill-emacs activate)
         "Prevent annoying \"Active processes exist\" query when you quit Emacs."
         (flet ((process-list ())) ad-do-it))
-
+(auto-fill-mode -1)
 ;; load color-theme:
-;; (load-theme 'manoj-dark)
+(load-theme 'manoj-dark)
 (put 'narrow-to-region 'disabled nil)
 (put 'upcase-region 'disabled nil)

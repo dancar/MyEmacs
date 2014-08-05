@@ -52,7 +52,6 @@
   (list (cond ((string-equal "*" (substring (buffer-name) 0 1)) "Emacs")
               ((eq major-mode 'dired-mode) "Dired")
               ((eq major-mode 'markdown-mode) "Markdown")
-              ((eq major-mode 'org-mode) "org")
               (t "User"))))
 (setq tabbar-buffer-groups-function 'my-tabbar-buffer-groups)
 (global-set-key (kbd "M-<right>") 'tabbar-forward-tab)
