@@ -32,7 +32,6 @@
 
 (global-set-key (kbd "s-z") 'zap-to-char)
 (global-set-key (kbd "s-m") 'back-to-indentation)
-(global-set-key (kbd "") 'back-to-indentation)
 (global-set-key (kbd "s-r") 'move-to-window-line-top-bottom)
 (global-set-key (kbd "s-v") 'scroll-down-command)
 (global-set-key (kbd "s-d") 'subword-kill)
@@ -168,13 +167,7 @@
 ;; org-mode keys-override:
 (defvar my-org-mode-keys-minor-mode-map (make-keymap) "my-org-mode-keys-minor-mode keymap.")
 
-(define-key my-org-mode-keys-minor-mode-map (kbd "C-<tab>") `other-window)
-(define-key my-org-mode-keys-minor-mode-map (kbd "C-c C-p") 'f3)
 (define-key my-org-mode-keys-minor-mode-map (kbd "C-c C-k") 'kill-buffer-and-window)
-
-(define-key my-org-mode-keys-minor-mode-map (kbd "M-<right>") 'tabbar-forward-tab)
-(define-key my-org-mode-keys-minor-mode-map (kbd "M-<left>") 'tabbar-backward-tab)
-(define-key my-org-mode-keys-minor-mode-map (kbd "M-<up>") 'tabbar-forward-group)
 (define-key my-org-mode-keys-minor-mode-map (kbd "M-j") 'org-metadown)
 (define-key my-org-mode-keys-minor-mode-map (kbd "M-k") 'org-metaup)
 
@@ -198,11 +191,15 @@
   nil " DanSuperKeys" 'my-super-mode-keys-minor-mode-map)
 (my-super-mode-keys-minor-mode 1)
 (defadvice load (after give-my-super-mode-keybindings-priority)
-  "Try to ensure that my keybindings always have priority."
+  "Try to ensure that my keybindings and settings always have priority."
+  ; Super keys:
   (if (not (eq (car (car minor-mode-map-alist)) 'my-super-mode-keys-minor-mode))
       (let ((mykeys (assq 'my-super-mode-keys-minor-mode minor-mode-map-alist)))
         (assq-delete-all 'my-super-mode-keys-minor-mode minor-mode-map-alist)
-        (add-to-list 'minor-mode-map-alist mykeys))))
+        (add-to-list 'minor-mode-map-alist mykeys)))
+  ;; Super settings:
+  (set-newline-and-indent)
+  )
 (ad-activate 'load)
 ;; /
 
