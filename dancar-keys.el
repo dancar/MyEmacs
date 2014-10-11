@@ -1,4 +1,5 @@
 ;; (l) dancar
+(global-set-key (kbd "C-c N") (lambda() (interactive) (dired "~/Dropbox/snippets")))
 ;;;
 (global-set-key (kbd "C-c \"") (lambda () (interactive) (query-replace "\"" "'")))
 (global-set-key [C-s-268632087] (lambda () (interactive (kill-buffer (current-buffer)))))
@@ -6,8 +7,6 @@
 (global-set-key (kbd "C-z") 'zap-to-char)
 (global-set-key (kbd "<f4>") (lambda () (interactive) (dired "~/dev")))
 (global-set-key (kbd "<f5>") (lambda () (interactive) (dired "~/dev/devmachines")))
-
-;; (global-set-key (kbd "C-x C-f") 'ido-find-file)
 
 (global-set-key (kbd "C-x d") `dancar-dired)
 (global-set-key (kbd "C-x C-d") `dancar-dired)
@@ -32,8 +31,6 @@
 (define-key helm-map (kbd "C-|") `dancar-helm-switch-to-full)
 
 (global-set-key (kbd "s-z") 'zap-to-char)
-(global-set-key (kbd "s-}") 'forward-paragraph)
-(global-set-key (kbd "s-{") 'backward-paragraph)
 (global-set-key (kbd "s-m") 'back-to-indentation)
 (global-set-key (kbd "") 'back-to-indentation)
 (global-set-key (kbd "s-r") 'move-to-window-line-top-bottom)
@@ -130,8 +127,6 @@
 (global-set-key (kbd "<f6>") `toggle-truncate-lines)
 (global-set-key (kbd "s-]") (lambda () (interactive) (scroll-up-line 2)))
 (global-set-key (kbd "s-[") (lambda () (interactive) (scroll-down-line 2)))
-(global-set-key (kbd "C-s-[") (lambda () (interactive) (scroll-down-line 6)))
-(global-set-key (kbd "C-s-]") (lambda () (interactive) (scroll-up-line 6)))
 (global-set-key (kbd "C-s-f") (lambda () (interactive) (forward-char) (search-forward " ") (backward-char)))
 (global-set-key (kbd "C-s-b") (lambda () (interactive) (backward-char) (search-backward " ") (backward-char)))
 (global-set-key (kbd "C-S-<SPC>") 'set-rectangular-region-anchor)

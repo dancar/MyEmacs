@@ -122,10 +122,10 @@
  ;; If there is more than one, they won't work right.
  '(highlight-symbol-face ((t (:underline "Blue"))))
  '(idle-highlight ((t (:inherit region :background "RoyalBlue4" :foreground "white"))))
- ;; '(magit-item-highlight ((t (:background "gray96"))))
  '(paren-face-match ((t (:inverse-video t))) t)
  '(region ((t (:background "SlateGray2"))))
  '(tabbar-default ((t (:inherit variable-pitch :background "gray75" :foreground "gray50" :height 1.3))))
+ '(tabbar-modified ((t (:inherit tabbar-default :foreground "blue" :box (:line-width 1 :color "white" :style released-button)))))
  '(tabbar-selected ((t (:inherit tabbar-default :foreground "aquamarine" :box (:line-width 1 :color "white" :style pressed-button)))))
  '(tabbar-unselected ((t (:inherit tabbar-default :foreground "Blue" :box (:line-width 1 :color "white" :style released-button) :width ultra-expanded)))))
 

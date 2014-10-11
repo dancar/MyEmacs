@@ -53,15 +53,15 @@
  (rear-context-string)
  (position . 1))
 ("bla.rb"
- (filename . "~/tmp/bla.rb")
- (front-context-string . "#!/usr/bin/env r")
+ (filename . "~/bla.rb")
+ (front-context-string . "def test(arg1 = ")
  (rear-context-string)
  (position . 1))
 ("_hereBookmark"
- (filename . "~/dev/mule/muleview/app/view/PieChart.coffee")
- (front-context-string . "pKeyTotal\n      ")
- (rear-context-string . "topKeyTotal = to")
- (position . 746))
+ (filename . "~/dev/inro/jefe/static/app/view/pane/Status.js")
+ (front-context-string . "\n  },\n\n  initCom")
+ (rear-context-string . "s-form\").show();")
+ (position . 3414))
 ("lastLoc"
  (filename . "~/dev/tma/public/tma/app/view/panes/EditUsers.js")
  (front-context-string . "\n      TMA.Msgs.")
