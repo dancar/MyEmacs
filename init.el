@@ -8,6 +8,8 @@
 (require 'dancar-plugins)
 (require 'dancar-keys)
 
+(add-hook 'prog-mode-hook 'set-newline-and-indent)
+
 ;; Ding is annoying:
 (setq ring-bell-function (lambda() (message "Beep.")))
 

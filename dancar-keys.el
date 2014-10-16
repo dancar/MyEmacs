@@ -191,14 +191,12 @@
   nil " DanSuperKeys" 'my-super-mode-keys-minor-mode-map)
 (my-super-mode-keys-minor-mode 1)
 (defadvice load (after give-my-super-mode-keybindings-priority)
-  "Try to ensure that my keybindings and settings always have priority."
+  "Try to ensure that my keybindings always have priority."
   ; Super keys:
   (if (not (eq (car (car minor-mode-map-alist)) 'my-super-mode-keys-minor-mode))
       (let ((mykeys (assq 'my-super-mode-keys-minor-mode minor-mode-map-alist)))
         (assq-delete-all 'my-super-mode-keys-minor-mode minor-mode-map-alist)
         (add-to-list 'minor-mode-map-alist mykeys)))
-  ;; Super settings:
-  (set-newline-and-indent)
   )
 (ad-activate 'load)
 ;; /
