@@ -21,10 +21,11 @@
 
 (defun helm-dan-buffers ()
  (interactive)
- (require 'helm-files)
- (helm-other-buffer
-  '(helm-source-buffers-list)
-  "*helm dan buffers*"))
+ (helm-buffers-list))
+ ;; (require 'helm-files)
+ ;; (helm-other-buffer
+ ;;  '(helm-source-buffers-list)
+ ;;  "*helm dan buffers*"))
 
 (defun date ()
   (interactive)

@@ -1,4 +1,6 @@
 ;; (l) dancar
+(global-set-key (kbd "C-x p") (lambda () (interactive) (kill-ring-save (point-min) (point-max)) (message "Buffer copied.")))
+
 (global-set-key (kbd "C-c N") (lambda() (interactive) (dired "~/Dropbox/snippets")))
 ;;;
 (global-set-key (kbd "C-c \"") (lambda () (interactive) (query-replace "\"" "'")))
