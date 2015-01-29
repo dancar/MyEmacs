@@ -11,3 +11,5 @@ session.*
 /elpa/yasnippet-20131224.143/snippets/conf-unix-mode/section
 /elpa/yasnippet-20131224.143/snippets/cpp-omnet-mode/EV
 .emacs.bmk
+places
+.smex-items
