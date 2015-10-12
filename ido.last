@@ -1,0 +1,71 @@
+;;; -*- coding: utf-8 -*-
+
+;; ----- ido-last-directory-list -----
+(
+ ("/Users/dan/.emacs.d/" . "lisp/")
+ ("/Users/dan/Dropbox/" . "deft/")
+ ("/Users/dan/dev/" . "ma-kaf/")
+ ("/Users/dan/" . ".emacs.d/")
+)
+
+;; ----- ido-work-directory-list -----
+(
+ "/Users/dan/dev/ma-kaf/"
+ "/Users/dan/.emacs.d/lisp/"
+ "/Users/dan/.emacs.d/"
+ "/Users/dan/Dropbox/"
+ "/Users/dan/Dropbox/deft/"
+ "/Users/dan/"
+ "/Users/dan/Dropbox/conf/"
+ "/Users/dan/dev/scripts/"
+ "/Users/dan/dev/"
+ "/Users/dan/Downloads/"
+)
+
+;; ----- ido-work-file-list -----
+(
+ "main.js"
+ "main.coffee"
+ "pws.txt"
+ "ma-kaf_nginx_conf"
+ "main.css"
+ "index.html"
+ ".profile"
+ "result.json"
+ "get_spanishdict_verb.py"
+ "Ver Conjugation _ Conjugate Ver in Spanish.html"
+ "bla.py"
+ ".emacs.d"
+ "README.md"
+)
+
+;; ----- ido-dir-file-cache -----
+(
+ ("/Users/dan/dev/ma-kaf/" (22043 21195 0 0) "Vagrantfile" "main.js" "main.css" "main.coffee" "ma-kaf_nginx_conf" "index.html" "images/" ".vagrant/" ".git/" ".DS_Store" "../" "./")
+
+ ("/Users/dan/.emacs.d/lisp/" (22043 20582 0 0) "load-themes.el" "dancar-plugins.el" "dancar-keys.el~" "dancar-keys.el" "dancar-functions.el" "dancar-customize.el" "copy-paste-from-register.el" "color-themese.el" "ac-comphist.dat" "../" "./")
+
+ ("/Users/dan/.emacs.d/" (22043 20449 0 0) "update_subsubmodules.sh" "snippets/" "recentf" "README.md" "plugins/" "lisp/" "init.el" "ido.last" "elpa/" "auto-save-list/" ".gitmodules" ".gitignore" ".gitconfig.bak" ".git/" ".DS_Store" "../" "./")
+
+ ("/Users/dan/dev/" (22039 8983 0 0) "scripts/" "practicar/" "ma-kaf/" "bla.pyc" "bla.py" ".DS_Store" "../" "./")
+
+ ("/Users/dan/" (22039 61782 0 0) "VirtualBox VMs/" "Public/" "Pictures/" "Music/" "Movies/" "Library/" "Dropbox/" "Downloads/" "Documents/" "dev/" "Desktop/" "bla.txt" "Applications/" ".viminfo" ".vim/" ".vagrant.d/" ".Trash/" ".subversion/" ".ssh/" ".rbenv/" ".profile" ".npm/" ".lesshst" ".gitconfig" ".emacs.d/" ".DS_Store" ".dropbox/" ".config/" ".coffee_history" ".CFUserTextEncoding" ".cache/" ".bash_history" "../" "./")
+
+ ("/Users/dan/Downloads/" (22036 48265 0 0) "Xcode_7.dmg" "Xcode_7 (1).dmg" "VuzeBittorrentClientInstaller.dmg" "VirtualBox-5.0.4-102546-OSX.dmg" "Ver Conjugation _ Conjugate Ver in Spanish.html" "vagrant_1.7.4.dmg" "Straight.Outta.Compton.2015.HC.HDRip.XViD.AC3-ETRG/" "Spectacle+1.0.1.zip" "Skype_7.13.428.dmg" "picasamac39.dmg" "node-v4.1.2.pkg" "Narcos S01 Season 1 Complete 720p HDTV x265 AAC E-Subs [GWC]/" "Mission Impossible Rogue Nation 2015 1080p HDRip x264 AAC-JYK/" "Mirror Mirror (2012)/" "Minions.2015.HDRip.XViD ETRG/" "Karabiner-10.9.0.dmg" "iTerm2-2_1_1.zip" "grumpy-bear.jpg" "grumpy care bear.jpg" "googlechrome.dmg" "gimp-2.8.14.dmg.torrent" "Fantastic.Four.2015.HC.HDRip.XViD.AC3-ETRG/" "Enders.Game.2013.1080p.BluRay.x264.anoXmous/" "Emacs-24.5-1-universal.dmg" "DropboxInstaller.dmg" "diveintopython-html-flat-5.4.zip" "com.blacktree.Quicksilver__16402.dmg" "Avengers Age of Ultron (2015) [1080p]/" "Appleseed 2004 720p BluRay x264 AAC - Ozlem/" "androidfiletransfer.dmg" "Alfred_2.7.2_407.zip" "20150602_114713.jpg" ".localized" ".DS_Store" "../" "./")
+
+ ("/Users/dan/Dropbox/deft/" (22036 47100 0 0) "tasks.org" "personal.org" "org-mode.org" "hacks.org" "emacs.org" ".#tasks.org" "../" "./")
+
+ ("/Users/dan/Dropbox/" (22032 43363 0 0) "web/" "Varda.odt" "trolls.odt" "snippets/" "pws.txt" "Public/" "pix/" "personal.txt" "MyMoneyList.xlsx" "Mule/" "joynet" "iTerm2/" "isracard_international.txt" "Icon
+" "ffsk.pdf" "eu.pem" "Ebooks/" "Documents/" "dev/" "deft/" "CV/" "couchsurprise.mp4" "conf/" "Camera Uploads/" "Archive/" "Apps/" ".vimrc~" ".DS_Store" ".dropbox.cache/" ".dropbox" ".directory" "../" "./")
+
+ ("/Users/dan/Dropbox/conf/" (22030 5249 0 0) "xfce_caps.sh" "xbindkeys.conf" "vimrc_pc.conf" "vimrc_mac.conf" "vimrc.conf" "vimperatorrc.conf" "vimperator.conf~" "vim/" "sublime/" "screenrc.conf" "screenrc (w500's conflicted copy 2013-08-11).conf" "mac_bash_profile.conf" "link.sh" "gnome-shell-extensions/" "gitconfig.conf" "bashrc_linux.conf" "bashrc.conf" ".vimrc.conf.swp" ".tmux.conf" "../" "./")
+
+ ("/Users/dan/dev/scripts/" (22028 35012 0 0) "result.json" "README.md" "list_devices.rb" "LICENSE" "get_spanishdict_verb.pyc" "get_spanishdict_verb.py" "Gemfile" ".gitignore" ".git/" "../" "./")
+
+ ("/Users/dan/dev/practicar/" (22023 14681 0 0) "verbos_irregulares_yo.json.stats" "verbos_irregulares_yo.json" "verbos_irregulares_en_present_simple.json.stats" "verbos_irregulares_en_present_simple.json" "verbos.json.stats" "verbos.json" "ser_estar_oraciones.json" "ser.json.stats" "ser.json" "questions.json.stats" "questions.json" "practicar.rb" "numbers.rb" "numbers.json.stats" "numbers.json" "main_numbers.json.stats" "main_numbers.json" "estar.json.stats" "estar.json" "accents.rtf" ".git/" "../" "./")
+
+ ("/Users/" (22012 52291 0 0) "Shared/" "dan/" ".localized" "../" "./")
+)
+
+;; ----- ido-unc-hosts-cache -----
+t

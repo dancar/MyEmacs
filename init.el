@@ -1,8 +1,9 @@
+;; Package Manager:
 (package-initialize)
 (add-to-list 'package-archives
              '("melpa" . "http://melpa.milkbox.net/packages/") t)
 
-(add-to-list 'load-path "~/.emacs.d")
+(add-to-list 'load-path "~/.emacs.d/lisp")
 (require 'dancar-customize)
 (require 'dancar-functions)
 (require 'dancar-plugins)
@@ -23,7 +24,7 @@
  ((and nil (equal system-type 'gnu/linux))
   (set-face-attribute 'default nil :family "Ubuntu Mono" :height 180 :weight 'normal)))
 
-;; Disable truncating lines when viewing diffs:
+;; Disable truncating lines when viewing diffs in ediff:
 (add-hook 'ediff-prepare-buffer-hook (lambda () (toggle-truncate-lines 0)))
 
 ;; Enable erasing complete buffers:
@@ -42,8 +43,10 @@
 (defadvice save-buffers-kill-emacs (around no-query-kill-emacs activate)
         "Prevent annoying \"Active processes exist\" query when you quit Emacs."
         (flet ((process-list ())) ad-do-it))
-(auto-fill-mode -1)
+
 ;; load color-theme:
 (load-theme 'manoj-dark)
+
+(auto-fill-mode -1)
 (put 'narrow-to-region 'disabled nil)
 (put 'upcase-region 'disabled nil)
