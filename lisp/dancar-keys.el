@@ -1,4 +1,42 @@
 ;; (l) dancar
+
+;; dancar-numeric-bookmarks:
+
+(global-set-key (kbd "C-c 0" )  (lambda () (interactive) (dancar-jump-numeric-bookmark 0)))
+(global-set-key (kbd "C-C 0")   (lambda () (interactive) (dancar-set-numeric-bookmark  0)))
+
+(global-set-key (kbd "C-c 1" )  (lambda () (interactive) (dancar-jump-numeric-bookmark 1)))
+(global-set-key (kbd "C-C 1")   (lambda () (interactive) (dancar-set-numeric-bookmark  1)))
+
+(global-set-key (kbd "C-c 2" )  (lambda () (interactive) (dancar-jump-numeric-bookmark 2)))
+(global-set-key (kbd "C-C 2")   (lambda () (interactive) (dancar-set-numeric-bookmark  2)))
+
+(global-set-key (kbd "C-c 3" )  (lambda () (interactive) (dancar-jump-numeric-bookmark 3)))
+(global-set-key (kbd "C-C 3")   (lambda () (interactive) (dancar-set-numeric-bookmark  3)))
+
+(global-set-key (kbd "C-c 4" )  (lambda () (interactive) (dancar-jump-numeric-bookmark 4)))
+(global-set-key (kbd "C-C 4")   (lambda () (interactive) (dancar-set-numeric-bookmark  4)))
+
+(global-set-key (kbd "C-c 5" )  (lambda () (interactive) (dancar-jump-numeric-bookmark 5)))
+(global-set-key (kbd "C-C 5")   (lambda () (interactive) (dancar-set-numeric-bookmark  5)))
+
+(global-set-key (kbd "C-c 6" )  (lambda () (interactive) (dancar-jump-numeric-bookmark 6)))
+(global-set-key (kbd "C-C 6")   (lambda () (interactive) (dancar-set-numeric-bookmark  6)))
+
+(global-set-key (kbd "C-c 7" )  (lambda () (interactive) (dancar-jump-numeric-bookmark 7)))
+(global-set-key (kbd "C-C 7")   (lambda () (interactive) (dancar-set-numeric-bookmark  7)))
+
+(global-set-key (kbd "C-c 8" )  (lambda () (interactive) (dancar-jump-numeric-bookmark 8)))
+(global-set-key (kbd "C-C 8")   (lambda () (interactive) (dancar-set-numeric-bookmark  8)))
+
+(global-set-key (kbd "C-c 9" )  (lambda () (interactive) (dancar-jump-numeric-bookmark 9)))
+(global-set-key (kbd "C-C 9")   (lambda () (interactive) (dancar-set-numeric-bookmark  9)))
+
+
+
+
+(global-set-key (kbd "C-c 0") (lambda () (interactive) (dancar-jump-numeric-bookmark 0)))
+
 (global-set-key (kbd "C-c p") (lambda () (interactive) (save-buffer) (kill-ring-save (point-min) (point-max)) (message "Buffer copied.")))
 
 (global-set-key (kbd "C-c N") (lambda() (interactive) (dired "~/Dropbox/snippets")))
@@ -20,8 +58,8 @@
 
 ;; MBP Adaptation:
 
-(global-set-key [C-s-268632076] (lambda () (interactive) (indent-selection 2)))
-(global-set-key [C-s-268632072] (lambda () (interactive) (indent-selection -2)))
+(global-set-key [C-s-right] (lambda () (interactive) (indent-selection 2)))
+(global-set-key [C-s-left] (lambda () (interactive) (indent-selection -2)))
 
 (fset 'init_kbd_fn
    (lambda (&optional arg) "Keyboard macro." (interactive "p") (kmacro-exec-ring-item (quote ([24 111 134217788 19 99 111 109 109 97 110 100 13 6 67108896 19 44 2 24 114 115 49 24 111 24 114 105 49 40 103 108 111 98 97 108 45 115 101 116 45 107 101 121 32 40 107 98 100 32 34 115 45 34 41 32 39 5 41 18 34 13] 0 "%d")) arg)))

@@ -1,3 +1,14 @@
+(defun dancar-numeric-bookmark-name (number)
+  (concat "_dancar-numeric_bookmark-" (number-to-string number)))
+
+(defun dancar-set-numeric-bookmark (number)
+  (bookmark-set (dancar-numeric-bookmark-name number))
+  (message (format "Bookmark %s set to buffer %s" number (buffer-name)))
+  )
+
+(defun dancar-jump-numeric-bookmark (number)
+  (bookmark-jump (dancar-numeric-bookmark-name number)))
+
 (defun dancar-helm-switch-to-full ()
   (interactive)
   (setq dan-temp-query (minibuffer-contents))
@@ -10,8 +21,8 @@
   (interactive)
   (helm :sources '(
                    helm-source-buffers-list
-                   helm-source-bookmarks
                    helm-source-ls-git-status
+                   helm-source-bookmarks
                    helm-source-recentf
                    helm-source-ls-git
                    helm-source-buffer-not-found
