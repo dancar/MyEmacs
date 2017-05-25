@@ -1,3 +1,6 @@
+;;; original and stolen functions
+
+
 ;;; stolen from: https://www.emacswiki.org/emacs/InsertingTodaysDate
 (defun date (arg)
    (interactive "P")
@@ -5,27 +8,12 @@
                (format-time-string "%d.%m.%Y")
              (format-time-string "%Y-%m-%d"))))
 
-
-(defun dancar-numeric-bookmark-name (number)
-  (concat "_dancar-numeric_bookmark-" (number-to-string number)))
-
-(defun dancar-numeric-bookmark (number)
-  (message (format "value: '%s'" current-prefix-arg))
-  (if current-prefix-arg
-      (progn
-        (bookmark-set (dancar-numeric-bookmark-name number))
-        (message (format "Bookmark %s set to buffer %s" number (buffer-name))))
-    (bookmark-jump (dancar-numeric-bookmark-name number))))
-
-
-
 (defun dancar-helm-switch-to-full ()
   (interactive)
   (setq dan-temp-query (minibuffer-contents))
-  (helm-run-after-quit
-   (lambda()
-     (helm-dan `,dan-temp-query)))
-  (helm-keyboard-quit))
+  (helm-exit-and-execute-action
+   (lambda(ignore)
+     (helm-dan `,dan-temp-query))))
 
 (defun helm-dan (&optional input)
   (interactive)

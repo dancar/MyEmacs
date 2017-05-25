@@ -1,7 +1,5 @@
 ;; Package Manager:
-
 (package-initialize)
-
 
 (add-to-list 'package-archives
             '("melpa" . "http://melpa.milkbox.net/packages/") t)
@@ -21,7 +19,6 @@
 ;; Start emacs server when in windows system:
 (when window-system (server-start))
 
-
 ;; Set font according to os:
 (cond
  ((equal system-type 'darwin)
@@ -29,20 +26,14 @@
  ((and nil (equal system-type 'gnu/linux))
   (set-face-attribute 'default nil :family "Ubuntu Mono" :height 180 :weight 'normal)))
 
-
-
 ;; Disable truncating lines when viewing diffs in ediff:
 (add-hook 'ediff-prepare-buffer-hook (lambda () (toggle-truncate-lines 0)))
-
 
 ;; Enable erasing complete buffers:
 (put 'erase-buffer 'disabled nil)
 
-
-
 ;; Delete trailing whitespace upon save:
 (add-hook 'before-save-hook 'delete-trailing-whitespace)
-
 
 ;; Read the bash profile when entering shell:
 (add-hook 'shell-mode-hook
