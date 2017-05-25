@@ -93,7 +93,7 @@
  '(nyan-wavy-trail nil)
  '(package-selected-packages
    (quote
-    (browse-kill-ring yasnippet web-mode undo-tree tabbar smex scss-mode paredit org nyan-mode multiple-cursors markdown-mode magit key-chord json-mode js3-mode js2-mode ivy ido-ubiquitous idle-highlight-mode highlight-symbol expand-region exec-path-from-shell deft color-theme buffer-move auto-complete ag)))
+    (evil yasnippet web-mode undo-tree tabbar smex scss-mode paredit org nyan-mode multiple-cursors markdown-mode magit key-chord json-mode js3-mode js2-mode ivy ido-ubiquitous idle-highlight-mode highlight-symbol expand-region exec-path-from-shell deft color-theme buffer-move auto-complete ag)))
  '(recentf-auto-cleanup (quote never))
  '(recentf-max-saved-items 1000)
  '(scroll-conservatively 100)
