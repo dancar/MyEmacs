@@ -13,3 +13,5 @@ session.*
 .emacs.bmk
 places
 .smex-items
+recentf
+ido.last

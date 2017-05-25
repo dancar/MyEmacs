@@ -31,14 +31,6 @@
 (defun helm-dan-buffers ()
  (interactive)
  (helm-buffers-list))
- ;; (require 'helm-files)
- ;; (helm-other-buffer
- ;;  '(helm-source-buffers-list)
- ;;  "*helm dan buffers*"))
-
-(defun date ()
-  (interactive)
-  (insert (shell-command-to-string "date")))
 
 ;; stolen: http://www.emacswiki.org/emacs/SwitchingBuffers#toc5
 (defun toggle-buffer ()

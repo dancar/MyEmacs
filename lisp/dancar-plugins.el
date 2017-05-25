@@ -22,18 +22,12 @@
          (message (format "Error loading plugin \"%s\"." plugin-name))
       ))))
 
-;; Minor modes / helpers:
-(load-plugin 'magit)
-(load-plugin 'git-emacs)
-
 ;; (load-plugin 'newcomment)
 
 
 (load-plugin 'highlighbt-symbol)
 (load-plugin 'dired-details-plus)
 (load-plugin 'move-lines)
-(load-plugin 'browse-kill-ring)
-(load-plugin 'magit)
 (load-plugin 'multiple-cursors)
 
 ;; (load-plugin 'sr-speedbar)

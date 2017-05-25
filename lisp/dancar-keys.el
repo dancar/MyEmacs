@@ -230,10 +230,12 @@
 (add-hook 'scss-mode-hook 'my-scss-mode-keys-minor-mode)
 ;; /
 
-;; Set newline
+;; Set newline everywhereish
 (defun set-newline-and-indent ()
   (interactive)
   (local-set-key (kbd "RET") 'newline-and-indent))
 ;;/
+(add-hook 'prog-mode-hook 'set-newline-and-indent)
+
 
 (provide 'dancar-keys)
