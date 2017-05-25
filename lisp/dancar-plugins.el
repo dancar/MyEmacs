@@ -31,7 +31,6 @@
 (load-plugin 'move-lines)
 (load-plugin 'browse-kill-ring)
 (load-plugin 'magit)
-;; (load-plugin 'dokuwiki-mode)
 (load-plugin 'multiple-cursors)
 
 ;; (load-plugin 'sr-speedbar)

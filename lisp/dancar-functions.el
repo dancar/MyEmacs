@@ -1,13 +1,23 @@
+;;; stolen from: https://www.emacswiki.org/emacs/InsertingTodaysDate
+(defun date (arg)
+   (interactive "P")
+   (insert (if arg
+               (format-time-string "%d.%m.%Y")
+             (format-time-string "%Y-%m-%d"))))
+
+
 (defun dancar-numeric-bookmark-name (number)
   (concat "_dancar-numeric_bookmark-" (number-to-string number)))
 
-(defun dancar-set-numeric-bookmark (number)
-  (bookmark-set (dancar-numeric-bookmark-name number))
-  (message (format "Bookmark %s set to buffer %s" number (buffer-name)))
-  )
+(defun dancar-numeric-bookmark (number)
+  (message (format "value: '%s'" current-prefix-arg))
+  (if current-prefix-arg
+      (progn
+        (bookmark-set (dancar-numeric-bookmark-name number))
+        (message (format "Bookmark %s set to buffer %s" number (buffer-name))))
+    (bookmark-jump (dancar-numeric-bookmark-name number))))
 
-(defun dancar-jump-numeric-bookmark (number)
-  (bookmark-jump (dancar-numeric-bookmark-name number)))
+
 
 (defun dancar-helm-switch-to-full ()
   (interactive)
