@@ -1,13 +1,17 @@
 ;; Package Manager:
+
 (package-initialize)
+
+
 (add-to-list 'package-archives
-             '("melpa" . "http://melpa.milkbox.net/packages/") t)
+            '("melpa" . "http://melpa.milkbox.net/packages/") t)
 
 (add-to-list 'load-path "~/.emacs.d/lisp")
 (require 'dancar-customize)
 (require 'dancar-functions)
 (require 'dancar-plugins)
 (require 'dancar-keys)
+
 
 (add-hook 'prog-mode-hook 'set-newline-and-indent)
 
@@ -17,6 +21,7 @@
 ;; Start emacs server when in windows system:
 (when window-system (server-start))
 
+
 ;; Set font according to os:
 (cond
  ((equal system-type 'darwin)
@@ -24,25 +29,26 @@
  ((and nil (equal system-type 'gnu/linux))
   (set-face-attribute 'default nil :family "Ubuntu Mono" :height 180 :weight 'normal)))
 
+
+
 ;; Disable truncating lines when viewing diffs in ediff:
 (add-hook 'ediff-prepare-buffer-hook (lambda () (toggle-truncate-lines 0)))
+
 
 ;; Enable erasing complete buffers:
 (put 'erase-buffer 'disabled nil)
 
+
+
 ;; Delete trailing whitespace upon save:
 (add-hook 'before-save-hook 'delete-trailing-whitespace)
+
 
 ;; Read the bash profile when entering shell:
 (add-hook 'shell-mode-hook
           (lambda ()
             (insert "source ~/.profile")
             (comint-send-input)))
-
-;; prevent exit prompt
-(defadvice save-buffers-kill-emacs (around no-query-kill-emacs activate)
-        "Prevent annoying \"Active processes exist\" query when you quit Emacs."
-        (flet ((process-list ())) ad-do-it))
 
 ;; load color-theme:
 (load-theme 'manoj-dark)

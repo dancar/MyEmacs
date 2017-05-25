@@ -14,8 +14,9 @@
 
 ;; ----- ido-work-directory-list -----
 (
- "/Users/dan/"
+ "/Users/dan/.emacs.d/lisp/"
  "/Users/dan/.emacs.d/"
+ "/Users/dan/"
  "/Users/dan/Dropbox/"
  "/Users/dan/dev/practicar/"
  "/tmp/"
@@ -30,7 +31,6 @@
  "/Users/dan/dev/ma-kaf/spanishverbs/management/commands/"
  "/Users/dan/dev/ma-kaf/mysite/mysite/"
  "/Users/dan/dev/ma-kaf/mysite/mysite/spanishverbs/"
- "/Users/dan/.emacs.d/lisp/"
  "/Users/dan/Dropbox/deft/"
  "/Users/dan/Dropbox/conf/"
  "/Users/dan/dev/scripts/"
@@ -38,8 +38,8 @@
 
 ;; ----- ido-work-file-list -----
 (
- ".emacs.d"
  "README.md"
+ ".emacs.d"
  "pws.txt"
  "package.json"
  "style.css"
@@ -77,11 +77,15 @@
 
 ;; ----- ido-dir-file-cache -----
 (
+ ("/Users/dan/Dropbox/notes/" (22822 18540 0 0) "journal.md" "atom.md" "2do.md" ".#2do.md" "../" "./")
+
+ ("/Users/dan/.emacs.d/" (22822 13488 0 0) "update_subsubmodules.sh" "tramp" "snippets/" "recentf" "README.md" "plugins/" "lisp/" "init.el" "ido.last" "elpa/" "dancar-customize.el" "auto-save-list/" "ac-comphist.dat" ".mc-lists.el" ".gitmodules" ".gitignore" ".gitconfig.bak" ".git/" ".emacs.bmk" ".DS_Store" "../" "./")
+
+ ("/Users/dan/.emacs.d/lisp/" (22822 12383 0 0) "load-themes.el" "dancar-plugins.el" "dancar-keys.el~" "dancar-keys.el" "dancar-functions.el" "dancar-customize.el" "copy-paste-from-register.el" "color-themese.el" "ac-comphist.dat" "../" "./")
+
  ("/Users/dan/dev/" (22820 39535 0 0) "World of Warcraft Sirus/" "vendor/" "snaffle_py/" "snaffle/" "scripts/" "practicar/" "passway/" "nukvar/" "ma-kaf/" "bla.pyc" "bla.py" "bla/" ".DS_Store" "../" "./")
 
  ("/Users/dan/dev/snaffle_py/" (22812 3216 0 0) "snaffle.py" "9.jpg.torrent" "../" "./")
-
- ("/Users/dan/.emacs.d/" (22822 1088 0 0) "update_subsubmodules.sh" "tramp" "snippets/" "recentf" "README.md" "plugins/" "lisp/" "init.el" "ido.last" "elpa/" "auto-save-list/" "ac-comphist.dat" ".mc-lists.el" ".gitmodules" ".gitignore" ".gitconfig.bak" ".git/" ".emacs.bmk" ".DS_Store" "../" "./")
 
  ("/Users/dan/" (22822 1092 0 0) "VirtualBox VMs/" "Untitled.ipynb" "tmp" "testtorrent/" "test" "spec_900s.htm" "spec.htm" "song_data.gl.zip" "song_data.gl/" "Song recommender.ipynb" "Samsung/" "rm" "q2.pyc" "q2.py" "Public/" "Predicting house prices.ipynb" "Pictures/" "people_wiki.gl/" "people-example.csv" "Music/" "Movies/" "Library/" "image_train_data/" "image_test_data/" "home_data.gl/" "Google Drive/" "FLIGHT2PAGE_files/" "FLIGHT2PAGE.html" "facepalm.jpg" "DSCN3712.jpg" "DSC00015 copy.jpg" "Dropbox/" "Downloads/" "Documents/" "document-retrieval.ipynb" "dev/" "Desktop/" "Deep Features for Image Retrieval.ipynb" "Deep Features for Image Classification.ipynb" "Calibre Library/" "bundle.js.1" "bundle.js" "bla.txt" "Applications/" "AndroidStudioProjects/" "Analyzing product sentiment.ipynb" ".wget-hsts" ".viminfo" ".vim/" ".vagrant.d/" ".Trash/" ".tmp/" ".swt/" ".swp" ".subversion/" ".standard-cache/" ".ssh/" ".rbenv/" ".profile" ".oracle_jre_usage/" ".npm/" ".node_repl_history" ".node-gyp/" ".mplayer/" ".meteorsession" ".meteor/" ".matplotlib/" ".local/" ".lesshst" ".jupyter/" ".ipython/" ".ipynb_checkpoints/" ".graphlab/" ".gradle/" ".gnupg/" ".gitignore_global" ".gitconfig" ".gem/" ".emacs.d/" ".electron/" ".DS_Store" ".dropbox/" ".continuum/" ".config/" ".conda/" ".coffee_history" ".CFUserTextEncoding" ".cache/" ".bundle/" ".bash_sessions/" ".bash_profile" ".bash_history" ".babel.json" ".atom/" ".android/" "../" "./")
 
@@ -97,8 +101,6 @@
  ("/Users/" (22517 57879 0 0) "Shared/" "Guest/" "dan/" ".localized" "../" "./")
 
  ("/Users/dan/Dropbox/snippets/" (22804 20845 0 0) "0044" "0043.org" "0042" "0041" "0040" "0039" "0038" "0037" "0036" "0035" "0034" "0033" "0032" "0031" "0030" "0029" "0028" "0027" "0026" "0025" "0024" "0023" "0022" "0021" "0020" "0019" "0018" "0017" "0016" "0015" "0014" "0013" "0012" "0011" "0010" "0009" "0008.txt" "0007" "0006" "0005" "0004" "0003" "0002" "0001" "../" "./")
-
- ("/Users/dan/.emacs.d/lisp/" (22802 53837 0 0) "load-themes.el" "dancar-plugins.el" "dancar-keys.el~" "dancar-keys.el" "dancar-functions.el" "dancar-customize.el" "copy-paste-from-register.el" "color-themese.el" "ac-comphist.dat" "../" "./")
 
  ("/Users/dan/dev/ma-kaf/mysite/mysite/spanishverbs/" (22691 5063 0 0) "verb_stealer.py" "management/" ".DS_Store" "../" "./")
 

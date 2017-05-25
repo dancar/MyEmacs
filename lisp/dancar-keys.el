@@ -15,6 +15,7 @@
 
 
 
+
 (global-set-key (kbd "C-c 0") (lambda () (interactive) (dancar-jump-numeric-bookmark 0)))
 
 (global-set-key (kbd "C-c p") (lambda () (interactive) (save-buffer) (kill-ring-save (point-min) (point-max)) (message "Buffer copied.")))

@@ -25,8 +25,11 @@
 ;; Minor modes / helpers:
 (load-plugin 'magit)
 (load-plugin 'git-emacs)
-(load-plugin 'newcomment)
-(load-plugin 'highlight-symbol)
+
+;; (load-plugin 'newcomment)
+
+
+(load-plugin 'highlighbt-symbol)
 (load-plugin 'dired-details-plus)
 (load-plugin 'move-lines)
 (load-plugin 'browse-kill-ring)
