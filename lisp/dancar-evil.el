@@ -5,7 +5,7 @@
   (key-chord-define-global "jk" 'evil-normal-state)
   )
 
-
+(use-package evil-magit)
 (evil-mode 1)
 (provide 'dancar-evil)
 ;;;;;;;;;;;;;;;;;;
