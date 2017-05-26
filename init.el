@@ -50,9 +50,26 @@
 (put 'narrow-to-region 'disabled nil)
 (put 'upcase-region 'disabled nil)
 
-;; plugins:
 
+;; allow using the new gpg:
+(setf epa-pinentry-mode 'loopback)
+
+;; plugins:
 (use-package helm-ls-git)
+
+(require 'use-package-chords)
+(use-package key-chord
+  :config
+  (key-chord-mode 1)
+  :chords (("`1" . save-buffer)
+
+           )
+           ("jh" . dancar-jump-line-next-small)
+           ("JH" . dancar-jump-line-next-big)
+
+           ("kl" . dancar-jump-line-previous-small)
+           ("KL" . dancar-jump-line-previous-big)
+  )
 
 (use-package tabbar-mode
   :bind (

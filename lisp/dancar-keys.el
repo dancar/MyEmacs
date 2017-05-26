@@ -154,8 +154,8 @@
 (global-set-key (kbd "s-<right>") 'windmove-right)
 (global-set-key (kbd "s-<left>") 'windmove-left)
 
-(global-set-key  [C-s-268632080] (lambda () (interactive) (previous-line 4)))
-(global-set-key  [C-s-268632078] (lambda () (interactive) (next-line 4)))
+(global-set-key  [C-s-268632080] 'dancar-jump-line-previous-small)
+(global-set-key  [C-s-268632078] 'dancar-jump-line-next-small)
 (global-set-key  (kbd "C-s-S-p") (lambda () (interactive) (previous-line 12)))
 (global-set-key  (kbd "C-s-S-n") (lambda () (interactive) (next-line 12)))
 

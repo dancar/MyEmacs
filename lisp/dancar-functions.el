@@ -58,19 +58,6 @@
       (coffee-newline-and-indent)
     (newline-and-indent)))
 
-(defun same-issue ()
-  "Copies issue number to commit message (c) dancar"
-  (interactive)
-  (beginning-of-buffer)
-  (next-line)
-  (end-of-line)
-  (search-backward "(")
-  (copy-to-register `x (point) (line-end-position))
-  (magit-log-edit)
-  (insert " ")
-  (insert-register `x)
-  (beginning-of-buffer))
-
 (defun tail (file)
   (interactive "fFile name:")
   (shell (concat (file-name-nondirectory file) "-tail"))
@@ -96,10 +83,6 @@
         (switch-to-buffer notes-buffer)
       (bookmark-jump "notes"))))
 
-(fset 'little-coffee-window
-      (lambda (&optional arg) "Keyboard macro." (interactive "p") (kmacro-exec-ring-item (quote ([24 49 24 50 C-tab 21 21 134217848 115 104 114 105 tab return C-tab] 0 "%d")) arg)))
-
-
 (defun dancar-kill ()
   "Kill the region if active, else backward-kill subword"
   (interactive)
@@ -107,13 +90,6 @@
       (region-active-p)
       (kill-region (region-beginning) (region-end))
     (subword-backward-kill 1)))
-
-
-;; Stolen from http://irreal.org/blog/?p=354
-(defun json-format ()
-  (interactive)
-  (save-excursion
-    (shell-command-on-region (mark) (point) "python -m json.tool" (buffer-name) t)))
 
 (defun new-buffer ()
   "Creates new buffers with iterative names
@@ -147,7 +123,6 @@
          )
     (find-file new-full-filename)))
 
-
 (defun indent-selection (count)
   (interactive)
   (let (
@@ -167,15 +142,22 @@
       (dired (file-name-directory (buffer-file-name)))
     (execute-extended-command nil "dired")))
 
-(defun view-functions ()
+(setq dancar-small-jump 7)
+(setq dancar-big-jump 12)
+(defun dancar-jump-line-next-small()
   (interactive)
-  (let ((rx
-        (case major-mode
-          (`js-mode "^  [a-zA-Z]+:")
-          (`coffee-mode "^  [a-zA-Z]+:")
-          (`yaml-mode "^  [a-zA-Z]+:")
-          ('enh-ruby-mode "^[ ]*def [a-zA-Z_]+"))))
-    (occur rx)))
-(global-set-key (kbd "C-c f") `view-functions)
+  (next-line dancar-small-jump))
+
+(defun dancar-jump-line-previous-small()
+  (interactive)
+  (previous-line dancar-small-jump))
+
+(defun dancar-jump-line-next-big()
+  (interactive)
+  (next-line dancar-big-jump))
+
+(defun dancar-jump-line-previous-big()
+  (interactive)
+  (previous-line dancar-big-jump))
 
 (provide 'dancar-functions)

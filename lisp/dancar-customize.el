@@ -86,13 +86,14 @@
  '(list-directory-brief-switches "-CFa")
  '(list-directory-verbose-switches "-1a")
  '(lua-indent-level 2)
+ '(magit-ediff-dwim-show-on-hunks t)
  '(make-backup-files nil)
  '(menu-bar-mode nil)
  '(ns-auto-hide-menu-bar nil)
  '(ns-pop-up-frames nil)
  '(package-selected-packages
    (quote
-    (evil-magit tabbar deft expand-region exec-path-from-shell powerline evil yasnippet web-mode undo-tree tabbar smex scss-mode paredit org multiple-cursors markdown-mode magit key-chord json-mode js3-mode js2-mode ivy ido-ubiquitous idle-highlight-mode highlight-symbol expand-region exec-path-from-shell deft color-theme buffer-move auto-complete ag)))
+    (evil-numbers use-package-chords use-package helm-ls-git powerline-evil evil-org evil-magit tabbar deft expand-region exec-path-from-shell powerline evil yasnippet web-mode undo-tree tabbar smex scss-mode paredit org multiple-cursors markdown-mode magit key-chord json-mode js3-mode js2-mode ivy ido-ubiquitous idle-highlight-mode highlight-symbol expand-region exec-path-from-shell deft color-theme buffer-move auto-complete ag)))
  '(recentf-auto-cleanup (quote never))
  '(recentf-max-saved-items 1000)
  '(scroll-conservatively 100)
