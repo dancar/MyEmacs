@@ -17,7 +17,7 @@
  '(coffee-tab-width 2)
  '(column-number-mode t)
  '(css-indent-offset 2)
- '(custom-file "~/.emacs.d/dancar-customize.el")
+ '(custom-file "~/.emacs.d/lisp/dancar-customize.el")
  '(deft-auto-save-interval 0.0)
  '(deft-use-filename-as-title t)
  '(dired-listing-switches "-lhpa")
@@ -29,6 +29,7 @@
  '(elscreen-display-tab nil)
  '(elscreen-tab-display-kill-screen nil)
  '(epg-debug t)
+ '(evil-want-C-u-scroll t)
  '(fill-column 9999999999999)
  '(git-state-modeline-decoration (quote git-state-decoration-large-dot))
  '(global-auto-revert-mode t)
@@ -40,10 +41,14 @@
  '(graphviz-dot-indent-width 2)
  '(graphviz-dot-view-command "dot %s")
  '(grep-find-command (quote ("find . -type f -exec grep -nH -e  {} ;" . 34)))
- '(grep-find-ignored-files (quote (".#*" "*.o" "*~" "*.bin" "*.lbin" "*.so" "*.a" "*.ln" "*.blg" "*.bbl" "*.elc" "*.lof" "*.glo" "*.idx" "*.lot" "*.fmt" "*.tfm" "*.class" "*.fas" "*.lib" "*.mem" "*.x86f" "*.sparcf" "*.dfsl" "*.pfsl" "*.d64fsl" "*.p64fsl" "*.lx64fsl" "*.lx32fsl" "*.dx64fsl" "*.dx32fsl" "*.fx64fsl" "*.fx32fsl" "*.sx64fsl" "*.sx32fsl" "*.wx64fsl" "*.wx32fsl" "*.fasl" "*.ufsl" "*.fsl" "*.dxl" "*.lo" "*.la" "*.gmo" "*.mo" "*.toc" "*.aux" "*.cp" "*.fn" "*.ky" "*.pg" "*.tp" "*.vr" "*.cps" "*.fns" "*.kys" "*.pgs" "*.tps" "*.vrs" "*.pyc" "*.pyo" "ext-*.js")))
+ '(grep-find-ignored-files
+   (quote
+    (".#*" "*.o" "*~" "*.bin" "*.lbin" "*.so" "*.a" "*.ln" "*.blg" "*.bbl" "*.elc" "*.lof" "*.glo" "*.idx" "*.lot" "*.fmt" "*.tfm" "*.class" "*.fas" "*.lib" "*.mem" "*.x86f" "*.sparcf" "*.dfsl" "*.pfsl" "*.d64fsl" "*.p64fsl" "*.lx64fsl" "*.lx32fsl" "*.dx64fsl" "*.dx32fsl" "*.fx64fsl" "*.fx32fsl" "*.sx64fsl" "*.sx32fsl" "*.wx64fsl" "*.wx32fsl" "*.fasl" "*.ufsl" "*.fsl" "*.dxl" "*.lo" "*.la" "*.gmo" "*.mo" "*.toc" "*.aux" "*.cp" "*.fn" "*.ky" "*.pg" "*.tp" "*.vr" "*.cps" "*.fns" "*.kys" "*.pgs" "*.tps" "*.vrs" "*.pyc" "*.pyo" "ext-*.js")))
  '(grep-find-template "find . <X> -type f <F> -exec grep <C> -nH -e <R> {} \\;")
  '(helm-always-two-windows nil)
- '(helm-boring-buffer-regexp-list (quote ("\\` " "\\*helm" "\\*helm-mode" "\\*Echo Area" "\\*Minibuf" "\\*magit-process*" "\\*magit-edit-log*")))
+ '(helm-boring-buffer-regexp-list
+   (quote
+    ("\\` " "\\*helm" "\\*helm-mode" "\\*Echo Area" "\\*Minibuf" "\\*magit-process*" "\\*magit-edit-log*")))
  '(helm-buffer-max-length 30)
  '(helm-ff-auto-update-initial-value nil)
  '(helm-full-frame nil)
@@ -58,7 +63,12 @@
  '(icicle-Completions-window-max-height 70)
  '(icicle-TAB/S-TAB-only-completes-flag nil)
  '(icicle-modal-cycle-down-keys (quote ([down] [nil mouse-5] [mouse-5] "")))
- '(icicle-modal-cycle-up-action-keys (quote ([C-up] [nil (control mouse-4)] [(control mouse-4)])))
+ '(icicle-modal-cycle-up-action-keys
+   (quote
+    ([C-up]
+     [nil
+      (control mouse-4)]
+     [(control mouse-4)])))
  '(icicle-modal-cycle-up-keys (quote ([up] [nil mouse-4] [mouse-4] "")))
  '(icicle-show-Completions-initially-flag nil)
  '(ido-enable-flex-matching nil)
@@ -80,8 +90,9 @@
  '(menu-bar-mode nil)
  '(ns-auto-hide-menu-bar nil)
  '(ns-pop-up-frames nil)
- '(nyan-mode t)
- '(nyan-wavy-trail nil)
+ '(package-selected-packages
+   (quote
+    (yasnippet web-mode undo-tree tabbar smex scss-mode paredit org multiple-cursors markdown-mode magit key-chord json-mode js3-mode js2-mode ivy ido-ubiquitous idle-highlight-mode highlight-symbol expand-region exec-path-from-shell deft color-theme buffer-move auto-complete ag)))
  '(recentf-auto-cleanup (quote never))
  '(recentf-max-saved-items 1000)
  '(scroll-conservatively 100)
@@ -119,9 +130,12 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
+ '(dancar-powerline-hud-fill1 ((t (:background "blue violet"))))
  '(highlight-symbol-face ((t (:underline "Blue"))))
  '(idle-highlight ((t (:inherit region :background "RoyalBlue4" :foreground "white"))))
  '(paren-face-match ((t (:inverse-video t))) t)
+ '(powerline-active1 ((t (:inherit mode-line :background "grey22" :foreground "LightSkyBlue1"))))
+ '(powerline-active2 ((t (:inherit mode-line :background "grey40" :foreground "LightSkyBlue2"))))
  '(region ((t (:background "SlateGray2"))))
  '(tabbar-default ((t (:inherit variable-pitch :background "gray75" :foreground "gray50" :height 1.3))))
  '(tabbar-modified ((t (:inherit tabbar-default :foreground "blue" :box (:line-width 1 :color "white" :style released-button)))))

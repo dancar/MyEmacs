@@ -1,4 +1,0 @@
-(
- (:id "sha1:49743765900ba91a36329d69bbc21a77f1e13c5a" :fingerprint "sha1:2d:97:96:a5:29:dd:17:bc:ab:be:20:2f:44:8a:6a:a7:94:ca:2f:85" :host "en.wikipedia.org:443" :conditions (:insecure :unknown-ca :invalid))
- (:id "sha1:4c4bbf68801de341a54ea4c98e58c08e6d81bd51" :fingerprint "sha1:8d:bb:1e:df:9d:6e:77:d2:75:3e:61:aa:96:b1:5f:0c:7c:65:cb:87" :host "duckduckgo.com:443" :conditions (:insecure :unknown-ca :invalid))
-)

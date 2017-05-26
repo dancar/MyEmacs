@@ -7,10 +7,15 @@
 (add-to-list 'load-path "~/.emacs.d/lisp")
  (require 'dancar-customize)
  (require 'dancar-functions)
- (require 'dancar-plugins)
  (require 'dancar-keys)
 
 
+
+;; full path in title
+(setq frame-title-format
+      (list
+       "Emacs24 - "
+       '(buffer-file-name "%f" (dired-directory dired-directory "%b"))))
 
 ;; Ding is annoying:
 (setq ring-bell-function (lambda() (message "Beep.")))
@@ -35,7 +40,7 @@
 (add-hook 'before-save-hook 'delete-trailing-whitespace)
 
 ;; Read the bash profile when entering shell:
-(add-hook 'shell-mode-hook
+(add-hook 'shell-mode-hook>
           (lambda ()
             (insert "source ~/.profile")
             (comint-send-input)))
@@ -46,17 +51,72 @@
 (auto-fill-mode -1)
 (put 'narrow-to-region 'disabled nil)
 (put 'upcase-region 'disabled nil)
-(custom-set-variables
- ;; custom-set-variables was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(package-selected-packages
-   (quote
-    (yasnippet web-mode undo-tree tabbar smex scss-mode paredit org nyan-mode multiple-cursors markdown-mode magit key-chord json-mode js3-mode js2-mode ivy ido-ubiquitous idle-highlight-mode highlight-symbol expand-region exec-path-from-shell deft color-theme buffer-move auto-complete ag))))
-(custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- )
+;; (custom-set-variables
+;;  ;; custom-set-variables was added by Custom.
+;;  ;; If you edit it by hand, you could mess it up, so be careful.
+;;  ;; Your init file should contain only one such instance.
+;;  ;; If there is more than one, they won't work right.
+;;  '(package-selected-packages
+;;    (quote
+;;     (yasnippet web-mode undo-tree tabbar smex scss-mode paredit org multiple-cursors markdown-mode magit key-chord json-mode js3-mode js2-mode ivy ido-ubiquitous idle-highlight-mode highlight-symbol expand-region exec-path-from-shell deft color-theme buffer-move auto-complete ag))))
+;; (custom-set-faces
+;;  ;; custom-set-faces was added by Custom.
+;;  ;; If you edit it by hand, you could mess it up, so be careful.
+;;  ;; Your init file should contain only one such instance.
+;;  ;; If there is more than one, they won't work right.
+;;  )
+
+;; plugins:
+
+(use-package helm-ls-git)
+
+(use-package tabbar-mode
+  :bind (
+    ("s-}" . tabbar-forward-tab)
+    ("s-{" . tabbar-backward-tab)
+    ("C-s-{" . tabbar-backward-group)
+    ("C-s-}" . tabbar-forward-group))
+  :config
+  ;; http://www.emacswiki.org/emacs/TabBarMode#toc4
+  (defun my-tabbar-buffer-groups () ;; customize to show all normal files in one group
+    "Returns the name of the tab group names the current buffer belongs to.
+ There are two groups: Emacs buffers (those whose name starts with '*', plus
+ dired buffers), and the rest.  This works at least with Emacs v24.2 using
+ tabbar.el v1.7."
+    (list (cond ((string-equal "*" (substring (buffer-name) 0 1)) "Emacs")
+                ((eq major-mode 'dired-mode) "Dired")
+                ((eq major-mode 'markdown-mode) "Markdown")
+                (t "User"))))
+  (setq tabbar-buffer-groups-function 'my-tabbar-buffer-groups)
+  )
+
+(use-package deft
+  :config
+  ;; configuration based on http://emacs-fu.blogspot.co.il/2011/09/quick-note-taking-with-deft-and-org.html
+  (setq
+   deft-extension "org"
+   deft-directory "~/Dropbox/deft/"
+   deft-text-mode 'org-mode)
+)
+
+(use-package expand-region
+  :bind (
+         ("C-=" . er/expand-region)
+         ("C-+" . er/contract-region)
+         ))
+
+(use-package exec-path-from-shell
+  :config
+  (exec-path-from-shell-initialize)
+  (mapcar 'exec-path-from-shell-copy-env '())
+  )
+
+(require 'dancar-evil)
+
+ (use-package powerline
+   :config
+   (require 'dancar-powerline)
+   )
+
+
+(toggle-frame-maximized)
