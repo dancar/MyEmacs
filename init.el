@@ -16,15 +16,16 @@
        '(buffer-file-name "%f" (dired-directory dired-directory "%b"))))
 
 ;; Ding is annoying:
-(setq ring-bell-function (lambda() (message "Beep.")))
+(setq ring-bell-function (lambda() nil))
 
 ;; Start emacs server when in windows system:
 (when window-system (server-start))
 
 ;; Set font according to os:
+;; old: Monaco
 (cond
  ((equal system-type 'darwin)
-  (set-face-attribute 'default nil :family "Monaco" :height 130 :weight 'normal))
+  (set-face-attribute 'default nil :family "Menlo" :height 140 :weight 'normal))
  ((and nil (equal system-type 'gnu/linux))
   (set-face-attribute 'default nil :family "Ubuntu Mono" :height 180 :weight 'normal)))
 
@@ -44,7 +45,7 @@
             (comint-send-input)))
 
 ;; load color-theme:
-(load-theme 'manoj-dark)
+(load-theme 'monokai)
 
 (auto-fill-mode -1)
 (put 'narrow-to-region 'disabled nil)
@@ -112,7 +113,11 @@
   (mapcar 'exec-path-from-shell-copy-env '())
   )
 
-(require 'dancar-evil)
+(use-package evil
+  :config
+  (require 'dancar-evil)
+  (evil-mode 1)
+  )
 
  (use-package powerline
    :config
