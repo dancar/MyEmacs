@@ -1,5 +1,7 @@
 ;; (l) dancar
 
+(global-set-key (kbd "<f12>") 'package-list-packages)
+
 ;; dancar-numeric-bookmarks:
 
 (global-set-key (kbd "C-S-c 0" )  (lambda () (interactive) (dancar-numeric-bookmark 0)))

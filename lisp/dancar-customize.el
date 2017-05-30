@@ -18,6 +18,9 @@
  '(column-number-mode t)
  '(css-indent-offset 2)
  '(custom-file "~/.emacs.d/lisp/dancar-customize.el")
+ '(custom-safe-themes
+   (quote
+    ("f78de13274781fbb6b01afd43327a4535438ebaeec91d93ebdbba1e3fba34d3c" default)))
  '(deft-auto-save-interval 0.0)
  '(deft-use-filename-as-title t)
  '(dired-listing-switches "-lhpa")
@@ -74,6 +77,7 @@
  '(ido-enable-flex-matching nil)
  '(ido-max-work-file-list 100)
  '(indent-tabs-mode nil)
+ '(inhibit-startup-screen t)
  '(js-indent-level 2)
  '(js2-allow-keywords-as-property-names nil)
  '(js2-auto-indent-p nil)
@@ -93,7 +97,7 @@
  '(ns-pop-up-frames nil)
  '(package-selected-packages
    (quote
-    (evil-numbers use-package-chords use-package helm-ls-git powerline-evil evil-org evil-magit tabbar deft expand-region exec-path-from-shell powerline evil yasnippet web-mode undo-tree tabbar smex scss-mode paredit org multiple-cursors markdown-mode magit key-chord json-mode js3-mode js2-mode ivy ido-ubiquitous idle-highlight-mode highlight-symbol expand-region exec-path-from-shell deft color-theme buffer-move auto-complete ag)))
+    (monokai-theme evil-mc markdown-preview-eww markdown-preview-mode coffee-mode evil-numbers use-package-chords use-package helm-ls-git powerline-evil evil-org evil-magit tabbar deft expand-region exec-path-from-shell powerline evil yasnippet web-mode undo-tree tabbar smex scss-mode paredit org multiple-cursors markdown-mode magit key-chord json-mode js2-mode ivy ido-ubiquitous idle-highlight-mode highlight-symbol expand-region exec-path-from-shell deft color-theme buffer-move auto-complete ag)))
  '(recentf-auto-cleanup (quote never))
  '(recentf-max-saved-items 1000)
  '(scroll-conservatively 100)

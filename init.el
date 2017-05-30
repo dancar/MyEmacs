@@ -25,7 +25,7 @@
 ;; old: Monaco
 (cond
  ((equal system-type 'darwin)
-  (set-face-attribute 'default nil :family "Menlo" :height 140 :weight 'normal))
+  (set-face-attribute 'default nil :family "Menlo" :height 150 :weight 'normal))
  ((and nil (equal system-type 'gnu/linux))
   (set-face-attribute 'default nil :family "Ubuntu Mono" :height 180 :weight 'normal)))
 
