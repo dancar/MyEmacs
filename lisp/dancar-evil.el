@@ -15,6 +15,11 @@
    (evil-normal-state)
    (save-buffer)))
 
+(use-package evil-surround
+  :config
+  (global-evil-surround-mode 1))
+
+
 (use-package evil-mc
   :config
   (defun dancar-toggle-evil-mc-mode ()
@@ -23,11 +28,11 @@
         (progn
           (evil-mc-undo-all-cursors)
           (evil-mc-mode 0)
-          (message "evil-mc-mode is ON")
+          (message "evil-mc-mode is OFF")
           )
       (progn
         (evil-mc-mode 1)
-        (message "evil-mc-mode is OFF")
+        (message "evil-mc-mode is ON")
         )
       ))
   :chords (

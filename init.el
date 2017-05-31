@@ -9,6 +9,9 @@
 (require 'dancar-functions)
 (require 'dancar-keys)
 
+;; load jsx by default for .js files:
+(add-to-list 'auto-mode-alist '("\\.js\\'" . js-jsx-mode) nil )
+
 ;; full path in title
 (setq frame-title-format
       (list
@@ -125,3 +128,7 @@
    )
 
 (toggle-frame-maximized)
+
+(if (< (length command-line-args) 2)
+    (setq initial-buffer-choice (car (helm-recentf)))
+  )

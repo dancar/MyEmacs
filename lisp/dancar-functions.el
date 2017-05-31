@@ -142,8 +142,10 @@
       (dired (file-name-directory (buffer-file-name)))
     (execute-extended-command nil "dired")))
 
-(setq dancar-small-jump 7)
-(setq dancar-big-jump 12)
+(setq dancar-small-jump 3)
+(setq dancar-medium-jump 6)
+(setq dancar-big-jump 14)
+
 (defun dancar-jump-line-next-small()
   (interactive)
   (next-line dancar-small-jump))
@@ -151,6 +153,14 @@
 (defun dancar-jump-line-previous-small()
   (interactive)
   (previous-line dancar-small-jump))
+
+(defun dancar-jump-line-next-medium()
+  (interactive)
+  (next-line dancar-medium-jump))
+
+(defun dancar-jump-line-previous-medium()
+  (interactive)
+  (previous-line dancar-medium-jump))
 
 (defun dancar-jump-line-next-big()
   (interactive)
