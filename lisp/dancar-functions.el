@@ -1,6 +1,5 @@
 ;;; original and stolen functions
 
-
 ;;; stolen from: https://www.emacswiki.org/emacs/InsertingTodaysDate
 (defun date (arg)
    (interactive "P")
@@ -73,24 +72,6 @@
   (interactive)
   (bookmark-jump "_hereBookmark"))
 
-(defun goto-notes ()
-  "Open the \"notes\" bookmark"
-  (interactive)
-  (bookmark-bmenu-list) ;; Mysterious bug causes the bookmark not to be found unless the list is preloaded
-  (kill-buffer "*Bookmark List*")
-  (let ((notes-buffer (get-buffer "notes.txt")))
-    (if notes-buffer
-        (switch-to-buffer notes-buffer)
-      (bookmark-jump "notes"))))
-
-(defun dancar-kill ()
-  "Kill the region if active, else backward-kill subword"
-  (interactive)
-  (if
-      (region-active-p)
-      (kill-region (region-beginning) (region-end))
-    (subword-backward-kill 1)))
-
 (defun new-buffer ()
   "Creates new buffers with iterative names
   (l) dancar"
@@ -122,19 +103,6 @@
          (new-full-filename (concat snippets-dir new-filename))
          )
     (find-file new-full-filename)))
-
-(defun indent-selection (count)
-  (interactive)
-  (let (
-        (deactivate-mark)
-        (start (if (use-region-p)
-                   (region-beginning)
-                 (line-beginning-position)))
-        (end (if (use-region-p)
-                 (region-end)
-               (line-end-position)))
-        )
-    (indent-rigidly start end count)))
 
 (defun dancar-dired ()
   (interactive)
@@ -169,5 +137,26 @@
 (defun dancar-jump-line-previous-big()
   (interactive)
   (previous-line dancar-big-jump))
+
+(defun rotate-windows (arg)
+  "Rotate your windows; use the prefix argument to rotate the other direction"
+  (interactive "P")
+  (if (not (> (count-windows) 1))
+      (message "You can't rotate a single window!")
+    (let* ((rotate-times (prefix-numeric-value arg))
+           (direction (if (or (< rotate-times 0) (equal arg '(4)))
+                          'reverse 'identity)))
+      (dotimes (_ (abs rotate-times))
+        (dotimes (i (- (count-windows) 1))
+          (let* ((w1 (elt (funcall direction (window-list)) i))
+                 (w2 (elt (funcall direction (window-list)) (+ i 1)))
+                 (b1 (window-buffer w1))
+                 (b2 (window-buffer w2))
+                 (s1 (window-start w1))
+                 (s2 (window-start w2))
+                 (p1 (window-point w1))
+                 (p2 (window-point w2)))
+            (set-window-buffer-start-and-point w1 b2 s2 p2)
+            (set-window-buffer-start-and-point w2 b1 s1 p1)))))))
 
 (provide 'dancar-functions)

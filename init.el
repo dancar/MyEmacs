@@ -9,6 +9,13 @@
 (require 'dancar-functions)
 (require 'dancar-keys)
 
+(use-package drag-stuff
+  :bind (
+         ("s-n" . drag-stuff-down)
+         ("s-p" . drag-stuff-up)
+         )
+  )
+
 ;; load jsx by default for .js files:
 (add-to-list 'auto-mode-alist '("\\.js\\'" . js-jsx-mode) nil )
 
@@ -83,7 +90,8 @@
     ("C-s-}" . tabbar-forward-group))
   :config
   ;; http://www.emacswiki.org/emacs/TabBarMode#toc4
-  (defun my-tabbar-buffer-groups () ;; customize to show all normal files in one group
+  :init
+  (defun dancar-tabbar-buffer-groups () ;; customize to show all normal files in one group
     "Returns the name of the tab group names the current buffer belongs to.
  There are two groups: Emacs buffers (those whose name starts with '*', plus
  dired buffers), and the rest.  This works at least with Emacs v24.2 using
@@ -92,7 +100,7 @@
                 ((eq major-mode 'dired-mode) "Dired")
                 ((eq major-mode 'markdown-mode) "Markdown")
                 (t "User"))))
-  (setq tabbar-buffer-groups-function 'my-tabbar-buffer-groups)
+  (setq tabbar-buffer-groups-function 'dancar-tabbar-buffer-groups)
   )
 
 (use-package deft
@@ -122,11 +130,16 @@
   (evil-mode 1)
   )
 
- (use-package powerline
-   :config
-   (require 'dancar-powerline)
-   )
-
+(use-package powerline
+  :config
+  (require 'dancar-powerline)
+  )
+(use-package company
+  :config
+  (add-hook 'after-init-hook 'global-company-mode)
+  :bind
+  (("C-s-<268632064>" . company-complete))
+)
 (toggle-frame-maximized)
 
 (if (< (length command-line-args) 2)

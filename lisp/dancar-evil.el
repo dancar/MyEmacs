@@ -6,6 +6,8 @@
 (global-set-key (kbd "C-S-s-k") 'dancar-jump-line-previous-big)
 (global-set-key (kbd "C-e") 'move-end-of-line)
 (define-key evil-motion-state-map (kbd "C-e") 'move-end-of-line)
+(define-key evil-insert-state-map (kbd "C-e") 'move-end-of-line)
+(define-key evil-insert-state-map (kbd "C-a") 'move-beginning-of-line)
 
 ;; ctrl-g fix
 (key-chord-define-global
