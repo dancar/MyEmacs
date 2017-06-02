@@ -9,13 +9,6 @@
 (require 'dancar-functions)
 (require 'dancar-keys)
 
-(use-package drag-stuff
-  :bind (
-         ("s-n" . drag-stuff-down)
-         ("s-p" . drag-stuff-up)
-         )
-  )
-
 ;; load jsx by default for .js files:
 (add-to-list 'auto-mode-alist '("\\.js\\'" . js-jsx-mode) nil )
 
@@ -65,7 +58,21 @@
 ;; allow using the new gpg:
 (setf epa-pinentry-mode 'loopback)
 
-;; plugins:
+;; plugins: ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+(use-package drag-stuff
+  :bind (
+         ("s-n" . drag-stuff-down)
+         ("s-p" . drag-stuff-up)
+         )
+  )
+
+(use-package helm-mode
+  :config
+  (helm-mode 1)
+  )
+
+
 (use-package helm-ls-git)
 
 (require 'use-package-chords)

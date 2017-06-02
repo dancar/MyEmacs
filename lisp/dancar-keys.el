@@ -6,6 +6,7 @@
 (global-set-key (kbd "C-s-|") (lambda () (interactive) (deft) (deft-filter-clear)))
 (global-set-key (kbd "C-\\") `helm-dan)
 (global-set-key (kbd "C-<return>") `go-line)
+(global-set-key (kbd "C-S-s-y") 'helm-show-kill-ring)
 
 ;; TEXT
 (global-set-key (kbd "s-k") 'kill-whole-line)
@@ -16,7 +17,6 @@
 (global-set-key [C-s-left] (lambda () (interactive) (indent-selection -2)))
 
 ;; WINDOWS
-(global-set-key (kbd "C-x `") (lambda () (interactive) (rotate-windows -1) (other-window 1)))
 (global-set-key  (kbd "C-<tab>") `other-window)
 (global-set-key (kbd "s-<up>") 'windmove-up)
 (global-set-key (kbd "s-<down>") 'windmove-down)
@@ -24,13 +24,15 @@
 (global-set-key (kbd "s-<left>") 'windmove-left)
 (global-set-key (kbd "C-;") `toggle-buffer)
 (global-set-key (kbd "C-x C-o") 'other-window)
+(global-set-key (kbd "<backtab>") 'other-window)
+(global-set-key (kbd "C-x <backtab>") (lambda () (interactive) (rotate-windows -1) (other-window 1)))
 
 
 ;; MOTION
 (global-set-key (kbd "C-c b") `bookmark-here-set)
 (global-set-key (kbd "C-c j") `bookmark-here-jump)
-(global-set-key (kbd "s-g s-n") 'next-error)
-(global-set-key (kbd "s-g s-p") 'previous-error)
+;;(global-set-key (kbd "s-g s-n") 'next-error)
+;;(global-set-key (kbd "s-g s-p") 'previous-error)
 (global-set-key (kbd "s-]") (lambda () (interactive) (scroll-up-line 2)))
 (global-set-key (kbd "s-[") (lambda () (interactive) (scroll-down-line 2)))
 (global-set-key  [C-s-268632080] 'dancar-jump-line-previous-small)
@@ -57,7 +59,7 @@
 
 
 ;;;MBP
-(global-set-key (kbd "s-g s-g") 'goto-line)
+;;(global-set-key (kbd "s-g s-g") 'goto-line)
 (global-set-key (kbd "s-0") 'digit-argument)
 (global-set-key (kbd "s-1") 'digit-argument)
 (global-set-key (kbd "s-2") 'digit-argument)
