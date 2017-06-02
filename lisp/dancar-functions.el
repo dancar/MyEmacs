@@ -13,9 +13,12 @@
   (helm-exit-and-execute-action
    (lambda(ignore)
      (helm-dan `,dan-temp-query))))
-
+;(helm-buffers-list--init)
 (defun helm-dan (&optional input)
   (interactive)
+  (unless helm-source-buffers-list
+    (setq helm-source-buffers-list
+          (helm-make-source "Buffers" 'helm-source-buffers)))
   (helm :sources '(
                    helm-source-buffers-list
                    helm-source-ls-git-status
