@@ -17,7 +17,6 @@
 (global-set-key [C-s-left] (lambda () (interactive) (indent-selection -2)))
 
 ;; WINDOWS
-(global-set-key  (kbd "C-<tab>") `other-window)
 (global-set-key (kbd "s-<up>") 'windmove-up)
 (global-set-key (kbd "s-<down>") 'windmove-down)
 (global-set-key (kbd "s-<right>") 'windmove-right)
@@ -25,7 +24,9 @@
 (global-set-key (kbd "C-;") `toggle-buffer)
 (global-set-key (kbd "C-x C-o") 'other-window)
 (global-set-key (kbd "<backtab>") 'other-window)
+(global-set-key  (kbd "C-<tab>") `other-window)
 (global-set-key (kbd "C-x <backtab>") (lambda () (interactive) (rotate-windows -1) (other-window 1)))
+(global-set-key (kbd "C-x C-<tab>") (lambda () (interactive) (rotate-windows -1) (other-window 1)))
 
 
 ;; MOTION
@@ -44,6 +45,7 @@
 ;; MISC SHORTCUTS
 (global-set-key (kbd "<f12>") 'package-list-packages)
 (global-set-key (kbd "C-x d") `dancar-dired)
+(global-set-key (kbd "C-x c-d") `dancar-dired)
 (global-set-key (kbd "<f4>") (lambda () (interactive) (dired "~/dev")))
 (global-set-key (kbd "C-c N") (lambda() (interactive) (dired "~/Dropbox/snippets")))
 (global-set-key (kbd "C-c p") (lambda () (interactive) (save-buffer) (kill-ring-save (point-min) (point-max)) (message "Buffer copied.")))
@@ -53,7 +55,7 @@
 (global-set-key (kbd "C-c C-h") `highlight-symbol-at-point)
 (global-set-key (kbd "C-c H") `highlight-symbol-remove-all)
 (global-set-key (kbd "s-<return>") `kmacro-end-and-call-macro)
-(global-set-key (kbd "C-c C-g") `magit-status)
+(global-set-key (kbd "C-c C-g") (lambda () (interactive) (magit-status) (delete-other-windows)))
 (global-set-key (kbd "C-#") `shell)
 (global-set-key (kbd "<f6>") `toggle-truncate-lines)
 

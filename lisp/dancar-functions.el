@@ -21,11 +21,9 @@
           (helm-make-source "Buffers" 'helm-source-buffers)))
   (helm :sources '(
                    helm-source-buffers-list
-                   helm-source-ls-git-status
+                   helm-source-projectile-files-list
                    helm-source-bookmarks
                    helm-source-recentf
-                   helm-source-ls-git
-                   helm-source-buffer-not-found
                    )
         :buffer "*helm dan*"
         :input input))

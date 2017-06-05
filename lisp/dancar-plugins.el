@@ -1,4 +1,18 @@
 ;; plugins: ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+(use-package helm-projectile
+  :config
+  (projectile-mode)
+  (setq projectile-completion-system 'helm)
+  (helm-projectile-on)
+
+  :bind (
+         ("C-x C-\\" . helm-projectile-find-file)
+         ("C-x C-|" . helm-projectile-switch-project)
+         )
+  )
+(use-package neotree
+  :bind ( ("<f8>" . neotree-toggle) )
+  )
 (use-package drag-stuff
   :bind (
          ("s-n" . drag-stuff-down)
