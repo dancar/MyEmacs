@@ -16,3 +16,6 @@
 [submodule "plugins/dokuwiki-mode"]
 	path = plugins/dokuwiki-mode
 	url = git@github.com:kbkbkbkb1/emacs-dokuwiki-mode.git
+[submodule "aanila"]
+	path = aanila
+	url = https://github.com/santoshs/aanila
