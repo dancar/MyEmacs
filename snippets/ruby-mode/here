@@ -1,5 +1,0 @@
-# -*- mode: snippet -*-
-# name: here
-# key: here
-# --
-puts('MYDEBUG `(file-name-nondirectory (buffer-file-name))`\\\\ `(line-number-at-pos)`: here')
