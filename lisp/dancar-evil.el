@@ -5,9 +5,25 @@
 (global-set-key (kbd "C-S-s-j") 'dancar-jump-line-next-big)
 (global-set-key (kbd "C-S-s-k") 'dancar-jump-line-previous-big)
 (global-set-key (kbd "C-e") 'move-end-of-line)
+
+
+;; (define-key evil-visual-state-map  (kbd "C-j") 'dancar-jump-line-next-small)
+;; (define-key evil-visual-state-map  (kbd "C-k") 'dancar-jump-line-previous-small)
+;; (define-key evil-visual-state-map  [C-s-268632074] 'dancar-jump-line-next-medium)
+;; (define-key evil-visual-state-map  [C-s-268632075] 'dancar-jump-line-previous-medium)
+;; (define-key evil-visual-state-map  (kbd "C-S-s-j") 'dancar-jump-line-next-big)
+;; (define-key evil-visual-state-map  (kbd "C-S-s-k") 'dancar-jump-line-previous-big)
+
+
 (define-key evil-motion-state-map (kbd "C-e") 'move-end-of-line)
 (define-key evil-insert-state-map (kbd "C-e") 'move-end-of-line)
 (define-key evil-insert-state-map (kbd "C-a") 'move-beginning-of-line)
+(define-key evil-insert-state-map (kbd "C-p") 'previous-line )
+(define-key evil-insert-state-map (kbd "C-n") 'next-line )
+
+
+
+(define-key evil-insert-state-map (kbd "C-d") nil)
 
 (use-package neotree
   :config
@@ -66,7 +82,7 @@
 
 ;; (define-key evil-normal-state-map   (kbd "C-g") #'evil-keyboard-quit)
 (define-key evil-motion-state-map   (kbd "C-g") #'evil-keyboard-quit)
-(define-key evil-insert-state-map   (kbd "C-g") #'evil-keyboard-quit)
+(define-key evil-insert-state-map   (kbd "C-g") (lambda() (interactive )(evil-normal-state 1) ) )
 (define-key evil-window-map         (kbd "C-g") #'evil-keyboard-quit)
 (define-key evil-operator-state-map (kbd "C-g") #'evil-keyboard-quit)
 

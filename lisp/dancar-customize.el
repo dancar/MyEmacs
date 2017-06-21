@@ -58,7 +58,6 @@
  '(helm-idle-delay 0.01)
  '(helm-input-idle-delay 0.01)
  '(helm-ls-git-show-abs-or-relative (quote relative))
- '(helm-mode nil)
  '(helm-split-window-default-side (quote same))
  '(highlight-symbol-idle-delay 0)
  '(highlight-symbol-on-navigation-p t)
@@ -87,6 +86,7 @@
  '(js2-indent-on-enter-key t)
  '(js2-mirror-mode nil)
  '(js2-mode-escape-quotes nil)
+ '(js2-strict-missing-semi-warning nil)
  '(list-directory-brief-switches "-CFa")
  '(list-directory-verbose-switches "-1a")
  '(lua-indent-level 2)
@@ -98,6 +98,9 @@
  '(package-selected-packages
    (quote
     (helm-ag helm-projectile projectile helm-descbinds drag-stuff tabbar-mode evil-surround company monokai-theme evil-mc markdown-preview-eww markdown-preview-mode coffee-mode evil-numbers use-package-chords use-package helm-ls-git powerline-evil evil-org evil-magit tabbar deft expand-region exec-path-from-shell powerline evil yasnippet web-mode undo-tree tabbar smex scss-mode paredit org multiple-cursors markdown-mode magit key-chord json-mode js2-mode ivy ido-ubiquitous idle-highlight-mode highlight-symbol expand-region exec-path-from-shell deft color-theme buffer-move auto-complete ag)))
+ '(projectile-globally-ignored-directories
+   (quote
+    ("node_modules" ".idea" ".ensime_cache" ".eunit" ".git" ".hg" ".fslckout" "_FOSSIL_" ".bzr" "_darcs" ".tox" ".svn" ".stack-work" "elpa")))
  '(recentf-auto-cleanup (quote never))
  '(recentf-max-saved-items 1000)
  '(scroll-conservatively 100)
@@ -141,7 +144,6 @@
  '(paren-face-match ((t (:inverse-video t))) t)
  '(powerline-active1 ((t (:inherit mode-line :background "grey22" :foreground "LightSkyBlue1"))))
  '(powerline-active2 ((t (:inherit mode-line :background "grey40" :foreground "LightSkyBlue2"))))
- '(region ((t (:background "SlateGray2"))))
  '(tabbar-default ((t (:inherit variable-pitch :background "gray75" :foreground "gray50" :height 1.3))))
  '(tabbar-modified ((t (:inherit tabbar-default :foreground "blue" :box (:line-width 1 :color "white" :style released-button)))))
  '(tabbar-selected ((t (:inherit tabbar-default :foreground "aquamarine" :box (:line-width 1 :color "white" :style pressed-button)))))

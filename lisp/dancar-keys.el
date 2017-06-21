@@ -1,12 +1,16 @@
 ;; (l) dancar
+(setq macright-command-modifier 'hyper)
 
 ;; COOL STUFF
 (global-set-key (kbd "C-c n") 'new-snippet)
-(define-key helm-map (kbd "C-|") `dancar-helm-switch-to-full)
+;; (define-key helm-map (kbd "C-|") `dancar-helm-switch-to-full)
 (global-set-key (kbd "C-s-|") (lambda () (interactive) (deft) (deft-filter-clear)))
 (global-set-key (kbd "C-\\") `helm-dan)
 (global-set-key (kbd "C-<return>") `go-line)
 (global-set-key (kbd "C-S-s-y") 'helm-show-kill-ring)
+(global-set-key (kbd "s-O") (lambda () (interactive) (evil-open-above 1) (evil-normal-state) (evil-next-line)))
+(global-set-key (kbd "s-o") (lambda () (interactive) (evil-open-below 1) (evil-normal-state) (evil-previous-line)))
+(global-set-key (kbd "s-<backspace>") 'dancar-concentrate)
 
 ;; TEXT
 (global-set-key (kbd "s-k") 'kill-whole-line)
@@ -30,8 +34,9 @@
 
 
 ;; MOTION
-(global-set-key (kbd "C-c b") `bookmark-here-set)
-(global-set-key (kbd "C-c j") `bookmark-here-jump)
+(global-set-key (kbd "s-m") 'back-to-indentation)
+(global-set-key (kbd "C-c b") 'bookmark-here-set)
+(global-set-key (kbd "C-c j") 'bookmark-here-jump)
 ;;(global-set-key (kbd "s-g s-n") 'next-error)
 ;;(global-set-key (kbd "s-g s-p") 'previous-error)
 (global-set-key (kbd "s-]") (lambda () (interactive) (scroll-up-line 2)))

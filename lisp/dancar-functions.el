@@ -1,5 +1,32 @@
 ;;; original and stolen functions
 
+(defun dancar-round-paren ()
+  (interactive)
+  (insert "()")
+  (left-char)
+  )
+
+(defun dancar-curly-paren ()
+  (interactive)
+  (insert "{}")
+  (left-char)
+  )
+
+
+(defun dancar-square-paren ()
+  (interactive)
+  (insert "[]")
+  (left-char)
+  )
+
+(defun dancar-concentrate ()
+   (interactive)
+   (delete-other-windows)
+   (neotree-hide)
+   (back-to-indentation)
+   (toggle-frame-maximized))
+
+
 ;;; stolen from: https://www.emacswiki.org/emacs/InsertingTodaysDate
 (defun date (arg)
    (interactive "P")

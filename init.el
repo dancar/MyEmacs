@@ -10,8 +10,6 @@
 (require 'dancar-keys)
 (require 'dancar-plugins)
 
-;; load jsx by default for .js files:
-(add-to-list 'auto-mode-alist '("\\.js\\'" . js-jsx-mode) nil )
 
 ;; full path in title
 (setq frame-title-format
@@ -49,7 +47,9 @@
             (comint-send-input)))
 
 ;; load color-theme:
-(load-theme 'monokai)
+;; (load-theme 'monokai)
+(load "~/.emacs.d/aanila/aanila-theme.el")
+(require 'aanila-theme)
 
 (auto-fill-mode -1)
 (put 'narrow-to-region 'disabled nil)
@@ -63,5 +63,5 @@
 
 (if (< (length command-line-args) 2)
     (progn
-      (setq initial-buffer-choice (car (helm-recentf)))
+      (setq initial-buffer-choice 'helm-projectile-switch-project)
       (helm-projectile-on)))
