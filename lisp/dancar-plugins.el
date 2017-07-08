@@ -1,4 +1,8 @@
 ;; plugins: ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+(use-package flycheck
+  :ensure t
+  :init (global-flycheck-mode))
+
 (use-package js2-mode
   :config
   (add-to-list 'auto-mode-alist '("\\.js\\'" . js2-mode) nil )
@@ -53,10 +57,6 @@
   :config
   (key-chord-mode 1)
   :chords (("`1" . save-buffer)
-           ("90" . dancar-round-paren)
-           ("[]" . dancar-square-paren)
-           ("{}" . dancar-curly-paren)
-
            ))
 
 

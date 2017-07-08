@@ -8,10 +8,10 @@
 
 (defun dancar-curly-paren ()
   (interactive)
-  (insert "{}")
+  (insert "{  }")
+  (left-char)
   (left-char)
   )
-
 
 (defun dancar-square-paren ()
   (interactive)

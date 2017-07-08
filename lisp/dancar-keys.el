@@ -1,9 +1,18 @@
 ;; (l) dancar
-(setq macright-command-modifier 'hyper)
+
+
+
+;; H-Y-P-E-R
+(setq mac-right-command-modifier 'hyper)
+(global-set-key (kbd "H-.") 'windmove-right)
+(global-set-key (kbd "H-,") 'windmove-left)
+(global-set-key (kbd "H-9") 'dancar-round-paren)
+(global-set-key (kbd "H-{") 'dancar-square-paren)
+(global-set-key (kbd "H-[") 'dancar-curly-paren)
 
 ;; COOL STUFF
+(global-set-key (kbd "C-x C-b") (lambda () (interactive) (list-buffers) (other-window 1) (delete-other-windows)))
 (global-set-key (kbd "C-c n") 'new-snippet)
-;; (define-key helm-map (kbd "C-|") `dancar-helm-switch-to-full)
 (global-set-key (kbd "C-s-|") (lambda () (interactive) (deft) (deft-filter-clear)))
 (global-set-key (kbd "C-\\") `helm-dan)
 (global-set-key (kbd "C-<return>") `go-line)
