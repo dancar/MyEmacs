@@ -27,20 +27,21 @@
          ("C-x C-|" . helm-projectile-switch-project)
          )
   )
+
 (use-package neotree
   :init (defun dancar-neotree-f ()
           (interactive)
           (neotree-find (buffer-file-name)))
-  :bind
-  (
-   ("<f8>" . neotree-toggle)
-   ("C-x <f8>" . dancar-neotree-f)
-         )
-  )
+  (define-key neotree-mode-map (kbd "H-r") 'neotree-refresh)
+
+  :bind (("<f8>" . neotree-toggle)
+         ("C-x <f8>" . dancar-neotree-f)
+         :map neotree-mode-map
+         ("H-r" . neotree-refresh)))
 (use-package drag-stuff
   :bind (
-         ("s-n" . drag-stuff-down)
-         ("s-p" . drag-stuff-up)
+         ("M-n" . drag-stuff-down)
+         ("M-p" . drag-stuff-up)
          )
   )
 
@@ -62,10 +63,10 @@
 
 (use-package tabbar-mode
   :bind (
-    ("s-}" . tabbar-forward-tab)
-    ("s-{" . tabbar-backward-tab)
-    ("C-s-{" . tabbar-backward-group)
-    ("C-s-}" . tabbar-forward-group))
+    ("M-}" . tabbar-forward-tab)
+    ("M-{" . tabbar-backward-tab)
+    ("C-M-{" . tabbar-backward-group)
+    ("C-M-}" . tabbar-forward-group))
   :config
   ;; http://www.emacswiki.org/emacs/TabBarMode#toc4
   :init
@@ -118,6 +119,7 @@
   (global-company-mode)
   (add-hook 'after-init-hook 'global-company-mode)
   :bind
-  (("C-s-<268632064>" . company-complete))
+  (("C-M-<SPC>" . company-complete))
   )
 (provide 'dancar-plugins)
+;;; dancar-plugins ends here

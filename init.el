@@ -7,9 +7,8 @@
 (add-to-list 'load-path "~/.emacs.d/lisp")
 (require 'dancar-customize)
 (require 'dancar-functions)
-(require 'dancar-keys)
 (require 'dancar-plugins)
-
+(require 'dancar-keys)
 
 ;; full path in title
 (setq frame-title-format

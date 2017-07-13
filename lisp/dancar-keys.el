@@ -1,9 +1,13 @@
 ;; (l) dancar
-
+;;; Code:
+(when (eq system-type 'darwin) ;; mac specific settings
+  (setq mac-command-modifier 'meta)
+  )
 
 
 ;; H-Y-P-E-R
 (setq mac-right-command-modifier 'hyper)
+(global-set-key (kbd "H-t") `toggle-truncate-lines)
 (global-set-key (kbd "H-.") 'windmove-right)
 (global-set-key (kbd "H-,") 'windmove-left)
 (global-set-key (kbd "H-9") 'dancar-round-paren)
@@ -13,27 +17,29 @@
 ;; COOL STUFF
 (global-set-key (kbd "C-x C-b") (lambda () (interactive) (list-buffers) (other-window 1) (delete-other-windows)))
 (global-set-key (kbd "C-c n") 'new-snippet)
-(global-set-key (kbd "C-s-|") (lambda () (interactive) (deft) (deft-filter-clear)))
 (global-set-key (kbd "C-\\") `helm-dan)
 (global-set-key (kbd "C-<return>") `go-line)
-(global-set-key (kbd "C-S-s-y") 'helm-show-kill-ring)
-(global-set-key (kbd "s-O") (lambda () (interactive) (evil-open-above 1) (evil-normal-state) (evil-next-line)))
-(global-set-key (kbd "s-o") (lambda () (interactive) (evil-open-below 1) (evil-normal-state) (evil-previous-line)))
-(global-set-key (kbd "s-<backspace>") 'dancar-concentrate)
+(global-set-key (kbd "C-M-Y") 'helm-show-kill-ring)
+(global-set-key (kbd "M-O") (lambda () (interactive) (evil-open-above 1) (evil-normal-state) (evil-next-line)))
+(global-set-key (kbd "M-o") (lambda () (interactive) (evil-open-below 1) (evil-normal-state) (evil-previous-line)))
+(global-set-key (kbd "M-<backspace>") 'dancar-concentrate)
 
 ;; TEXT
-(global-set-key (kbd "s-k") 'kill-whole-line)
-(global-set-key (kbd "s-;") 'comment-line-toggle)
-(global-set-key (kbd "s-P") `delete-indentation)
-(global-set-key (kbd "s-N") (lambda() (interactive (delete-indentation 1))))
-(global-set-key [C-s-right] (lambda () (interactive) (indent-selection 2)))
-(global-set-key [C-s-left] (lambda () (interactive) (indent-selection -2)))
+(define-key evil-insert-state-map (kbd "C-d") nil)
+(global-set-key (kbd "M-k") 'kill-whole-line)
+(global-set-key (kbd "M-;") 'comment-line-toggle)
+(global-set-key (kbd "M-P") `delete-indentation)
+(global-set-key (kbd "M-N") (lambda() (interactive (delete-indentation 1))))
+(global-set-key [C-M-right] (lambda () (interactive) (indent-selection 2)))
+(global-set-key [C-M-left] (lambda () (interactive) (indent-selection -2)))
 
 ;; WINDOWS
-(global-set-key (kbd "s-<up>") 'windmove-up)
-(global-set-key (kbd "s-<down>") 'windmove-down)
-(global-set-key (kbd "s-<right>") 'windmove-right)
-(global-set-key (kbd "s-<left>") 'windmove-left)
+(global-set-key (kbd "C-M-w") (lambda () (interactive) (kill-buffer (current-buffer))(delete-window)))
+
+(global-set-key (kbd "M-<up>") 'windmove-up)
+(global-set-key (kbd "M-<down>") 'windmove-down)
+(global-set-key (kbd "M-<right>") 'windmove-right)
+(global-set-key (kbd "M-<left>") 'windmove-left)
 (global-set-key (kbd "C-;") `toggle-buffer)
 (global-set-key (kbd "C-x C-o") 'other-window)
 (global-set-key (kbd "<backtab>") 'other-window)
@@ -43,18 +49,37 @@
 
 
 ;; MOTION
-(global-set-key (kbd "s-m") 'back-to-indentation)
+(global-set-key (kbd "M-m") 'back-to-indentation)
 (global-set-key (kbd "C-c b") 'bookmark-here-set)
 (global-set-key (kbd "C-c j") 'bookmark-here-jump)
-;;(global-set-key (kbd "s-g s-n") 'next-error)
-;;(global-set-key (kbd "s-g s-p") 'previous-error)
-(global-set-key (kbd "s-]") (lambda () (interactive) (scroll-up-line 2)))
-(global-set-key (kbd "s-[") (lambda () (interactive) (scroll-down-line 2)))
-(global-set-key  [C-s-268632080] 'dancar-jump-line-previous-small)
-(global-set-key  [C-s-268632078] 'dancar-jump-line-next-small)
-(global-set-key  (kbd "C-s-S-p") (lambda () (interactive) (previous-line 12)))
-(global-set-key  (kbd "C-s-S-n") (lambda () (interactive) (next-line 12)))
+(global-set-key (kbd "M-]") (lambda () (interactive) (scroll-up-line 2)))
+(global-set-key (kbd "M-[") (lambda () (interactive) (scroll-down-line 2)))
+(define-key evil-motion-state-map (kbd "C-e") 'move-end-of-line)
+(define-key evil-insert-state-map (kbd "C-e") 'move-end-of-line)
+(define-key evil-insert-state-map (kbd "C-a") 'move-beginning-of-line)
 
+;; line jumps:
+;; hjkl:
+(define-key evil-motion-state-map (kbd "C-j") 'dancar-jump-line-next-small)
+(define-key evil-motion-state-map (kbd "C-M-j") 'dancar-jump-line-next-medium)
+(define-key evil-motion-state-map (kbd "C-S-M-j") 'dancar-jump-line-next-big)
+
+(define-key evil-motion-state-map (kbd "C-k") 'dancar-jump-line-previous-small)
+(define-key evil-motion-state-map (kbd "C-M-k") 'dancar-jump-line-previous-medium)
+(define-key evil-motion-state-map (kbd "C-S-M-k") 'dancar-jump-line-previous-big)
+
+;; n/p:
+(define-key evil-insert-state-map (kbd "C-p") 'previous-line )
+(global-set-key  (kbd "C-M-p") 'dancar-jump-line-previous-small)
+(global-set-key  (kbd "C-M-S-p") 'dancar-jump-line-previous-big)
+
+(define-key evil-insert-state-map (kbd "C-n") 'next-line )
+(global-set-key  (kbd "C-M-n") 'dancar-jump-line-next-small)
+(global-set-key  (kbd "C-M-S-n") 'dancar-jump-line-next-big)
+
+;; MISC COPING WITH EVIL:
+(define-key evil-insert-state-map (kbd "M-v") 'evil-paste-after)
+(define-key evil-normal-state-map (kbd "M-v") 'evil-paste-after)
 
 ;; MISC SHORTCUTS
 (global-set-key (kbd "<f12>") 'package-list-packages)
@@ -62,13 +87,12 @@
 (global-set-key (kbd "C-x c-d") `dancar-dired)
 (global-set-key (kbd "<f4>") (lambda () (interactive) (dired "~/dev")))
 (global-set-key (kbd "C-c N") (lambda() (interactive) (dired "~/Dropbox/snippets")))
-(global-set-key (kbd "C-c p") (lambda () (interactive) (save-buffer) (kill-ring-save (point-min) (point-max)) (message "Buffer copied.")))
-(global-set-key [C-s-268632087] (lambda () (interactive (kill-buffer (current-buffer)))))
-(global-set-key (kbd "s-q") 'highlight-symbol-next)
-(global-set-key (kbd "s-Q") 'highlight-symbol-prev)
+(global-set-key (kbd "C-x p") (lambda () (interactive) (save-buffer) (kill-ring-save (point-min) (point-max)) (message "Buffer copied.")))
+(global-set-key (kbd "M-q") 'highlight-symbol-next)
+(global-set-key (kbd "M-Q") 'highlight-symbol-prev)
 (global-set-key (kbd "C-c C-h") `highlight-symbol-at-point)
 (global-set-key (kbd "C-c H") `highlight-symbol-remove-all)
-(global-set-key (kbd "s-<return>") `kmacro-end-and-call-macro)
+(global-set-key (kbd "M-<return>") `kmacro-end-and-call-macro)
 (global-set-key (kbd "C-c C-g") (lambda () (interactive) (magit-status) (delete-other-windows)))
 (global-set-key (kbd "C-#") `shell)
 (global-set-key (kbd "<f6>") `toggle-truncate-lines)
@@ -94,8 +118,6 @@
 (global-set-key (kbd "s-y") 'yank-pop)
 (global-set-key (kbd "s-<") 'beginning-of-buffer)
 (global-set-key (kbd "s->") 'end-of-buffer)
-(global-set-key [C-s-268632095] 'negative-argument)
-(global-set-key [C-s-268632086] 'scroll-other-window)
 (global-set-key (kbd "s-r") 'move-to-window-line-top-bottom)
 (global-set-key (kbd "s-c") 'subword-capitalize)
 (global-set-key (kbd "s-l") 'subword-downcase)
@@ -123,6 +145,5 @@
   (local-set-key (kbd "RET") 'newline-and-indent))
 ;;/
 (add-hook 'prog-mode-hook 'set-newline-and-indent)
-
 
 (provide 'dancar-keys)

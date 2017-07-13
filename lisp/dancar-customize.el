@@ -16,6 +16,7 @@
  '(case-fold-search t)
  '(coffee-tab-width 2)
  '(column-number-mode t)
+ '(company-dabbrev-downcase nil)
  '(css-indent-offset 2)
  '(custom-file "~/.emacs.d/lisp/dancar-customize.el")
  '(custom-safe-themes
@@ -33,6 +34,7 @@
  '(elscreen-tab-display-kill-screen nil)
  '(epg-debug t)
  '(evil-want-C-u-scroll t)
+ '(evil-want-fine-undo t)
  '(fill-column 9999999999999)
  '(git-state-modeline-decoration (quote git-state-decoration-large-dot))
  '(global-auto-revert-mode t)
