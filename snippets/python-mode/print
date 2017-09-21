@@ -1,0 +1,4 @@
+# key: prnt
+# name: print
+# --
+print('<-DANDEBUG-> `(file-name-nondirectory (buffer-file-name))`\\\\ `(line-number-at-pos)`: $1:', $1)

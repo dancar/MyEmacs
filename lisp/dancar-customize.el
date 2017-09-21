@@ -21,7 +21,7 @@
  '(custom-file "~/.emacs.d/lisp/dancar-customize.el")
  '(custom-safe-themes
    (quote
-    ("f78de13274781fbb6b01afd43327a4535438ebaeec91d93ebdbba1e3fba34d3c" default)))
+    ("a49760e39bd7d7876c94ee4bf483760e064002830a63e24c2842a536c6a52756" "f78de13274781fbb6b01afd43327a4535438ebaeec91d93ebdbba1e3fba34d3c" default)))
  '(deft-auto-save-interval 0.0)
  '(deft-use-filename-as-title t)
  '(dired-listing-switches "-lhpa")
@@ -55,11 +55,15 @@
    (quote
     ("\\` " "\\*helm" "\\*helm-mode" "\\*Echo Area" "\\*Minibuf" "\\*magit-process*" "\\*magit-edit-log*")))
  '(helm-buffer-max-length 30)
+ '(helm-buffers-fuzzy-matching t)
+ '(helm-completion-in-region-fuzzy-match t)
  '(helm-ff-auto-update-initial-value nil)
  '(helm-full-frame nil)
  '(helm-idle-delay 0.01)
  '(helm-input-idle-delay 0.01)
  '(helm-ls-git-show-abs-or-relative (quote relative))
+ '(helm-mode-fuzzy-match t)
+ '(helm-projectile-fuzzy-match t)
  '(helm-split-window-default-side (quote same))
  '(highlight-symbol-idle-delay 0)
  '(highlight-symbol-on-navigation-p t)
@@ -79,7 +83,7 @@
  '(ido-max-work-file-list 100)
  '(indent-tabs-mode nil)
  '(inhibit-startup-screen t)
- '(js-indent-level 2)
+ '(js-indent-level 4)
  '(js2-allow-keywords-as-property-names nil)
  '(js2-auto-indent-p nil)
  '(js2-basic-offset 2)
@@ -99,10 +103,10 @@
  '(ns-pop-up-frames nil)
  '(package-selected-packages
    (quote
-    (flycheck helm-ag helm-projectile projectile helm-descbinds drag-stuff tabbar-mode evil-surround company monokai-theme evil-mc markdown-preview-eww markdown-preview-mode coffee-mode evil-numbers use-package-chords use-package helm-ls-git powerline-evil evil-org evil-magit tabbar deft expand-region exec-path-from-shell powerline evil yasnippet web-mode undo-tree tabbar smex scss-mode paredit org multiple-cursors markdown-mode magit key-chord json-mode js2-mode ivy ido-ubiquitous idle-highlight-mode highlight-symbol expand-region exec-path-from-shell deft color-theme buffer-move auto-complete ag)))
+    (helm-fuzzier helm-flx tide ng2-mode typescript-mode go-mode flycheck helm-ag helm-projectile projectile helm-descbinds drag-stuff tabbar-mode evil-surround company monokai-theme evil-mc markdown-preview-eww markdown-preview-mode coffee-mode evil-numbers use-package-chords use-package helm-ls-git powerline-evil evil-org evil-magit tabbar deft expand-region exec-path-from-shell powerline evil yasnippet web-mode undo-tree tabbar smex scss-mode paredit org multiple-cursors markdown-mode magit key-chord json-mode js2-mode ivy ido-ubiquitous idle-highlight-mode highlight-symbol expand-region exec-path-from-shell deft color-theme buffer-move auto-complete ag)))
  '(projectile-globally-ignored-directories
    (quote
-    ("node_modules" ".idea" ".ensime_cache" ".eunit" ".git" ".hg" ".fslckout" "_FOSSIL_" ".bzr" "_darcs" ".tox" ".svn" ".stack-work" "elpa")))
+    ("node_modules" ".idea" ".ensime_cache" ".eunit" ".git" ".hg" ".fslckout" "_FOSSIL_" ".bzr" "_darcs" ".tox" ".svn" ".stack-work" "elpa" "tensorflow_models")))
  '(recentf-auto-cleanup (quote never))
  '(recentf-max-saved-items 1000)
  '(safe-local-variable-values
@@ -137,6 +141,7 @@
  '(tail-max-size 7)
  '(tool-bar-mode nil)
  '(truncate-lines t)
+ '(typescript-indent-level 2)
  '(x-gtk-whole-detached-tool-bar nil)
  '(yas-global-mode t nil (yasnippet))
  '(yas-good-grace nil)

@@ -13,7 +13,7 @@
  "`1"
  (lambda ()
    (interactive)
-   (evil-normal-state)
+   (evil-normal-state 1)
    (save-buffer)))
 
 (use-package evil-surround

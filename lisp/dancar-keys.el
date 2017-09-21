@@ -14,6 +14,39 @@
 (global-set-key (kbd "H-{") 'dancar-square-paren)
 (global-set-key (kbd "H-[") 'dancar-curly-paren)
 
+(global-set-key (kbd "H-0") (lambda () (interactive) (bookmark-jump "0")))
+(global-set-key (kbd "H-1") (lambda () (interactive) (bookmark-jump "1")))
+(global-set-key (kbd "H-2") (lambda () (interactive) (bookmark-jump "2")))
+(global-set-key (kbd "H-3") (lambda () (interactive) (bookmark-jump "3")))
+(global-set-key (kbd "H-4") (lambda () (interactive) (bookmark-jump "4")))
+(global-set-key (kbd "H-5") (lambda () (interactive) (bookmark-jump "5")))
+(global-set-key (kbd "H-6") (lambda () (interactive) (bookmark-jump "6")))
+(global-set-key (kbd "H-7") (lambda () (interactive) (bookmark-jump "7")))
+(global-set-key (kbd "H-8") (lambda () (interactive) (bookmark-jump "8")))
+(global-set-key (kbd "H-9") (lambda () (interactive) (bookmark-jump "9")))
+
+(global-set-key (kbd "C-c 0") (lambda () (interactive) (bookmark-jump "0")))
+(global-set-key (kbd "C-c 1") (lambda () (interactive) (bookmark-jump "1")))
+(global-set-key (kbd "C-c 2") (lambda () (interactive) (bookmark-jump "2")))
+(global-set-key (kbd "C-c 3") (lambda () (interactive) (bookmark-jump "3")))
+(global-set-key (kbd "C-c 4") (lambda () (interactive) (bookmark-jump "4")))
+(global-set-key (kbd "C-c 5") (lambda () (interactive) (bookmark-jump "5")))
+(global-set-key (kbd "C-c 6") (lambda () (interactive) (bookmark-jump "6")))
+(global-set-key (kbd "C-c 7") (lambda () (interactive) (bookmark-jump "7")))
+(global-set-key (kbd "C-c 8") (lambda () (interactive) (bookmark-jump "8")))
+(global-set-key (kbd "C-c 9") (lambda () (interactive) (bookmark-jump "9")))
+
+(global-set-key (kbd "C-x H-0") (lambda () (interactive) (bookmark-set "0")))
+(global-set-key (kbd "C-x H-1") (lambda () (interactive) (bookmark-set "1")))
+(global-set-key (kbd "C-x H-2") (lambda () (interactive) (bookmark-set "2")))
+(global-set-key (kbd "C-x H-3") (lambda () (interactive) (bookmark-set "3")))
+(global-set-key (kbd "C-x H-4") (lambda () (interactive) (bookmark-set "4")))
+(global-set-key (kbd "C-x H-5") (lambda () (interactive) (bookmark-set "5")))
+(global-set-key (kbd "C-x H-6") (lambda () (interactive) (bookmark-set "6")))
+(global-set-key (kbd "C-x H-7") (lambda () (interactive) (bookmark-set "7")))
+(global-set-key (kbd "C-x H-8") (lambda () (interactive) (bookmark-set "8")))
+(global-set-key (kbd "C-x H-9") (lambda () (interactive) (bookmark-set "9")))
+
 ;; COOL STUFF
 (global-set-key (kbd "C-x C-b") (lambda () (interactive) (list-buffers) (other-window 1) (delete-other-windows)))
 (global-set-key (kbd "C-c n") 'new-snippet)
@@ -34,7 +67,8 @@
 (global-set-key [C-M-left] (lambda () (interactive) (indent-selection -2)))
 
 ;; WINDOWS
-(global-set-key (kbd "C-M-w") (lambda () (interactive) (kill-buffer (current-buffer))(delete-window)))
+;; (global-set-key (kbd "C-M-w") (lambda () (interactive) (kill-buffer (current-buffer))(delete-window)))
+(global-set-key (kbd "C-M-w") (lambda () (interactive) (kill-buffer (current-buffer))))
 
 (global-set-key (kbd "M-<up>") 'windmove-up)
 (global-set-key (kbd "M-<down>") 'windmove-down)
@@ -60,6 +94,14 @@
 
 ;; line jumps:
 ;; hjkl:
+(define-key evil-insert-state-map (kbd "C-j") 'dancar-jump-line-next-small)
+(define-key evil-insert-state-map (kbd "C-M-j") 'dancar-jump-line-next-medium)
+(define-key evil-insert-state-map (kbd "C-S-M-j") 'dancar-jump-line-next-big)
+
+(define-key evil-insert-state-map (kbd "C-k") 'dancar-jump-line-previous-small)
+(define-key evil-insert-state-map (kbd "C-M-k") 'dancar-jump-line-previous-medium)
+(define-key evil-insert-state-map (kbd "C-S-M-k") 'dancar-jump-line-previous-big)
+
 (define-key evil-motion-state-map (kbd "C-j") 'dancar-jump-line-next-small)
 (define-key evil-motion-state-map (kbd "C-M-j") 'dancar-jump-line-next-medium)
 (define-key evil-motion-state-map (kbd "C-S-M-j") 'dancar-jump-line-next-big)
@@ -96,6 +138,7 @@
 (global-set-key (kbd "C-c C-g") (lambda () (interactive) (magit-status) (delete-other-windows)))
 (global-set-key (kbd "C-#") `shell)
 (global-set-key (kbd "<f6>") `toggle-truncate-lines)
+(global-set-key (kbd "C-M-|") 'deft)
 
 
 ;;;MBP

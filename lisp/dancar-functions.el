@@ -48,7 +48,7 @@
           (helm-make-source "Buffers" 'helm-source-buffers)))
   (helm :sources '(
                    helm-source-buffers-list
-                   helm-source-projectile-files-list
+                   ;; helm-source-projectile-files-list
                    helm-source-bookmarks
                    helm-source-recentf
                    )
@@ -144,27 +144,27 @@
 
 (defun dancar-jump-line-next-small()
   (interactive)
-  (next-line dancar-small-jump))
+  (evil-next-line dancar-small-jump))
 
 (defun dancar-jump-line-previous-small()
   (interactive)
-  (previous-line dancar-small-jump))
+  (evil-previous-line dancar-small-jump))
 
 (defun dancar-jump-line-next-medium()
   (interactive)
-  (next-line dancar-medium-jump))
+  (evil-next-line dancar-medium-jump))
 
 (defun dancar-jump-line-previous-medium()
   (interactive)
-  (previous-line dancar-medium-jump))
+  (evil-previous-line dancar-medium-jump))
 
 (defun dancar-jump-line-next-big()
   (interactive)
-  (next-line dancar-big-jump))
+  (evil-next-line dancar-big-jump))
 
 (defun dancar-jump-line-previous-big()
   (interactive)
-  (previous-line dancar-big-jump))
+  (evil-previous-line dancar-big-jump))
 
 (defun rotate-windows (arg)
   "Rotate your windows; use the prefix argument to rotate the other direction"

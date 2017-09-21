@@ -46,9 +46,10 @@
             (comint-send-input)))
 
 ;; load color-theme:
+(load-theme 'deeper-blue)
 ;; (load-theme 'monokai)
-(load "~/.emacs.d/aanila/aanila-theme.el")
-(require 'aanila-theme)
+;; (load "~/.emacs.d/aanila/aanila-theme.el")
+;; (require 'aanila-theme)
 
 (auto-fill-mode -1)
 (put 'narrow-to-region 'disabled nil)

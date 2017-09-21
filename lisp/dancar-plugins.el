@@ -1,3 +1,5 @@
+
+
 ;; plugins: ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 (use-package flycheck
   :ensure t
@@ -7,6 +9,21 @@
   :config
   (add-to-list 'auto-mode-alist '("\\.js\\'" . js2-mode) nil )
   )
+(use-package typescript-mode
+  :config
+  (add-hook 'typescript-mode-hook (lambda () (yas-load-directory "/Users/dan/.emacs.d/snippets/typescript")(yas-reload-all)))
+)
+;;;; stolen from https://debbugs.gnu.org/cgi/bugreport.cgi?bug=24896
+(defvar js-jsx-tag-syntax-table
+  (let ((table (make-syntax-table sgml-tag-syntax-table)))
+    (modify-syntax-entry ?\{ "<" table)
+    (modify-syntax-entry ?\} ">" table)
+    table))
+(defun advice-js-jsx-indent-line (orig-fun)
+  (interactive)
+  (let ((sgml-tag-syntax-table js-jsx-tag-syntax-table))
+    (apply orig-fun nil)))
+(advice-add 'js-jsx-indent-line :around 'advice-js-jsx-indent-line)
 
 (use-package rjsx-mode
   :config
@@ -15,6 +32,12 @@
   (add-to-list 'auto-mode-alist '("\\.js\\'" . rjsx-mode) nil )
   ;; (define-key rjsx-mode-map "<" nil)
   )
+
+(use-package helm-fuzzier
+  :config
+  (helm-fuzzier-mode 1)
+  )
+
 (use-package helm-projectile
   :config
   (projectile-mode)
@@ -31,7 +54,10 @@
 (use-package neotree
   :init (defun dancar-neotree-f ()
           (interactive)
-          (neotree-find (buffer-file-name)))
+          (let ((bfn (buffer-file-name)))
+            (neotree-dir (projectile-project-root))
+            (neotree-find bfn)))
+  :config
   (define-key neotree-mode-map (kbd "H-r") 'neotree-refresh)
 
   :bind (("<f8>" . neotree-toggle)
@@ -48,6 +74,7 @@
 (use-package helm-mode
   :config
   (helm-mode 1)
+  :bind (("M-x" . helm-M-x))
   )
 
 
@@ -58,8 +85,18 @@
   :config
   (key-chord-mode 1)
   :chords (("`1" . save-buffer)
-           ))
 
+           ("`k" . windmove-up)
+           ("`j" . windmove-down)
+           ("`l" . windmove-right)
+           ("`h" . windmove-left)
+
+           ("<space>k" . windmove-up)
+           ("<space>j" . windmove-down)
+           ("<space>l" . windmove-right)
+           ("<space>h" . windmove-left)
+
+               ))
 
 (use-package tabbar-mode
   :bind (
