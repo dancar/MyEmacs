@@ -1,5 +1,3 @@
-
-
 ;; plugins: ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 (use-package flycheck
   :ensure t
@@ -33,10 +31,10 @@
   ;; (define-key rjsx-mode-map "<" nil)
   )
 
-(use-package helm-fuzzier
-  :config
-  (helm-fuzzier-mode 1)
-  )
+;; (use-package helm-fuzzier
+;;   :config
+;;   (helm-fuzzier-mode 1)
+;;   )
 
 (use-package helm-projectile
   :config
@@ -51,19 +49,20 @@
          )
   )
 
-(use-package neotree
-  :init (defun dancar-neotree-f ()
-          (interactive)
-          (let ((bfn (buffer-file-name)))
-            (neotree-dir (projectile-project-root))
-            (neotree-find bfn)))
-  :config
-  (define-key neotree-mode-map (kbd "H-r") 'neotree-refresh)
+;; (use-package neotree
+;;   :init (defun dancar-neotree-f ()
+;;           (interactive)
+;;           (let ((bfn (buffer-file-name)))
+;;             (neotree-dir (projectile-project-root))
+;;             (neotree-find bfn)))
+;;   :config
+;;   (define-key neotree-mode-map (kbd "H-r") 'neotree-refresh)
 
-  :bind (("<f8>" . neotree-toggle)
-         ("C-x <f8>" . dancar-neotree-f)
-         :map neotree-mode-map
-         ("H-r" . neotree-refresh)))
+;;   :bind (("<f8>" . neotree-toggle)
+;;          ("C-x <f8>" . dancar-neotree-f)
+;;          :map neotree-mode-map
+;;          ("H-r" . neotree-refresh)))
+
 (use-package drag-stuff
   :bind (
          ("M-n" . drag-stuff-down)
@@ -91,10 +90,10 @@
            ("`l" . windmove-right)
            ("`h" . windmove-left)
 
-           ("<space>k" . windmove-up)
-           ("<space>j" . windmove-down)
-           ("<space>l" . windmove-right)
-           ("<space>h" . windmove-left)
+           ("`<up>" . windmove-up)
+           ("`<down>" . windmove-down)
+           ("`<right>" . windmove-right)
+           ("`<left>" . windmove-left)
 
                ))
 
@@ -158,5 +157,21 @@
   :bind
   (("C-M-<SPC>" . company-complete))
   )
+
+(defun dancar-treemacs-f ()
+  (interactive)
+  (let ((bfn (buffer-file-name)))
+    (treemacs--init (projectile-project-root))
+    (treemacs-find-file bfn)))
+
+(use-package treemacs
+  :config
+  (progn
+    (use-package treemacs-evil :ensure t :demand t)
+    (use-package treemacs-projectile))
+  :bind (("<f8>" . treemacs-projectile-toggle)
+         ("C-x <f8>" . dancaretreemacs-f)
+         ("H-r" . treemacs-refresh)))
+
 (provide 'dancar-plugins)
 ;;; dancar-plugins ends here
