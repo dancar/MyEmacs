@@ -76,8 +76,8 @@
 (global-set-key (kbd "M-<left>") 'windmove-left)
 (global-set-key (kbd "C-;") `toggle-buffer)
 (global-set-key (kbd "C-x C-o") 'other-window)
-(global-set-key (kbd "<backtab>") 'other-window)
-(global-set-key  (kbd "C-<tab>") `other-window)
+(global-set-key (kbd "<backtab>") 'ace-window)
+(global-set-key  (kbd "C-<tab>") `ace-window)
 (global-set-key (kbd "C-x <backtab>") (lambda () (interactive) (rotate-windows -1) (other-window 1)))
 (global-set-key (kbd "C-x C-<tab>") (lambda () (interactive) (rotate-windows -1) (other-window 1)))
 

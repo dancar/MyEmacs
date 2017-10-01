@@ -83,8 +83,7 @@
 (use-package key-chord
   :config
   (key-chord-mode 1)
-  :chords (("`1" . save-buffer)
-
+  :chords (
            ("`k" . windmove-up)
            ("`j" . windmove-down)
            ("`l" . windmove-right)
@@ -170,7 +169,7 @@
     (use-package treemacs-evil :ensure t :demand t)
     (use-package treemacs-projectile))
   :bind (("<f8>" . treemacs-projectile-toggle)
-         ("C-x <f8>" . dancaretreemacs-f)
+         ("C-x <f8>" . dancar-treemacs-f)
          ("H-r" . treemacs-refresh)))
 
 (provide 'dancar-plugins)
