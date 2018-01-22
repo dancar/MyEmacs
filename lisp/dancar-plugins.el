@@ -172,5 +172,26 @@
          ("C-x <f8>" . dancar-treemacs-f)
          ("H-r" . treemacs-refresh)))
 
+(use-package virtualenvwrapper
+  :config
+  (setq venv-location "/Users/dan/.envs")
+  (venv-workon "emacs"))
+
+() (use-package elpy
+  :config
+  (elpy-enable)
+  (define-key elpy-mode-map (kbd "<C-return>") nil)
+  )
+(use-package yafolding
+  :config
+  (define-key yafolding-mode-map (kbd "<C-S-return>") nil)
+  (define-key yafolding-mode-map (kbd "<C-M-return>") nil)
+  (define-key yafolding-mode-map (kbd "<C-return>") nil)
+  (define-key yafolding-mode-map (kbd "C-c <C-M-return>") 'yafolding-toggle-all)
+  (define-key yafolding-mode-map (kbd "C-c <C-S-return>") 'yafolding-hide-parent-element)
+  (define-key yafolding-mode-map (kbd "C-c <C-return>") 'yafolding-toggle-element)
+  (add-hook 'prog-mode-hook (lambda () (yafolding-mode)))
+ )
+
 (provide 'dancar-plugins)
 ;;; dancar-plugins ends here

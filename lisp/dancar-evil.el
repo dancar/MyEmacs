@@ -10,7 +10,7 @@
   )
 
 (key-chord-define-global
- "`1"
+ "nj"
  (lambda ()
    (interactive)
    (evil-normal-state 1)
@@ -50,16 +50,24 @@
       (evil-force-normal-state)
     (keyboard-quit)))
 
+(defun dancar-quit-mc-mode ()
+   (if evil-mc-mode
+      (progn
+        (evil-mc-undo-all-cursors)
+        (evil-mc-mode 0)
+        )))
+
 (defun evil-keyboard-quit ()
   "Keyboard quit and force normal state."
   (interactive)
   (and evil-mode (evil-force-normal-state))
+  (dancar-quit-mc-mode)
   (keyboard-quit)
   (keyboard-quit))
 
 ;; (define-key evil-normal-state-map   (kbd "C-g") #'evil-keyboard-quit)
 (define-key evil-motion-state-map   (kbd "C-g") #'evil-keyboard-quit)
-(define-key evil-insert-state-map   (kbd "C-g") (lambda() (interactive )(evil-normal-state 1) ) )
+(define-key evil-insert-state-map   (kbd "C-g") (lambda() (interactive )(evil-normal-state 1) (dancar-quit-mc-mode) ) )
 (define-key evil-window-map         (kbd "C-g") #'evil-keyboard-quit)
 (define-key evil-operator-state-map (kbd "C-g") #'evil-keyboard-quit)
 

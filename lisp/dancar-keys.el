@@ -14,6 +14,16 @@
 (global-set-key (kbd "H-{") 'dancar-square-paren)
 (global-set-key (kbd "H-[") 'dancar-curly-paren)
 
+(global-set-key (kbd "H-s") (lambda () (interactive) (insert "ß")))
+(global-set-key (kbd "H-u") (lambda () (interactive) (insert "ü")))
+(global-set-key (kbd "H-o") (lambda () (interactive) (insert "ö")))
+(global-set-key (kbd "H-a") (lambda () (interactive) (insert "ä")))
+
+(global-set-key (kbd "H-S") (lambda () (interactive) (insert "ß")))
+(global-set-key (kbd "H-U") (lambda () (interactive) (insert "Ü")))
+(global-set-key (kbd "H-O") (lambda () (interactive) (insert "Ö")))
+(global-set-key (kbd "H-A") (lambda () (interactive) (insert "Ä")))
+
 (global-set-key (kbd "H-0") (lambda () (interactive) (bookmark-jump "0")))
 (global-set-key (kbd "H-1") (lambda () (interactive) (bookmark-jump "1")))
 (global-set-key (kbd "H-2") (lambda () (interactive) (bookmark-jump "2")))
@@ -91,6 +101,8 @@
 (define-key evil-motion-state-map (kbd "C-e") 'move-end-of-line)
 (define-key evil-insert-state-map (kbd "C-e") 'move-end-of-line)
 (define-key evil-insert-state-map (kbd "C-a") 'move-beginning-of-line)
+(define-key evil-motion-state-map (kbd "C-S-a") 'evil-first-non-blank)
+(define-key evil-insert-state-map (kbd "C-S-a") 'evil-first-non-blank)
 
 ;; line jumps:
 ;; hjkl:

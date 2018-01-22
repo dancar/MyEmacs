@@ -96,6 +96,7 @@
  '(js2-mirror-mode nil)
  '(js2-mode-escape-quotes nil)
  '(js2-strict-missing-semi-warning nil)
+ '(json-reformat:indent-width 2)
  '(list-directory-brief-switches "-CFa")
  '(list-directory-verbose-switches "-1a")
  '(lua-indent-level 2)
@@ -106,7 +107,7 @@
  '(ns-pop-up-frames nil)
  '(package-selected-packages
    (quote
-    (treemacs treemacs-evil treemacs-projectile helm-fuzzier helm-flx tide ng2-mode typescript-mode go-mode flycheck helm-ag helm-projectile projectile helm-descbinds drag-stuff tabbar-mode evil-surround company monokai-theme evil-mc markdown-preview-eww markdown-preview-mode coffee-mode evil-numbers use-package-chords use-package helm-ls-git powerline-evil evil-org evil-magit tabbar deft expand-region exec-path-from-shell powerline evil yasnippet web-mode undo-tree tabbar smex scss-mode paredit org multiple-cursors markdown-mode magit key-chord json-mode js2-mode ivy ido-ubiquitous idle-highlight-mode highlight-symbol expand-region exec-path-from-shell deft color-theme buffer-move auto-complete ag)))
+    (discover yafolding virtualenvwrapper elpy treemacs treemacs-evil treemacs-projectile helm-fuzzier helm-flx tide ng2-mode typescript-mode go-mode flycheck helm-ag helm-projectile projectile helm-descbinds drag-stuff tabbar-mode evil-surround company monokai-theme evil-mc markdown-preview-eww markdown-preview-mode coffee-mode evil-numbers use-package-chords use-package helm-ls-git powerline-evil evil-org evil-magit tabbar deft expand-region exec-path-from-shell powerline evil yasnippet web-mode undo-tree tabbar smex scss-mode paredit org multiple-cursors markdown-mode magit key-chord json-mode js2-mode ivy ido-ubiquitous idle-highlight-mode highlight-symbol expand-region exec-path-from-shell deft color-theme buffer-move auto-complete ag)))
  '(projectile-globally-ignored-directories
    (quote
     ("node_modules" ".idea" ".ensime_cache" ".eunit" ".git" ".hg" ".fslckout" "_FOSSIL_" ".bzr" "_darcs" ".tox" ".svn" ".stack-work" "elpa" "tensorflow_models")))
@@ -154,7 +155,9 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
+ '(default ((t (:inherit nil :stipple nil :background "black" :foreground "gray80" :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 150 :width normal :foundry "nil" :family "Menlo"))))
  '(dancar-powerline-hud-fill1 ((t (:background "blue violet"))))
+ '(highlight-indentation-face ((t (:inherit fringe :background "gray10"))))
  '(highlight-symbol-face ((t (:underline "Blue"))))
  '(idle-highlight ((t (:inherit region :background "RoyalBlue4" :foreground "white"))))
  '(paren-face-match ((t (:inverse-video t))) t)

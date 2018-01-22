@@ -10,6 +10,7 @@
 (require 'dancar-plugins)
 (require 'dancar-keys)
 
+(winner-mode 1)
 ;; full path in title
 (setq frame-title-format
       (list
