@@ -40,18 +40,35 @@
   (helm-exit-and-execute-action
    (lambda(ignore)
      (helm-dan `,dan-temp-query))))
-;(helm-buffers-list--init)
+
 (defun helm-dan (&optional input)
   (interactive)
   (unless helm-source-buffers-list
     (setq helm-source-buffers-list
           (helm-make-source "Buffers" 'helm-source-buffers)))
-  (helm :sources '(
-                   helm-source-buffers-list
-                   ;; helm-source-projectile-files-list
-                   helm-source-bookmarks
-                   helm-source-recentf
-                   )
+
+
+  ;; TODO: find a way to init helm-source-{bookmarks,recentf} instead of checking whethre it is already initialized or not :(
+  (setq dan-helm-sources '(helm-source-buffers-list))
+
+  (if (boundp 'helm-source-bookmarks)
+      (setq dan-helm-sources (append dan-helm-sources '(helm-source-bookmarks))))
+
+  (if (boundp 'helm-source-recentf)
+      (setq dan-helm-sources (append dan-helm-sources '(helm-source-recentf))))
+
+
+  ;; This guy is too slow:
+  ;; (if (boundp 'helm-source-projectile-files-list)
+  ;;     (setq dan-helm-sources (append dan-helm-sources '(helm-source-projectile-files-list))))
+
+  (helm :sources dan-helm-sources
+        ;; '(
+        ;;            helm-source-buffers-list
+        ;;            ;; helm-source-projectile-files-list
+        ;;            ;; helm-source-bookmarks
+        ;;            ;; helm-source-recentf
+        ;;            )
         :buffer "*helm dan*"
         :input input))
 

@@ -49,19 +49,6 @@
          )
   )
 
-;; (use-package neotree
-;;   :init (defun dancar-neotree-f ()
-;;           (interactive)
-;;           (let ((bfn (buffer-file-name)))
-;;             (neotree-dir (projectile-project-root))
-;;             (neotree-find bfn)))
-;;   :config
-;;   (define-key neotree-mode-map (kbd "H-r") 'neotree-refresh)
-
-;;   :bind (("<f8>" . neotree-toggle)
-;;          ("C-x <f8>" . dancar-neotree-f)
-;;          :map neotree-mode-map
-;;          ("H-r" . neotree-refresh)))
 
 (use-package drag-stuff
   :bind (
@@ -137,7 +124,7 @@
   (exec-path-from-shell-initialize)
   (mapcar 'exec-path-from-shell-copy-env '())
   )
-
+(use-package let-alist)
 (use-package evil
   :config
   (require 'dancar-evil)
@@ -172,16 +159,17 @@
          ("C-x <f8>" . dancar-treemacs-f)
          ("H-r" . treemacs-refresh)))
 
-(use-package virtualenvwrapper
-  :config
-  (setq venv-location "/Users/dan/.envs")
-  (venv-workon "emacs"))
+;; (use-package virtualenvwrapper
+;;   :config
+;;   (setq venv-location "/Users/dan/.envs")
+;;   (venv-workon "emacs"))
 
-() (use-package elpy
-  :config
-  (elpy-enable)
-  (define-key elpy-mode-map (kbd "<C-return>") nil)
-  )
+;; () (use-package elpy
+;;   :config
+;;   (elpy-enable)
+;;   (define-key elpy-mode-map (kbd "<C-return>") nil)
+;;   )
+
 (use-package yafolding
   :config
   (define-key yafolding-mode-map (kbd "<C-S-return>") nil)
