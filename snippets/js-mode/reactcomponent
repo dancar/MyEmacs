@@ -14,7 +14,9 @@ export default class $1 extends React.Component {
 
     render () {
         return (
-            $3
+            <div>
+
+            </div>
         )
     }
 }
