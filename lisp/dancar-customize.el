@@ -86,7 +86,7 @@
  '(ido-max-work-file-list 100)
  '(indent-tabs-mode nil)
  '(inhibit-startup-screen t)
- '(js-indent-level 4)
+ '(js-indent-level 2)
  '(js2-allow-keywords-as-property-names nil)
  '(js2-auto-indent-p nil)
  '(js2-basic-offset 2)
@@ -107,7 +107,7 @@
  '(ns-pop-up-frames nil)
  '(package-selected-packages
    (quote
-    (rjsx-mode discover yafolding virtualenvwrapper elpy treemacs treemacs-evil treemacs-projectile helm-fuzzier helm-flx tide ng2-mode typescript-mode go-mode flycheck helm-ag helm-projectile projectile helm-descbinds drag-stuff tabbar-mode evil-surround company monokai-theme evil-mc markdown-preview-eww markdown-preview-mode coffee-mode evil-numbers use-package-chords use-package helm-ls-git powerline-evil evil-org evil-magit tabbar deft expand-region exec-path-from-shell powerline evil yasnippet web-mode undo-tree tabbar smex scss-mode paredit org multiple-cursors markdown-mode magit key-chord json-mode js2-mode ivy ido-ubiquitous idle-highlight-mode highlight-symbol expand-region exec-path-from-shell deft color-theme buffer-move auto-complete ag)))
+    (yasnippet-snippets yaml-mode rjsx-mode discover yafolding virtualenvwrapper elpy treemacs treemacs-evil treemacs-projectile helm-fuzzier helm-flx tide ng2-mode typescript-mode go-mode flycheck helm-ag helm-projectile projectile helm-descbinds drag-stuff tabbar-mode evil-surround company monokai-theme evil-mc markdown-preview-eww markdown-preview-mode coffee-mode evil-numbers use-package-chords use-package helm-ls-git powerline-evil evil-org evil-magit tabbar deft expand-region exec-path-from-shell powerline evil yasnippet web-mode undo-tree tabbar smex scss-mode paredit org multiple-cursors markdown-mode magit key-chord json-mode js2-mode ivy ido-ubiquitous idle-highlight-mode highlight-symbol expand-region exec-path-from-shell deft color-theme buffer-move auto-complete ag)))
  '(projectile-globally-ignored-directories
    (quote
     ("node_modules" ".idea" ".ensime_cache" ".eunit" ".git" ".hg" ".fslckout" "_FOSSIL_" ".bzr" "_darcs" ".tox" ".svn" ".stack-work" "elpa" "tensorflow_models")))

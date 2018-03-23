@@ -134,6 +134,8 @@
 ;; MISC COPING WITH EVIL:
 (define-key evil-insert-state-map (kbd "M-v") 'evil-paste-after)
 (define-key evil-normal-state-map (kbd "M-v") 'evil-paste-after)
+(define-key evil-normal-state-map (kbd "C-t") (lambda () (interactive) (transpose-chars 1)))
+(define-key evil-insert-state-map (kbd "C-t") 'transpose-chars)
 
 ;; MISC SHORTCUTS
 (global-set-key (kbd "<f12>") 'package-list-packages)

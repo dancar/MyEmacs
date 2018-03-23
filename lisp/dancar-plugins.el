@@ -155,7 +155,7 @@
   (progn
     (use-package treemacs-evil :ensure t :demand t)
     (use-package treemacs-projectile))
-  :bind (("<f8>" . treemacs-projectile-toggle)
+  :bind (("<f8>" . treemacs-toggle)
          ("C-x <f8>" . dancar-treemacs-f)
          ("H-r" . treemacs-refresh)))
 
