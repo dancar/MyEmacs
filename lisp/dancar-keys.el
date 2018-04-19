@@ -66,6 +66,7 @@
 (global-set-key (kbd "M-O") (lambda () (interactive) (evil-open-above 1) (evil-normal-state) (evil-next-line)))
 (global-set-key (kbd "M-o") (lambda () (interactive) (evil-open-below 1) (evil-normal-state) (evil-previous-line)))
 (global-set-key (kbd "M-<backspace>") 'dancar-concentrate)
+(global-set-key (kbd "C-c F") (lambda () (interactive) (kill-new buffer-file-truename) (message (concat "Copied: " buffer-file-truename))))
 
 ;; TEXT
 (define-key evil-insert-state-map (kbd "C-d") nil)
@@ -138,6 +139,8 @@
 (define-key evil-insert-state-map (kbd "C-t") 'transpose-chars)
 
 ;; MISC SHORTCUTS
+
+(global-set-key (kbd "C-|") 'helm-ls-git-ls)
 (global-set-key (kbd "<f12>") 'package-list-packages)
 (global-set-key (kbd "C-x d") `dancar-dired)
 (global-set-key (kbd "C-x c-d") `dancar-dired)
