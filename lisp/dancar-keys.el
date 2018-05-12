@@ -78,7 +78,7 @@
 (global-set-key [C-M-right] (lambda () (interactive) (indent-selection 2)))
 (global-set-key [C-M-left] (lambda () (interactive) (indent-selection -2)))
 
-;; WINDOWS
+;; WINDOWS / BUFFERS
 ;; (global-set-key (kbd "C-M-w") (lambda () (interactive) (kill-buffer (current-buffer))(delete-window)))
 (global-set-key (kbd "C-M-w") (lambda () (interactive) (kill-buffer (current-buffer))))
 
@@ -92,7 +92,10 @@
 (global-set-key  (kbd "C-<tab>") `ace-window)
 (global-set-key (kbd "C-x <backtab>") (lambda () (interactive) (rotate-windows -1) (other-window 1)))
 (global-set-key (kbd "C-x C-<tab>") (lambda () (interactive) (rotate-windows -1) (other-window 1)))
+(global-set-key (kbd "M-}") 'tabbar-forward-tab)
 
+(define-key org-mode-map "\M-}" nil)
+(define-key org-mode-map "\M-{" nil)
 
 ;; MOTION
 (global-set-key (kbd "M-m") 'back-to-indentation)
