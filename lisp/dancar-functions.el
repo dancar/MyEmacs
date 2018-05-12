@@ -205,4 +205,11 @@
             (set-window-buffer-start-and-point w1 b2 s2 p2)
             (set-window-buffer-start-and-point w2 b1 s1 p1)))))))
 
+(defun dancar-copy-file-and-line ()
+  (interactive)
+  (let* (
+        (line-str (format-mode-line "%l"))
+        (str (concat buffer-file-truename ":" line-str)))
+    (kill-new str)
+    (message (concat "Copied: " str))))
 (provide 'dancar-functions)

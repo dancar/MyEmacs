@@ -67,6 +67,7 @@
 (global-set-key (kbd "M-o") (lambda () (interactive) (evil-open-below 1) (evil-normal-state) (evil-previous-line)))
 (global-set-key (kbd "M-<backspace>") 'dancar-concentrate)
 (global-set-key (kbd "C-c F") (lambda () (interactive) (kill-new buffer-file-truename) (message (concat "Copied: " buffer-file-truename))))
+(global-set-key (kbd "C-c C-f") 'dancar-copy-file-and-line)
 
 ;; TEXT
 (define-key evil-insert-state-map (kbd "C-d") nil)
