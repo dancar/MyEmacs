@@ -1,12 +1,29 @@
-
 (add-hook 'git-commit-mode-hook 'evil-insert-state)
+
+(global-set-key (kbd "<mouse-3>") 'evil-force-normal-state)
 
 (key-chord-define-global
  "nj"
  (lambda ()
    (interactive)
+   (save-buffer)
    (evil-normal-state 1)
-   (save-buffer)))
+   ))
+
+(key-chord-define-global
+ "`1"
+ (lambda ()
+   (interactive)
+   (save-buffer)
+   ))
+
+(key-chord-define-global
+ "~!"
+ (lambda ()
+   (interactive)
+   (evil-normal-state 1)
+   (save-some-buffers)
+   ))
 
 (use-package evil-surround
   :config

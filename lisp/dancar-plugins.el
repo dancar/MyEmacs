@@ -1,4 +1,10 @@
 ;; plugins: ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+(use-package enh-ruby-mode
+  :config
+  (add-to-list 'auto-mode-alist
+             '("\\(?:\\.rb\\|ru\\|rake\\|thor\\|jbuilder\\|gemspec\\|podspec\\|/\\(?:Gem\\|Rake\\|Cap\\|Thor\\|Vagrant\\|Guard\\|Pod\\)file\\)\\'" . enh-ruby-mode))
+
+  )
 (use-package flycheck
   :ensure t
   :init (global-flycheck-mode))
@@ -146,16 +152,16 @@
 
 (defun dancar-treemacs-f ()
   (interactive)
-  (let ((bfn (buffer-file-name)))
-    (treemacs--init (projectile-project-root))
-    (treemacs-find-file bfn)))
+  (treemacs-find-file)
+  (treemacs-select-window)
+  )
 
 (use-package treemacs
   :config
   (progn
     (use-package treemacs-evil :ensure t :demand t)
     (use-package treemacs-projectile))
-  :bind (("<f8>" . treemacs-toggle)
+  :bind (("<f8>" . treemacs)
          ("C-x <f8>" . dancar-treemacs-f)
          ("H-r" . treemacs-refresh)))
 
