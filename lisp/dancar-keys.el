@@ -28,6 +28,9 @@
 ;; (global-set-key (kbd "H-O") (lambda () (interactive) (insert "Ö")))
 ;; (global-set-key (kbd "H-A") (lambda () (interactive) (insert "Ä")))
 
+(global-set-key (kbd "H-a") (lambda () (interactive) (bookmark-jump "a")))
+(global-set-key (kbd "H-b") (lambda () (interactive) (bookmark-jump "b")))
+(global-set-key (kbd "H-c") (lambda () (interactive) (bookmark-jump "c")))
 (global-set-key (kbd "H-0") (lambda () (interactive) (bookmark-jump "0")))
 (global-set-key (kbd "H-1") (lambda () (interactive) (bookmark-jump "1")))
 (global-set-key (kbd "H-2") (lambda () (interactive) (bookmark-jump "2")))
@@ -39,6 +42,9 @@
 (global-set-key (kbd "H-8") (lambda () (interactive) (bookmark-jump "8")))
 (global-set-key (kbd "H-9") (lambda () (interactive) (bookmark-jump "9")))
 
+(global-set-key (kbd "C-x H-a") (lambda () (interactive) (bookmark-set "a")))
+(global-set-key (kbd "C-x H-b") (lambda () (interactive) (bookmark-set "b")))
+(global-set-key (kbd "C-x H-c") (lambda () (interactive) (bookmark-set "c")))
 (global-set-key (kbd "C-x H-0") (lambda () (interactive) (bookmark-set "0")))
 (global-set-key (kbd "C-x H-1") (lambda () (interactive) (bookmark-set "1")))
 (global-set-key (kbd "C-x H-2") (lambda () (interactive) (bookmark-set "2")))

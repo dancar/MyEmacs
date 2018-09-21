@@ -5,6 +5,7 @@
              '("\\(?:\\.rb\\|ru\\|rake\\|thor\\|jbuilder\\|gemspec\\|podspec\\|/\\(?:Gem\\|Rake\\|Cap\\|Thor\\|Vagrant\\|Guard\\|Pod\\)file\\)\\'" . enh-ruby-mode))
 
   )
+
 (use-package flycheck
   :ensure t
   :init (global-flycheck-mode))
@@ -13,10 +14,46 @@
   :config
   (add-to-list 'auto-mode-alist '("\\.js\\'" . js2-mode) nil )
   )
+
+
 (use-package typescript-mode
+  :demand t
   :config
   (add-hook 'typescript-mode-hook (lambda () (yas-load-directory "/Users/dan/.emacs.d/snippets/typescript")(yas-reload-all)))
 )
+
+
+(defun setup-tide-mode ()
+  (interactive)
+  (tide-setup)
+  (flycheck-mode +1)
+  (setq flycheck-check-syntax-automatically '(save mode-enabled))
+  (eldoc-mode +1)
+  (tide-hl-identifier-mode +1)
+  (company-mode +1)
+)
+;; aligns annotation to the right hand side
+  (setq company-tooltip-align-annotations t)
+
+
+(add-hook 'typescript-mode-hook #'setup-tide-mode)
+
+(use-package tide
+  :demand t
+  :config
+  (flycheck-add-mode 'typescript-tslint 'ng2-ts-mode)
+  (flycheck-add-mode 'typescript-tide 'ng2-ts-mode)
+
+  :after (typescript-mode company flycheck)
+  :hook (
+         (typescript-mode . tide-hl-identifier-mode)
+  )
+)
+
+
+
+
+
 ;;;; stolen from https://debbugs.gnu.org/cgi/bugreport.cgi?bug=24896
 (defvar js-jsx-tag-syntax-table
   (let ((table (make-syntax-table sgml-tag-syntax-table)))

@@ -62,7 +62,5 @@
 
 (toggle-frame-maximized)
 
-(if (< (length command-line-args) 2)
-    (progn
-      (setq initial-buffer-choice 'helm-recentf)
-      (helm-projectile-on)))
+(helm-projectile-on)
+(helm-recentf)
