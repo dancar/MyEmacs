@@ -7,22 +7,26 @@
 
 ;; H-Y-P-E-R
 (setq mac-right-command-modifier 'hyper)
+(global-set-key (kbd "H-<backspace>") 'dancar-notebook-buffer)
+
 (global-set-key (kbd "H-t") `toggle-truncate-lines)
-(global-set-key (kbd "H-.") 'windmove-right)
-(global-set-key (kbd "H-,") 'windmove-left)
-(global-set-key (kbd "H-9") 'dancar-round-paren)
+(global-set-key (kbd "H-(") 'dancar-round-paren)
 (global-set-key (kbd "H-{") 'dancar-square-paren)
 (global-set-key (kbd "H-[") 'dancar-curly-paren)
+(global-set-key (kbd "H-f") 'projectile-find-file)
+(global-set-key (kbd "H-s") 'projectile-ripgrep)
+(global-set-key (kbd "H-g") (lambda () (interactive) (magit-status) (delete-other-windows)))
 
-(global-set-key (kbd "H-s") (lambda () (interactive) (insert "ß")))
-(global-set-key (kbd "H-u") (lambda () (interactive) (insert "ü")))
-(global-set-key (kbd "H-o") (lambda () (interactive) (insert "ö")))
-(global-set-key (kbd "H-a") (lambda () (interactive) (insert "ä")))
 
-(global-set-key (kbd "H-S") (lambda () (interactive) (insert "ß")))
-(global-set-key (kbd "H-U") (lambda () (interactive) (insert "Ü")))
-(global-set-key (kbd "H-O") (lambda () (interactive) (insert "Ö")))
-(global-set-key (kbd "H-A") (lambda () (interactive) (insert "Ä")))
+;; (global-set-key (kbd "H-s") (lambda () (interactive) (insert "ß")))
+;; (global-set-key (kbd "H-u") (lambda () (interactive) (insert "ü")))
+;; (global-set-key (kbd "H-o") (lambda () (interactive) (insert "ö")))
+;; (global-set-key (kbd "H-a") (lambda () (interactive) (insert "ä")))
+
+;; (global-set-key (kbd "H-S") (lambda () (interactive) (insert "ß")))
+;; (global-set-key (kbd "H-U") (lambda () (interactive) (insert "Ü")))
+;; (global-set-key (kbd "H-O") (lambda () (interactive) (insert "Ö")))
+;; (global-set-key (kbd "H-A") (lambda () (interactive) (insert "Ä")))
 
 (global-set-key (kbd "H-0") (lambda () (interactive) (bookmark-jump "0")))
 (global-set-key (kbd "H-1") (lambda () (interactive) (bookmark-jump "1")))
@@ -35,17 +39,6 @@
 (global-set-key (kbd "H-8") (lambda () (interactive) (bookmark-jump "8")))
 (global-set-key (kbd "H-9") (lambda () (interactive) (bookmark-jump "9")))
 
-(global-set-key (kbd "C-c 0") (lambda () (interactive) (bookmark-jump "0")))
-(global-set-key (kbd "C-c 1") (lambda () (interactive) (bookmark-jump "1")))
-(global-set-key (kbd "C-c 2") (lambda () (interactive) (bookmark-jump "2")))
-(global-set-key (kbd "C-c 3") (lambda () (interactive) (bookmark-jump "3")))
-(global-set-key (kbd "C-c 4") (lambda () (interactive) (bookmark-jump "4")))
-(global-set-key (kbd "C-c 5") (lambda () (interactive) (bookmark-jump "5")))
-(global-set-key (kbd "C-c 6") (lambda () (interactive) (bookmark-jump "6")))
-(global-set-key (kbd "C-c 7") (lambda () (interactive) (bookmark-jump "7")))
-(global-set-key (kbd "C-c 8") (lambda () (interactive) (bookmark-jump "8")))
-(global-set-key (kbd "C-c 9") (lambda () (interactive) (bookmark-jump "9")))
-
 (global-set-key (kbd "C-x H-0") (lambda () (interactive) (bookmark-set "0")))
 (global-set-key (kbd "C-x H-1") (lambda () (interactive) (bookmark-set "1")))
 (global-set-key (kbd "C-x H-2") (lambda () (interactive) (bookmark-set "2")))
@@ -57,6 +50,7 @@
 (global-set-key (kbd "C-x H-8") (lambda () (interactive) (bookmark-set "8")))
 (global-set-key (kbd "C-x H-9") (lambda () (interactive) (bookmark-set "9")))
 
+
 ;; COOL STUFF
 (global-set-key (kbd "C-x C-b") (lambda () (interactive) (list-buffers) (other-window 1) (delete-other-windows)))
 (global-set-key (kbd "C-c n") 'new-snippet)
@@ -67,7 +61,7 @@
 (global-set-key (kbd "M-o") (lambda () (interactive) (evil-open-below 1) (evil-normal-state) (evil-previous-line)))
 (global-set-key (kbd "M-<backspace>") 'dancar-concentrate)
 (global-set-key (kbd "C-c F") (lambda () (interactive) (kill-new buffer-file-truename) (message (concat "Copied: " buffer-file-truename))))
-(global-set-key (kbd "C-c C-f") 'dancar-copy-file-and-line)
+(global-set-key (kbd "C-c C-F") 'dancar-copy-file-and-line)
 
 ;; TEXT
 (define-key evil-insert-state-map (kbd "C-d") nil)
@@ -82,14 +76,9 @@
 ;; (global-set-key (kbd "C-M-w") (lambda () (interactive) (kill-buffer (current-buffer))(delete-window)))
 (global-set-key (kbd "C-M-w") (lambda () (interactive) (kill-buffer (current-buffer))))
 
-(global-set-key (kbd "M-<up>") 'windmove-up)
-(global-set-key (kbd "M-<down>") 'windmove-down)
-(global-set-key (kbd "M-<right>") 'windmove-right)
-(global-set-key (kbd "M-<left>") 'windmove-left)
 (global-set-key (kbd "C-;") `toggle-buffer)
 (global-set-key (kbd "C-x C-o") 'other-window)
 (global-set-key (kbd "<backtab>") 'ace-window)
-(global-set-key  (kbd "C-<tab>") `ace-window)
 (global-set-key (kbd "C-x <backtab>") (lambda () (interactive) (rotate-windows -1) (other-window 1)))
 (global-set-key (kbd "C-x C-<tab>") (lambda () (interactive) (rotate-windows -1) (other-window 1)))
 (global-set-key (kbd "M-}") 'tabbar-forward-tab)
@@ -150,20 +139,18 @@
 (global-set-key (kbd "C-x c-d") `dancar-dired)
 (global-set-key (kbd "<f4>") (lambda () (interactive) (dired "~/dev")))
 (global-set-key (kbd "C-c N") (lambda() (interactive) (dired "~/Dropbox/snippets")))
-(global-set-key (kbd "C-x p") (lambda () (interactive) (save-buffer) (kill-ring-save (point-min) (point-max)) (message "Buffer copied.")))
+(global-set-key (kbd "C-x p") 'dancar-copy-buffer)
 (global-set-key (kbd "M-q") 'highlight-symbol-next)
 (global-set-key (kbd "M-Q") 'highlight-symbol-prev)
 (global-set-key (kbd "C-c C-h") `highlight-symbol-at-point)
 (global-set-key (kbd "C-c H") `highlight-symbol-remove-all)
 (global-set-key (kbd "M-<return>") `kmacro-end-and-call-macro)
-(global-set-key (kbd "C-c C-g") (lambda () (interactive) (magit-status) (delete-other-windows)))
 (global-set-key (kbd "C-#") `shell)
 (global-set-key (kbd "<f6>") `toggle-truncate-lines)
 (global-set-key (kbd "C-M-|") 'deft)
 
 
 ;;;MBP
-;;(global-set-key (kbd "s-g s-g") 'goto-line)
 (global-set-key (kbd "s-0") 'digit-argument)
 (global-set-key (kbd "s-1") 'digit-argument)
 (global-set-key (kbd "s-2") 'digit-argument)

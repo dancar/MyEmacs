@@ -212,4 +212,22 @@
         (str (concat buffer-file-truename ":" line-str)))
     (kill-new str)
     (message (concat "Copied: " str))))
+
+(setq dancar-notebook-file "/Users/dan/Dropbox/deft/transmit.org")
+(defun dancar-notebook-buffer ()
+  (interactive)
+  (find-file dancar-notebook-file))
+
+(defun dancar-copy-buffer ()
+  (interactive)
+  (save-buffer)
+  (kill-ring-save (point-min) (point-max))
+  (message
+   (concat
+    "Buffer copied ("
+    (number-to-string (- (point-max) (point-min)))
+    " characters).")))
+
+(message (concat "" (number-to-string (- 10 5))))
+
 (provide 'dancar-functions)
