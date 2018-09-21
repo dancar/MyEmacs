@@ -64,5 +64,5 @@
 
 (if (< (length command-line-args) 2)
     (progn
-      (setq initial-buffer-choice 'helm-projectile-switch-project)
+      (setq initial-buffer-choice 'helm-recentf)
       (helm-projectile-on)))

@@ -48,6 +48,8 @@
   (add-to-list 'projectile-globally-ignored-directories "node_modules")
   (setq projectile-completion-system 'helm)
   (helm-projectile-on)
+  (define-key projectile-mode-map (kbd "C-c p") 'projectile-command-map)
+
 
   :bind (
          ("C-x C-\\" . helm-projectile-find-file)
