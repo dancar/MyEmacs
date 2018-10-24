@@ -105,6 +105,7 @@
  '(menu-bar-mode nil)
  '(ns-auto-hide-menu-bar nil)
  '(ns-pop-up-frames nil)
+ '(org-export-backends (quote (ascii html icalendar latex md odt)))
  '(package-selected-packages
    (quote
     (helm-flycheck flycheck flymake-easy flymake-jslint helm-rg projectile-ripgrep graphql-mode enh-ruby-mode graphviz-dot-mode csv-mode yasnippet-snippets yaml-mode rjsx-mode discover yafolding virtualenvwrapper elpy treemacs treemacs-evil treemacs-projectile helm-fuzzier helm-flx tide ng2-mode typescript-mode go-mode helm-ag helm-projectile projectile helm-descbinds drag-stuff tabbar-mode evil-surround company monokai-theme evil-mc markdown-preview-eww markdown-preview-mode coffee-mode evil-numbers use-package-chords use-package helm-ls-git powerline-evil evil-org evil-magit tabbar deft expand-region exec-path-from-shell powerline evil yasnippet web-mode undo-tree tabbar smex scss-mode paredit org multiple-cursors markdown-mode magit key-chord json-mode js2-mode ivy ido-ubiquitous idle-highlight-mode highlight-symbol expand-region exec-path-from-shell deft color-theme buffer-move auto-complete ag)))
@@ -155,7 +156,7 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(default ((t (:inherit nil :stipple nil :background "black" :foreground "gray80" :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 150 :width normal :foundry "nil" :family "Menlo"))))
+ '(default ((t (:inherit nil :stipple nil :background "black" :foreground "gray80" :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 120 :width normal :foundry "nil" :family "Menlo"))))
  '(dancar-powerline-hud-fill1 ((t (:background "blue violet"))))
  '(highlight-indentation-face ((t (:inherit fringe :background "gray10"))))
  '(highlight-symbol-face ((t (:underline "Blue"))))

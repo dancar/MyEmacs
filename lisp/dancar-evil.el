@@ -6,7 +6,7 @@
  "nj"
  (lambda ()
    (interactive)
-   (save-buffer)
+   ;; (save-buffer)
    (evil-normal-state 1)
    ))
 
@@ -14,6 +14,7 @@
  "`1"
  (lambda ()
    (interactive)
+   (evil-normal-state 1)
    (save-buffer)
    ))
 
