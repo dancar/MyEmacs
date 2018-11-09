@@ -1,5 +1,11 @@
 ;;; original and stolen functions
 
+
+(defun dancar-open-in-vscode ()
+  (interactive)
+  (call-process-shell-command (concat "/usr/local/bin/code " (buffer-file-name) "&") nil 0)
+  )
+
 (defun dancar-round-paren ()
   (interactive)
   (insert "()")

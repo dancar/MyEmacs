@@ -1,4 +1,19 @@
 ;; plugins: ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+(use-package guide-key
+  :config
+  (guide-key-mode 1)
+  )
+
+(use-package guide-key-tip
+  :config
+  (setq guide-key-tip/enabled t)
+  )
+
+(use-package all-the-icons-dired
+  :config
+  (add-hook 'dired-mode-hook 'all-the-icons-dired-mode)
+)
+
 (use-package enh-ruby-mode
   :config
   (add-to-list 'auto-mode-alist

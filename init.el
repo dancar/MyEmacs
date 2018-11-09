@@ -60,7 +60,14 @@
 ;; allow using the new gpg:
 (setf epa-pinentry-mode 'loopback)
 
-(toggle-frame-maximized)
+(add-hook 'dired-mode-hook 'dired-hide-details-mode)
 
+
+;; load personal stuff:
+(let ((personal-file "~/Dropbox/private_emacs_config.el"))
+  (if (file-exists-p personal-file) (load personal-file)))
+
+
+(toggle-frame-maximized)
 (helm-projectile-on)
 (helm-recentf)

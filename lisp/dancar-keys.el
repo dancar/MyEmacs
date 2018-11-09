@@ -61,6 +61,8 @@
 
 
 ;; COOL STUFF
+(global-set-key (kbd "C-c V") 'dancar-open-in-vscode)
+(global-set-key (kbd "M-s o") 'helm-swoop)
 (global-set-key (kbd "C-x C-b") (lambda () (interactive) (list-buffers) (other-window 1) (delete-other-windows)))
 (global-set-key (kbd "C-c n") 'new-snippet)
 (global-set-key (kbd "C-\\") `helm-dan)
@@ -143,9 +145,8 @@
 ;; MISC SHORTCUTS
 
 (global-set-key (kbd "C-|") 'helm-ls-git-ls)
-(global-set-key (kbd "<f12>") 'package-list-packages)
-(global-set-key (kbd "C-x d") `dancar-dired)
-(global-set-key (kbd "C-x c-d") `dancar-dired)
+(global-set-key (kbd "<f12>") 'paradox-list-packages)
+(global-set-key (kbd "C-x d") `dired-jump)
 (global-set-key (kbd "<f4>") (lambda () (interactive) (dired "~/dev")))
 (global-set-key (kbd "C-c N") (lambda() (interactive) (dired "~/Dropbox/snippets")))
 (global-set-key (kbd "C-x p") 'dancar-copy-buffer)

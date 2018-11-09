@@ -1,5 +1,0 @@
-# -*- mode: snippet -*-
-# name: alert
-# key: alert
-# --
-window.alert('`(file-name-nondirectory (buffer-file-name))`\\\\ `(line-number-at-pos)`: $1:', $1);
