@@ -16,6 +16,9 @@
 (global-set-key (kbd "H-f") 'projectile-find-file)
 (global-set-key (kbd "H-s") 'projectile-ripgrep)
 (global-set-key (kbd "H-g") (lambda () (interactive) (magit-status) (delete-other-windows)))
+(global-set-key (kbd "C-M-S-<return>") 'evil-org-org-insert-heading-respect-content-below)
+(global-set-key (kbd "H-=") 'text-scale-increase)
+(global-set-key (kbd "H--") 'text-scale-decrease)
 
 
 ;; (global-set-key (kbd "H-s") (lambda () (interactive) (insert "ß")))
