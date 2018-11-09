@@ -6,25 +6,6 @@
   (call-process-shell-command (concat "/usr/local/bin/code " (buffer-file-name) "&") nil 0)
   )
 
-(defun dancar-round-paren ()
-  (interactive)
-  (insert "()")
-  (left-char)
-  )
-
-(defun dancar-curly-paren ()
-  (interactive)
-  (insert "{  }")
-  (left-char)
-  (left-char)
-  )
-
-(defun dancar-square-paren ()
-  (interactive)
-  (insert "[]")
-  (left-char)
-  )
-
 (defun dancar-concentrate ()
    (interactive)
    (delete-other-windows)
@@ -97,7 +78,7 @@
     (comment-or-uncomment-region (line-beginning-position) (line-end-position))))
 (global-set-key (kbd "M-;") 'comment-line-toggle)
 
-(defun go-line ()
+(defun dancar-go-line ()
   (interactive)
   (search-backward " ")
   (delete-char 1)
@@ -233,7 +214,5 @@
     "Buffer copied ("
     (number-to-string (- (point-max) (point-min)))
     " characters).")))
-
-(message (concat "" (number-to-string (- 10 5))))
 
 (provide 'dancar-functions)

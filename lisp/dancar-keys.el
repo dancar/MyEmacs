@@ -10,9 +10,6 @@
 (global-set-key (kbd "H-<backspace>") 'dancar-notebook-buffer)
 
 (global-set-key (kbd "H-t") `toggle-truncate-lines)
-(global-set-key (kbd "H-(") 'dancar-round-paren)
-(global-set-key (kbd "H-{") 'dancar-square-paren)
-(global-set-key (kbd "H-[") 'dancar-curly-paren)
 (global-set-key (kbd "H-f") 'projectile-find-file)
 (global-set-key (kbd "H-s") 'projectile-ripgrep)
 (global-set-key (kbd "H-g") (lambda () (interactive) (magit-status) (delete-other-windows)))
@@ -66,7 +63,7 @@
 (global-set-key (kbd "C-x C-b") (lambda () (interactive) (list-buffers) (other-window 1) (delete-other-windows)))
 (global-set-key (kbd "C-c n") 'new-snippet)
 (global-set-key (kbd "C-\\") `helm-dan)
-(global-set-key (kbd "C-<return>") `go-line)
+(global-set-key (kbd "C-<return>") `dancar-go-line)
 (global-set-key (kbd "C-M-Y") 'helm-show-kill-ring)
 (global-set-key (kbd "M-O") (lambda () (interactive) (evil-open-above 1) (evil-normal-state) (evil-next-line)))
 (global-set-key (kbd "M-o") (lambda () (interactive) (evil-open-below 1) (evil-normal-state) (evil-previous-line)))
