@@ -1,4 +1,14 @@
 ;; plugins: ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+(use-package fill-column-indicator
+  :config (add-hook 'typescript-mode-hook 'fci-mode)
+  )
+
+
+(use-package web-mode
+  :config
+  (add-to-list 'auto-mode-alist '("\\.html\\'" . web-mode))
+  )
 (use-package guide-key
   :config
   (guide-key-mode 1)
@@ -6,7 +16,8 @@
 
 (use-package guide-key-tip
   :config
-  (setq guide-key-tip/enabled t)
+  (setq guide-key-tip/enabled nil)
+  ;; (setq guide-key-tip/enabled t)
   )
 
 (use-package all-the-icons-dired
@@ -147,20 +158,36 @@
   :bind (
     ("M-}" . tabbar-forward-tab)
     ("M-{" . tabbar-backward-tab)
-    ("C-M-{" . tabbar-backward-group)
-    ("C-M-}" . tabbar-forward-group))
+    ("C-H-<return>" . dancar-toggle-buffer-name-tabprefix)
+    )
   :config
   ;; http://www.emacswiki.org/emacs/TabBarMode#toc4
   :init
-  (defun dancar-tabbar-buffer-groups () ;; customize to show all normal files in one group
-    "Returns the name of the tab group names the current buffer belongs to.
- There are two groups: Emacs buffers (those whose name starts with '*', plus
- dired buffers), and the rest.  This works at least with Emacs v24.2 using
- tabbar.el v1.7."
-    (list (cond ((string-equal "*" (substring (buffer-name) 0 1)) "Emacs")
-                ((eq major-mode 'dired-mode) "Dired")
-                ((eq major-mode 'markdown-mode) "Markdown")
-                (t "User"))))
+  (defun dancar-tabbar-buffer-groups () (list "all"))
+
+
+  (setq dancar-tabprefix "¶ ")
+
+  (defun dancar-buffer-has-tabprefix (buffer-name)
+    (equal (substring buffer-name 0 (length dancar-tabprefix)) dancar-tabprefix))
+
+  (defun dancar-toggle-buffer-name-tabprefix ()
+    (interactive)
+    (if (dancar-buffer-has-tabprefix (buffer-name))
+        (rename-buffer (substring (buffer-name) (length dancar-tabprefix)))
+        (rename-buffer (concat dancar-tabprefix (buffer-name)))))
+
+  (defun dancar-tabbar-buffers-list ()
+    (remove-if
+     (lambda (buffer)
+       (not
+        (or
+         (eq buffer (current-buffer))
+         (dancar-buffer-has-tabprefix (buffer-name buffer)))
+        ))
+       (buffer-list)))
+
+  (setq tabbar-buffer-list-function 'dancar-tabbar-buffers-list)
   (setq tabbar-buffer-groups-function 'dancar-tabbar-buffer-groups)
   )
 
