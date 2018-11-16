@@ -19,7 +19,7 @@
    (interactive "P")
    (insert (if arg
                (format-time-string "%d.%m.%Y")
-             (format-time-string "%Y-%m-%d"))))
+             (format-time-string "%F"))))
 
 (defun dancar-helm-switch-to-full ()
   (interactive)
@@ -125,9 +125,10 @@
 (defun new-snippet ()
   (interactive)
   (let* (
-         (filter-regexp "[0-9][0-9][0-9][0-9]")
+         (date (format-time-string "%F"))
+         (prefix (concat "dansnippet-[" date "]-"))
+         (filter-regexp (concat (make-string (length prefix) ?.) "[0-9][0-9][0-9][0-9]$"))
          (files (directory-files snippets-dir nil filter-regexp))
-         (prefix "dansnippet-")
          (get-number (lambda (filename)
                        (string-to-number (substring filename (length prefix) (+ (length prefix) 4)))))
          (numbers (mapcar get-number files))
