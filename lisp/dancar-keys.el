@@ -5,6 +5,10 @@
   )
 
 
+;; Touchbar
+(global-set-key (kbd "<f13>") 'toggle-truncate-lines)
+(global-set-key (kbd "<C-M-S-f1>") 'tide-organize-imports)
+(global-set-key (kbd "<C-M-S-f2>") 'tide-fix)
 ;; H-Y-P-E-R
 (setq mac-right-command-modifier 'hyper)
 (global-set-key (kbd "H-<backspace>") 'dancar-notebook-buffer)
@@ -58,10 +62,13 @@
 
 
 ;; COOL STUFF
+
+
 (global-set-key (kbd "C-c V") 'dancar-open-in-vscode)
 (global-set-key (kbd "M-s o") 'helm-swoop)
 (global-set-key (kbd "C-x C-b") (lambda () (interactive) (list-buffers) (other-window 1) (delete-other-windows)))
 (global-set-key (kbd "C-c n") 'new-snippet)
+
 (global-set-key (kbd "C-\\") `helm-dan)
 (global-set-key (kbd "C-<return>") `dancar-go-line)
 (global-set-key (kbd "C-M-Y") 'helm-show-kill-ring)
@@ -141,6 +148,9 @@
 
 ;; MISC SHORTCUTS
 
+(global-set-key (kbd "C-c R") 'tide-rename-file)
+(global-set-key (kbd "C-c r") 'tide-rename-symbol)
+(global-set-key (kbd "C-c D") 'tide-jump-to-definition)
 (global-set-key (kbd "C-|") 'helm-ls-git-ls)
 (global-set-key (kbd "<f12>") 'paradox-list-packages)
 (global-set-key (kbd "C-x d") `dired-jump)

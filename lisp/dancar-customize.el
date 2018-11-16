@@ -35,7 +35,7 @@
  '(epg-debug t)
  '(evil-want-C-u-scroll t)
  '(evil-want-fine-undo t)
- '(fill-column 9999999999999)
+ '(fill-column 140)
  '(git-state-modeline-decoration (quote git-state-decoration-large-dot))
  '(global-auto-revert-mode t)
  '(global-diff-hl-mode t)
@@ -109,11 +109,12 @@
  '(org-export-backends (quote (ascii html icalendar latex md odt)))
  '(package-selected-packages
    (quote
-    (guide-key-tip guide-key all-the-icons-dired paradox helm-rg helm-swoop helm-flycheck flycheck flymake-easy flymake-jslint graphql-mode enh-ruby-mode graphviz-dot-mode csv-mode yasnippet-snippets yaml-mode rjsx-mode yafolding virtualenvwrapper elpy treemacs treemacs-evil treemacs-projectile helm-fuzzier helm-flx tide ng2-mode typescript-mode go-mode helm-projectile projectile helm-descbinds drag-stuff tabbar-mode evil-surround company monokai-theme evil-mc markdown-preview-eww markdown-preview-mode evil-numbers use-package-chords use-package helm-ls-git powerline-evil evil-org evil-magit tabbar deft expand-region exec-path-from-shell powerline evil yasnippet web-mode undo-tree tabbar smex scss-mode paredit org multiple-cursors markdown-mode magit key-chord json-mode js2-mode ido-ubiquitous idle-highlight-mode highlight-symbol expand-region exec-path-from-shell deft color-theme buffer-move auto-complete ag)))
+    (ripgrep fill-column-indicator guide-key-tip guide-key all-the-icons-dired paradox helm-rg helm-swoop helm-flycheck flycheck flymake-easy flymake-jslint graphql-mode enh-ruby-mode graphviz-dot-mode csv-mode yasnippet-snippets yaml-mode rjsx-mode yafolding virtualenvwrapper elpy treemacs treemacs-evil treemacs-projectile helm-fuzzier helm-flx tide ng2-mode typescript-mode go-mode helm-projectile projectile helm-descbinds drag-stuff tabbar-mode evil-surround company monokai-theme evil-mc markdown-preview-eww markdown-preview-mode evil-numbers use-package-chords use-package helm-ls-git powerline-evil evil-org evil-magit tabbar deft expand-region exec-path-from-shell powerline evil yasnippet web-mode undo-tree tabbar smex scss-mode paredit org multiple-cursors markdown-mode magit key-chord json-mode js2-mode ido-ubiquitous idle-highlight-mode highlight-symbol expand-region exec-path-from-shell deft color-theme buffer-move auto-complete ag)))
  '(paradox-automatically-star nil)
  '(projectile-globally-ignored-directories
    (quote
     ("node_modules" ".idea" ".ensime_cache" ".eunit" ".git" ".hg" ".fslckout" "_FOSSIL_" ".bzr" "_darcs" ".tox" ".svn" ".stack-work" "elpa" "tensorflow_models")))
+ '(projectile-indexing-method (quote hybrid))
  '(projectile-other-file-alist
    (quote
     (("cpp" "h" "hpp" "ipp")
