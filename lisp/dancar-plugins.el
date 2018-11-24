@@ -138,9 +138,30 @@
 (use-package helm-ls-git)
 
 (require 'use-package-chords)
+
 (use-package key-chord
   :config
   (key-chord-mode 1)
+  (defun dancar-split-window-right ()
+    (interactive)
+    (split-window-right)
+    (windmove-right)
+    )
+
+  (defun dancar-split-window-below ()
+    (interactive)
+    (split-window-below)
+    (windmove-down)
+    )
+  (defun dancar-split-window-left ()
+    (interactive)
+    (split-window-right)
+    )
+
+  (defun dancar-split-window-above ()
+    (interactive)
+    (split-window-below)
+    )
   :chords (
            ("`k" . windmove-up)
            ("`j" . windmove-down)
@@ -152,13 +173,25 @@
            ("`<right>" . windmove-right)
            ("`<left>" . windmove-left)
 
+           ("`n" . delete-window)
+           ("1n" . delete-other-windows)
+           ("2n" . dancar-split-window-below)
+           ("3n" . dancar-split-window-right)
+           ("5n" . make-frame-command)
+           ("0n" . delete-frame)
+
+           ("2h" . dancar-split-window-left)
+           ("2j" . dancar-split-window-below)
+           ("2k" . dancar-split-window-above)
+           ("2l" . dancar-split-window-right)
+
                ))
 
 (use-package tabbar-mode
   :bind (
     ("M-}" . tabbar-forward-tab)
     ("M-{" . tabbar-backward-tab)
-    ("C-H-<return>" . dancar-toggle-buffer-name-tabprefix)
+    ("C-c k" . dancar-toggle-buffer-name-tabprefix)
     )
   :config
   ;; http://www.emacswiki.org/emacs/TabBarMode#toc4
