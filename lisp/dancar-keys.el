@@ -12,7 +12,7 @@
 ;; H-Y-P-E-R
 (setq mac-right-command-modifier 'hyper)
 (global-set-key (kbd "H-<backspace>") 'dancar-notebook-buffer)
-
+(global-set-key (kbd "H-d") 'dired-jump)
 (global-set-key (kbd "H-t") `toggle-truncate-lines)
 (global-set-key (kbd "H-f") 'projectile-find-file)
 (global-set-key (kbd "H-s") 'projectile-ripgrep)
@@ -80,12 +80,24 @@
 
 ;; TEXT
 (define-key evil-insert-state-map (kbd "C-d") nil)
-(global-set-key (kbd "M-k") 'kill-whole-line)
+
+
+
+
 (global-set-key (kbd "M-;") 'comment-line-toggle)
 (global-set-key (kbd "M-P") `delete-indentation)
 (global-set-key (kbd "M-N") (lambda() (interactive (delete-indentation 1))))
 (global-set-key [C-M-right] (lambda () (interactive) (indent-selection 2)))
 (global-set-key [C-M-left] (lambda () (interactive) (indent-selection -2)))
+
+(global-set-key (kbd "M-k") 'kill-whole-line)
+;; fix this in org-mode:
+(add-hook 'org-mode-hook
+          '(lambda ()
+             (evil-define-key '(normal visual insert) evil-org-mode-map (kbd "M-k") 'kill-whole-line)
+             (message "Defined.")
+             ))
+
 
 ;; WINDOWS / BUFFERS
 ;; (global-set-key (kbd "C-M-w") (lambda () (interactive) (kill-buffer (current-buffer))(delete-window)))
@@ -161,7 +173,7 @@
 (global-set-key (kbd "M-Q") 'highlight-symbol-prev)
 (global-set-key (kbd "C-c C-h") `highlight-symbol-at-point)
 (global-set-key (kbd "C-c H") `highlight-symbol-remove-all)
-(global-set-key (kbd "M-<return>") `kmacro-end-and-call-macro)
+(global-set-key (kbd "H-<return>") `kmacro-end-and-call-macro)
 (global-set-key (kbd "C-#") `shell)
 (global-set-key (kbd "<f6>") `toggle-truncate-lines)
 (global-set-key (kbd "C-M-|") 'deft)
