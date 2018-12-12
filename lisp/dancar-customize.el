@@ -135,8 +135,8 @@
      ("lock" "")
      ("gpg" "")
      ("component.ts" "component.html")
-     ("component.html" "component.scss" "component.ts")
-     ("component.scss" . "component.html"))))
+     ("component.html" "component.ts")
+     ("component.scss" "component.html"))))
  '(recentf-auto-cleanup (quote never))
  '(recentf-max-saved-items 1000)
  '(safe-local-variable-values
