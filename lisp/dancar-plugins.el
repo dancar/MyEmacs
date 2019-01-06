@@ -115,8 +115,6 @@
 
 
   :bind (
-         ("C-x C-\\" . helm-projectile-find-file)
-         ("C-x C-|" . helm-projectile-switch-project)
          )
   )
 
