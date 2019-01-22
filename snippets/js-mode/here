@@ -2,4 +2,4 @@
 # name: here
 # key: here
 # --
-console.log('<-DANDEBUG-> `(file-name-nondirectory (buffer-file-name))`\\\\ `(line-number-at-pos)`: <here>');
+/* DANDEBUG */ console.table({file: '`(file-name-nondirectory (buffer-file-name))`', line: `(line-number-at-pos)`});

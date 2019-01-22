@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: ts
+# key: ts
+# --
+TSAUTH-$1 #comment - $2

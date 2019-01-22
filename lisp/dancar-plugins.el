@@ -182,8 +182,12 @@
            ("2j" . dancar-split-window-below)
            ("2k" . dancar-split-window-above)
            ("2l" . dancar-split-window-right)
+
            ("qd" . tide-jump-to-definition)
+           ("qr" . tide-references)
            ("qp" . projectile-find-other-file)
+           ("qf" . tide-fix)
+           ("qi" . tide-organize-imports)
 
                ))
 
