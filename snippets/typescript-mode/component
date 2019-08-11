@@ -1,0 +1,16 @@
+# -*- mode: snippet -*-
+# name: component
+# key: component
+# --
+import {Component, OnInit,} from '@angular/core';
+
+@Component({
+  selector: 'app-$2',
+  templateUrl: './$3.component.html',
+})
+export class $1 implements OnInit {
+
+  ngOnInit() {
+
+  }
+}
