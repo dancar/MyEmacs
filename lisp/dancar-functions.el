@@ -1,5 +1,7 @@
 ;;; original and stolen functions
 
+(fset 'split-param-to-new-line
+   [?f ?, ?l ?r return])
 
 (defun dancar-open-in-vscode ()
   (interactive)

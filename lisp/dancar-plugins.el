@@ -175,8 +175,8 @@
            ("1n" . delete-other-windows)
            ("2n" . dancar-split-window-below)
            ("3n" . dancar-split-window-right)
-           ("5n" . make-frame-command)
-           ("0n" . delete-frame)
+           ("5`" . make-frame-command)
+           ("0`" . delete-frame)
 
            ("2h" . dancar-split-window-left)
            ("2j" . dancar-split-window-below)
@@ -188,6 +188,8 @@
            ("qp" . projectile-find-other-file)
            ("qf" . tide-fix)
            ("qi" . tide-organize-imports)
+
+           ("`w" . balance-windows)
 
                ))
 
