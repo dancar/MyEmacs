@@ -21,7 +21,7 @@
  '(custom-file "~/.emacs.d/lisp/dancar-customize.el")
  '(custom-safe-themes
    (quote
-    ("a49760e39bd7d7876c94ee4bf483760e064002830a63e24c2842a536c6a52756" "f78de13274781fbb6b01afd43327a4535438ebaeec91d93ebdbba1e3fba34d3c" default)))
+    ("bd7b7c5df1174796deefce5debc2d976b264585d51852c962362be83932873d9" "a49760e39bd7d7876c94ee4bf483760e064002830a63e24c2842a536c6a52756" "f78de13274781fbb6b01afd43327a4535438ebaeec91d93ebdbba1e3fba34d3c" default)))
  '(deft-auto-save-interval 0.0)
  '(deft-use-filename-as-title t)
  '(dired-listing-switches "-lhpa")
@@ -173,7 +173,8 @@
  '(tabbar-mode t nil (tabbar))
  '(tail-hide-delay 7)
  '(tail-max-size 7)
- '(tide-server-max-response-length 1024000)
+ '(tide-server-max-response-length 10240000)
+ '(tide-sync-request-timeout 30)
  '(tool-bar-mode nil)
  '(truncate-lines t)
  '(typescript-indent-level 2)

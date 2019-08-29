@@ -71,6 +71,9 @@
   (flycheck-add-mode 'typescript-tide 'ng2-ts-mode)
 
   :after (typescript-mode company flycheck)
+  :bind (
+         ("C-X r r" . tide-restart-server)
+         )
   :hook (
          (typescript-mode . tide-hl-identifier-mode)
   )
