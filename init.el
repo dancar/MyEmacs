@@ -25,11 +25,11 @@
 
 ;; Set font according to os:
 ;; old: Monaco
-(cond
- ((equal system-type 'darwin)
-  (set-face-attribute 'default nil :family "Menlo" :height 150 :weight 'normal))
- ((and nil (equal system-type 'gnu/linux))
-  (set-face-attribute 'default nil :family "Ubuntu Mono" :height 180 :weight 'normal)))
+;; (cond
+;;  ((equal system-type 'darwin)
+;;   (set-face-attribute 'default nil :family "Menlo" :height 150 :weight 'normal))
+;;  ((and nil (equal system-type 'gnu/linux))
+;;   (set-face-attribute 'default nil :family "Ubuntu Mono" :height 180 :weight 'normal)))
 
 ;; Disable truncating lines when viewing diffs in ediff:
 (add-hook 'ediff-prepare-buffer-hook (lambda () (toggle-truncate-lines 0)))
@@ -48,8 +48,8 @@
 
 ;; load color-theme:
 (load-theme 'deeper-blue)
-;; (load-theme 'monokai)
-;; (load "~/.emacs.d/aanila/aanila-theme.el")
+;; ;; (load-theme 'monokai)
+;; ;; (load "~/.emacs.d/aanila/aanila-theme.el")
 ;; (require 'aanila-theme)
 
 (auto-fill-mode -1)
@@ -66,7 +66,6 @@
 ;; load personal stuff:
 (let ((personal-file "~/Dropbox/private_emacs_config.el"))
   (if (file-exists-p personal-file) (load personal-file)))
-
 
 (toggle-frame-maximized)
 (helm-projectile-on)
