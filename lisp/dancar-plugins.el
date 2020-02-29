@@ -57,6 +57,13 @@
   (eldoc-mode +1)
   (tide-hl-identifier-mode +1)
   (company-mode +1)
+  (defun tide-popup-select-item (prompt list)
+    (helm
+     :sources
+     (helm-build-sync-source prompt
+       :candidates list)
+     :buffer "*Tide Completion Candidates*")
+    )
 )
 ;; aligns annotation to the right hand side
   (setq company-tooltip-align-annotations t)
@@ -191,7 +198,6 @@
            ("qp" . projectile-find-other-file)
            ("qf" . tide-fix)
            ("qi" . tide-organize-imports)
-
            ("`w" . balance-windows)
 
                ))
@@ -309,6 +315,11 @@
   (define-key yafolding-mode-map (kbd "C-c <C-return>") 'yafolding-toggle-element)
   (add-hook 'prog-mode-hook (lambda () (yafolding-mode)))
  )
+
+;; open tsc source file at point with line number
+(fset 'open-src-file-with-line
+   [?v ?t ?: ?\C-x ?r ?s ?a ?l ?l ?v ?t ?: ?\C-x ?r ?s ?b ?\C-x ?2 ?\C-x ?o ?\H-a ?\C-x ?\C-f ?s ?r ?c ?/ ?\C-x ?r ?i ?a return ?g ?g ?\M-x ?g ?o ?t ?o ?- ?l ?i ?n ?e return ?\C-x ?r ?i ?b return])
+
 
 (provide 'dancar-plugins)
 ;;; dancar-plugins ends here

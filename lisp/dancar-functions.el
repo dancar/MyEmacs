@@ -195,6 +195,14 @@
             (set-window-buffer-start-and-point w1 b2 s2 p2)
             (set-window-buffer-start-and-point w2 b1 s1 p1)))))))
 
+(defun dancar-copy-buffer-name-to-clipboard ()
+  (interactive)
+  (let (
+        (str (file-name-nondirectory (buffer-name)))
+        )
+  (kill-new (buffer-name))
+  (message (concat "Copied: " str))))
+
 (defun dancar-copy-file-and-line ()
   (interactive)
   (let* (

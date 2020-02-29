@@ -2,4 +2,4 @@
 # name: conslog
 # key: conslog
 # --
-/* DANDEBUG */ console.table({file: '`(file-name-nondirectory (buffer-file-name))`', line: `(line-number-at-pos)`, expression: '$1'}); console.log($1);
+/* DANDEBUG */ ( () => {const DAN_EXPRESSION = [$1]; console.table({file: '`(file-name-nondirectory (buffer-file-name))`', line: `(line-number-at-pos)`, expression: '$1', values: DAN_EXPRESSION}); console.log(...DAN_EXPRESSION);})();

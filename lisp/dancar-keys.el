@@ -35,6 +35,7 @@
 (global-set-key (kbd "H-a") (lambda () (interactive) (bookmark-jump "a")))
 (global-set-key (kbd "H-b") (lambda () (interactive) (bookmark-jump "b")))
 (global-set-key (kbd "H-c") (lambda () (interactive) (bookmark-jump "c")))
+(global-set-key (kbd "H-i") (lambda () (interactive) (bookmark-jump "i")))
 (global-set-key (kbd "H-0") (lambda () (interactive) (bookmark-jump "0")))
 (global-set-key (kbd "H-1") (lambda () (interactive) (bookmark-jump "1")))
 (global-set-key (kbd "H-2") (lambda () (interactive) (bookmark-jump "2")))
@@ -49,6 +50,7 @@
 (global-set-key (kbd "C-x H-a") (lambda () (interactive) (bookmark-set "a")))
 (global-set-key (kbd "C-x H-b") (lambda () (interactive) (bookmark-set "b")))
 (global-set-key (kbd "C-x H-c") (lambda () (interactive) (bookmark-set "c")))
+(global-set-key (kbd "C-x H-i") (lambda () (interactive) (bookmark-set "i")))
 (global-set-key (kbd "C-x H-0") (lambda () (interactive) (bookmark-set "0")))
 (global-set-key (kbd "C-x H-1") (lambda () (interactive) (bookmark-set "1")))
 (global-set-key (kbd "C-x H-2") (lambda () (interactive) (bookmark-set "2")))
@@ -77,6 +79,7 @@
 (global-set-key (kbd "M-<backspace>") 'dancar-concentrate)
 (global-set-key (kbd "C-c F") (lambda () (interactive) (kill-new buffer-file-truename) (message (concat "Copied: " buffer-file-truename))))
 (global-set-key (kbd "C-c C-F") 'dancar-copy-file-and-line)
+(global-set-key (kbd "C-x F") 'dancar-copy-buffer-name-to-clipboard)
 
 ;; TEXT
 (define-key evil-insert-state-map (kbd "C-d") nil)
