@@ -195,23 +195,31 @@
             (set-window-buffer-start-and-point w1 b2 s2 p2)
             (set-window-buffer-start-and-point w2 b1 s1 p1)))))))
 
+(defun dancar-copy-str (str)
+  (kill-new str)
+  (message (concat "COPIED: " str))
+  )
+
+(defun dancar-copy-buffer-name-and-line-to-clipboard()
+  (interactive)
+  (dancar-copy-str (concat (buffer-name) ":" (format-mode-line "%l")))
+  )
+
 (defun dancar-copy-buffer-name-to-clipboard ()
   (interactive)
-  (let (
-        (str (file-name-nondirectory (buffer-name)))
-        )
-  (kill-new (buffer-name))
-  (message (concat "Copied: " str))))
+  (dancar-copy-str (buffer-name)))
+
+(defun dancar-copy-full-file-name ()
+  (interactive)
+  (dancar-copy-str buffer-file-truename))
 
 (defun dancar-copy-file-and-line ()
   (interactive)
   (let* (
-        (line-str (format-mode-line "%l"))
-        (str (concat buffer-file-truename ":" line-str)))
-    (kill-new str)
-    (message (concat "Copied: " str))))
+         (line-str (format-mode-line "%l"))
+         (str (concat buffer-file-truename ":" line-str)))
+    (dancar-copy-str str)))
 
-(setq dancar-notebook-file "/Users/dan/Dropbox/deft/transmit.org")
 (defun dancar-notebook-buffer ()
   (interactive)
   (find-file dancar-notebook-file))
@@ -225,5 +233,41 @@
     "Buffer copied ("
     (number-to-string (- (point-max) (point-min)))
     " characters).")))
+
+(defun dancar-copy-zoom ()
+  (interactive)
+  (dancar-copy-str clipboard-preset-1))
+
+
+(defun dancar-copy-src-link ()
+  (interactive)
+  (dancar-copy-str (concat
+                    dancar-src-link
+                    (string-trim (shell-command-to-string "git rev-parse HEAD"))
+                    "/"
+                    (substring buffer-file-truename (length dancar-src-link-omit))
+                    (format-mode-line "#lines-%l")
+                    ) )
+  )
+
+(defun dancar-ng-error ()
+  (interactive)
+  (let* (
+         (parts (split-string (s-trim (current-kill 0)) ":"))
+         (filename (nth 0 parts))
+         (full-path (concat dancar-src-dir-1 filename))
+         (line  (nth 1 parts))
+         (character (car (split-string (nth 2 parts) " ")))
+         )
+
+    ;; (message (concat "Opening " full-path ", line " line ", char " character))
+    (find-file full-path)
+    (goto-char 0)
+    (forward-line (string-to-number line))
+    (forward-line -1)
+    (move-beginning-of-line nil)
+    (forward-char (string-to-number character))
+    (forward-char -1)
+    ))
 
 (provide 'dancar-functions)

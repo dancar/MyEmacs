@@ -77,9 +77,14 @@
 (global-set-key (kbd "M-O") (lambda () (interactive) (evil-open-above 1) (evil-normal-state) (evil-next-line)))
 (global-set-key (kbd "M-o") (lambda () (interactive) (evil-open-below 1) (evil-normal-state) (evil-previous-line)))
 (global-set-key (kbd "M-<backspace>") 'dancar-concentrate)
-(global-set-key (kbd "C-c F") (lambda () (interactive) (kill-new buffer-file-truename) (message (concat "Copied: " buffer-file-truename))))
+;; (global-set-key (kbd "C-c F") (lambda () (interactive) (kill-new buffer-file-truename) (message (concat "Copied: " buffer-file-truename))))
+(global-set-key (kbd "C-c F") 'dancar-copy-full-file-name)
+(global-set-key (kbd "C-c S") 'dancar-copy-src-link)
 (global-set-key (kbd "C-c C-F") 'dancar-copy-file-and-line)
-(global-set-key (kbd "C-x F") 'dancar-copy-buffer-name-to-clipboard)
+(global-set-key (kbd "C-x F") 'dancar-copy-buffer-name-and-line-to-clipboard)
+(global-set-key (kbd "C-x f") 'dancar-copy-buffer-name-to-clipboard)
+(global-set-key (kbd "C-c  E") 'dancar-ng-error)
+
 
 ;; TEXT
 (define-key evil-insert-state-map (kbd "C-d") nil)
@@ -180,6 +185,7 @@
 (global-set-key (kbd "C-#") `shell)
 (global-set-key (kbd "<f6>") `toggle-truncate-lines)
 (global-set-key (kbd "C-M-|") 'deft)
+(global-set-key (kbd "C-M-S-z") 'dancar-copy-zoom)
 
 
 ;;;MBP

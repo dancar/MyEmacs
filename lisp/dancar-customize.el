@@ -72,6 +72,7 @@
  '(helm-projectile-fuzzy-match t)
  '(helm-recentf-fuzzy-match t)
  '(helm-split-window-default-side (quote same))
+ '(helm-truncate-lines t)
  '(highlight-symbol-idle-delay 0)
  '(highlight-symbol-on-navigation-p t)
  '(icicle-Completions-max-columns nil)

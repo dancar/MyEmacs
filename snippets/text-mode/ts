@@ -2,4 +2,4 @@
 # name: ts
 # key: ts
 # --
-TSAUTH-$1 #comment - $2
+TSAUTH-$1 #comment > $2

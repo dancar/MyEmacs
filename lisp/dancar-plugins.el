@@ -1,10 +1,5 @@
 ;; plugins: ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-(use-package fill-column-indicator
-  :config (add-hook 'typescript-mode-hook 'fci-mode)
-  )
-
-
 (use-package web-mode
   :config
   (add-to-list 'auto-mode-alist '("\\.html\\'" . web-mode))
