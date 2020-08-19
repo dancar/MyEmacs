@@ -79,9 +79,10 @@
 (global-set-key (kbd "M-<backspace>") 'dancar-concentrate)
 ;; (global-set-key (kbd "C-c F") (lambda () (interactive) (kill-new buffer-file-truename) (message (concat "Copied: " buffer-file-truename))))
 (global-set-key (kbd "C-c F") 'dancar-copy-full-file-name)
-(global-set-key (kbd "C-c S") 'dancar-copy-src-link)
+(global-set-key (kbd "C-c s") 'dancar-copy-src-link)
+(global-set-key (kbd "C-c S") 'dancar-copy-src-link-develop)
 (global-set-key (kbd "C-c C-F") 'dancar-copy-file-and-line)
-(global-set-key (kbd "C-x F") 'dancar-copy-buffer-name-and-line-to-clipboard)
+(global-set-key (kbd "C-c f") 'dancar-copy-buffer-name-and-line-to-clipboard)
 (global-set-key (kbd "C-x f") 'dancar-copy-buffer-name-to-clipboard)
 (global-set-key (kbd "C-c  E") 'dancar-ng-error)
 

@@ -249,18 +249,40 @@
                     (format-mode-line "#lines-%l")
                     ) )
   )
+(defun dancar-copy-src-link-develop ()
+
+  (interactive)
+  (dancar-copy-str (concat
+                    dancar-src-link
+                    "develop"
+                    "/"
+                    (substring buffer-file-truename (length dancar-src-link-omit))
+                    (format-mode-line "#lines-%l")
+                    ) )
+  )
 
 (defun dancar-ng-error ()
   (interactive)
   (let* (
-         (parts (split-string (s-trim (current-kill 0)) ":"))
+         (parts
+          (split-string
+           (concat
+            (s-chop-prefix
+             "ERROR in "
+             (s-trim (current-kill 0))
+             )
+            ":::"
+            )
+           ":"
+           )
+          )
          (filename (nth 0 parts))
          (full-path (concat dancar-src-dir-1 filename))
          (line  (nth 1 parts))
          (character (car (split-string (nth 2 parts) " ")))
          )
 
-    ;; (message (concat "Opening " full-path ", line " line ", char " character))
+    (message (concat "Opening " full-path ", line " line ", char " character))
     (find-file full-path)
     (goto-char 0)
     (forward-line (string-to-number line))
@@ -270,4 +292,8 @@
     (forward-char -1)
     ))
 
+(defun dancar-diary ()
+  (interactive)
+  (insert (format-time-string "\n** Week %U %A %Y-%m-%d"))
+  )
 (provide 'dancar-functions)
