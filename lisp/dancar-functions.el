@@ -239,28 +239,59 @@
   (dancar-copy-str clipboard-preset-1))
 
 
+(defun dancar--repo-link-prefix ()
+  (let* (
+         (remote-link (shell-command-to-string "git remote get-url origin"))                                           ; git@bitbucket.org:my-great-company/my-great-project
+         (remote-link-no-prefix (string-trim remote-link "git@"))                                                      ; bitbucket.org:my-great-company/my-great-project
+         (remote-url-prefix (replace-regexp-in-string ":" "/" remote-link-no-prefix))                                  ; bitbucket.org/my-great-company/my-great-project
+         )
+    remote-url-prefix
+    ))
+
+(defun dancar--src-link (revision)
+  ;;; ATM only works for bitbucket
+ (let* (
+         (relative-file (string-trim (shell-command-to-string (concat "git ls-files --full-name " buffer-file-name)))) ; my-sub-folder/my-great-file.java
+         (remote-link (shell-command-to-string "git remote get-url origin"))                                           ; git@bitbucket.org:my-great-company/my-great-project
+         (remote-link-no-prefix (string-trim remote-link "git@"))                                                      ; bitbucket.org:my-great-company/my-great-project
+         (remote-url-prefix (dancar--repo-link-prefix))
+         )
+   (concat
+    remote-url-prefix
+    "/src/"
+    revision
+    "/"
+    relative-file
+    (format-mode-line "#lines-%l")
+    )                                                                                       ; bitbucket.org/my-great-company/my-great-project/src/a756bc9a4bc6308e793139b09c06edf39978fb4e/my-great/file.text#lines-234
+   ))
+
 (defun dancar-copy-src-link ()
   (interactive)
-  (dancar-copy-str (concat
-                    dancar-src-link
-                    (string-trim (shell-command-to-string "git rev-parse HEAD"))
-                    "/"
-                    (substring buffer-file-truename (length dancar-src-link-omit))
-                    (format-mode-line "#lines-%l")
-                    ) )
-  )
+  (dancar-copy-str (dancar--src-link (string-trim (shell-command-to-string "git rev-parse HEAD")))))
+
 (defun dancar-copy-src-link-develop ()
-
   (interactive)
-  (dancar-copy-str (concat
-                    dancar-src-link
-                    "develop"
-                    "/"
-                    (substring buffer-file-truename (length dancar-src-link-omit))
-                    (format-mode-line "#lines-%l")
-                    ) )
-  )
+  (dancar-copy-str (dancar--src-link "develop")))
 
+(defun dancar--get-line-commit ()
+  (string-trim
+   (shell-command-to-string (concat
+                             "git blame -s -L "
+                             (number-to-string (line-number-at-pos))
+                             ",+1 "
+                             buffer-file-name
+                             " | cut -f 1 -d' ' | head -1 "
+                             ))))
+
+
+(defun dancar-link-to-commit ()
+  (interactive)
+ ;;; ATM only works for bitbucket
+  (dancar-copy-str (concat
+                    (dancar--repo-link-prefix)
+                    "/commits/"
+                    (dancar--get-line-commit))))
 (defun dancar-ng-error ()
   (interactive)
   (let* (
