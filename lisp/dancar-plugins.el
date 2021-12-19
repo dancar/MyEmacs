@@ -88,16 +88,16 @@
 
 
 ;;;; stolen from https://debbugs.gnu.org/cgi/bugreport.cgi?bug=24896
-(defvar js-jsx-tag-syntax-table
-  (let ((table (make-syntax-table sgml-tag-syntax-table)))
-    (modify-syntax-entry ?\{ "<" table)
-    (modify-syntax-entry ?\} ">" table)
-    table))
-(defun advice-js-jsx-indent-line (orig-fun)
-  (interactive)
-  (let ((sgml-tag-syntax-table js-jsx-tag-syntax-table))
-    (apply orig-fun nil)))
-(advice-add 'js-jsx-indent-line :around 'advice-js-jsx-indent-line)
+;(defvar js-jsx-tag-syntax-table
+;  (let ((table (make-syntax-table sgml-tag-syntax-table)))
+;    (modify-syntax-entry ?\{ "<" table)
+;    (modify-syntax-entry ?\} ">" table)
+;    table))
+;(defun advice-js-jsx-indent-line (orig-fun)
+;  (interactive)
+;  (let ((sgml-tag-syntax-table js-jsx-tag-syntax-table))
+;    (apply orig-fun nil)))
+;(advice-add 'js-jsx-indent-line :around 'advice-js-jsx-indent-line)
 
 (use-package rjsx-mode
   :config
